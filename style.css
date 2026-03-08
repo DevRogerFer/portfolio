@@ -77,6 +77,7 @@
     display: flex;
     align-items: center;
     margin-top: 50px;
+    /* text-align: justify; */
 }
 
 .about-me-content img {
@@ -125,6 +126,84 @@
 .skill-item p {
     color: white;
     opacity: 75%;
+}
+
+/* PROJETOS */
+.projects-content {
+    margin-top: 118px;
+}
+
+.projects-content .project-item:nth-child(2),
+.projects-content .project-item:nth-child(4) {
+    justify-content: flex-end;
+}
+
+.projects-content .project-item:nth-child(2) .project-item-image,
+.projects-content .project-item:nth-child(4) .project-item-image {
+    order: 2;
+    margin-left: 50px;
+}
+
+.projects-content .project-item:nth-child(2) .project-text,
+.projects-content .project-item:nth-child(4) .project-text {
+    order: 1;
+    text-align: right;
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.project-item img {
+    width: 350px;
+    border-radius: 15px;
+    margin-right: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.project-item-image {
+    width: 250px;
+    height: 400px;
+    border-radius: 15px;
+    margin-right: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-size: cover;
+    background-position: center;
+}
+
+.project-item-1 {
+    background-image: url('./images/psique2.png');
+}
+
+.project-item-2 {
+    background-image: url('./images/pizzaria1.png');
+}
+
+.project-item-3 {
+    background-image: url('./images/chatbot3.png');
+}
+
+.project-item-4 {
+    background-image: url('./images/machine_learning4.png');
+}
+
+.project-text {
+    max-width: 800px;
+}
+
+.project-item p {
+    color: white;
+    opacity: 75%;
+    line-height: 1.75rem;
+    font-size: 1.250rem;
+}
+
+.project-item h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 1.5rem;
 }
 
 /* Utilities */
