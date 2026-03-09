@@ -82,13 +82,14 @@ a {
     display: flex;
     align-items: center;
     margin-top: 50px;
-    /* text-align: justify; */
+    margin-right: 50px;
 }
 
 .about-me-content img {
     width: 320px;
     right: 320px;
     margin-right: 50px;
+    margin-left: 50px;
 }
 
 .about-me-content p {
@@ -103,6 +104,8 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .skill-item {
@@ -136,6 +139,11 @@ a {
 /* PROJETOS */
 .projects-content {
     margin-top: 118px;
+}
+
+.projects-content .project-item:nth-child(1),
+.projects-content .project-item:nth-child(3) {
+    margin-left: 50px;
 }
 
 .projects-content .project-item:nth-child(2),
