@@ -105,9 +105,9 @@ a {
 /* HABILIDADES */
 .skills-content {
     margin-top: 108px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
     margin-left: 50px;
     margin-right: 50px;
 }
@@ -121,11 +121,13 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 250px;
 }
 
-.skills-content .skill-item:nth-child(2) {
-    margin-left: 50px;
-    margin-right: 50px;
+.skill-item img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
 }
 
 .skill-item span {
@@ -138,6 +140,7 @@ a {
 .skill-item p {
     color: white;
     opacity: 75%;
+    line-height: 1.6;
 }
 
 /* PROJETOS */

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="PostgreSQL e APIs REST">
+  <rect width="128" height="128" rx="28" fill="#0b1220"/>
+  <ellipse cx="47" cy="43" rx="18" ry="14" fill="#60a5fa"/>
+  <path d="M29 43v23c0 8 8 14 18 14s18-6 18-14V43" fill="#60a5fa"/>
+  <ellipse cx="47" cy="66" rx="18" ry="14" fill="#3b82f6"/>
+  <ellipse cx="47" cy="89" rx="18" ry="14" fill="#2563eb"/>
+  <rect x="75" y="34" width="28" height="12" rx="6" fill="#e2e8f0"/>
+  <rect x="67" y="58" width="36" height="12" rx="6" fill="#93c5fd"/>
+  <rect x="75" y="82" width="28" height="12" rx="6" fill="#e2e8f0"/>
+  <path d="M61 43h8M61 66h4M61 89h8" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="TypeScript">
+  <rect width="128" height="128" rx="28" fill="#0b1220"/>
+  <rect x="24" y="24" width="80" height="80" rx="18" fill="#3178c6"/>
+  <text x="64" y="73" text-anchor="middle" fill="#ffffff" font-family="Poppins, Arial, sans-serif" font-size="34" font-weight="800">TS</text>
+  <rect x="32" y="92" width="64" height="6" rx="3" fill="#93c5fd" opacity="0.9"/>
+</svg>

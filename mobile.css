@@ -58,21 +58,16 @@
     /* HABILIDADES */
     .skills-content {
         margin-top: 40px;
-        flex-direction: column;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
         margin-left: 0;
         margin-right: 0;
     }
 
-    .skills-content .skill-item:nth-child(2) {
-        margin-top: 40px;
-        margin-bottom: 40px;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
     .skill-item {
         padding: 30px;
-        width: 90%;
+        width: 100%;
+        min-height: 220px;
     }
 
     .skill-item img {
@@ -194,6 +189,10 @@
 }
 
 @media(max-width: 480px) {
+    .skills-content {
+        grid-template-columns: 1fr;
+    }
+
     .showcase-container h1 {
         font-size: 2.3rem;
     }

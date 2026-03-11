@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Python e Django">
+  <rect width="128" height="128" rx="28" fill="#101826"/>
+  <path d="M37 30h24c10 0 14 5 14 14v10H51c-10 0-14 5-14 14v8c0 9 4 14 14 14h8V79c0-10 5-14 14-14h18c9 0 14-4 14-14V44c0-9-5-14-14-14H64" fill="#3776ab"/>
+  <circle cx="57" cy="41" r="3" fill="#fff"/>
+  <path d="M91 98H67c-10 0-14-5-14-14V74h24c10 0 14-5 14-14v-8c0-9-4-14-14-14h-8v11c0 10-5 14-14 14H37c-9 0-14 4-14 14v7c0 9 5 14 14 14h27" fill="#ffd43b"/>
+  <circle cx="71" cy="87" r="3" fill="#0f172a"/>
+  <text x="97" y="111" text-anchor="end" fill="#ffffff" font-family="Poppins, Arial, sans-serif" font-size="16" font-weight="700">DJ</text>
+</svg>
