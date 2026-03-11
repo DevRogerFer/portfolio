@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../mobile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Projeto PrimeFlix | Dev Roger Fer</title>
+    <script src="https://kit.fontawesome.com/6394f12341.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar-container">
+        <ul>
+            <li><a href="../index.html#home-section">Início</a></li>
+            <li><a href="../index.html#about-me-section">Sobre</a></li>
+            <li><a href="../index.html#skills-section">Habilidades</a></li>
+            <li class="active"><a href="../index.html#projects-section">Projetos</a></li>
+            <li><a href="../index.html#contact-section">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main class="project-page-main">
+        <div class="section-container">
+            <div class="section-content">
+                <h1 class="section-title">Projeto PrimeFlix</h1>
+                <p class="project-meta">React JS | Catálogo de Filmes</p>
+
+                <div class="project-page-content">
+                    <div class="project-item">
+                        <div class="project-item-image project-item-5"></div>
+                        <div class="project-text">
+                            <h2>Visão geral</h2>
+                            <p>PrimeFlix é uma aplicação React executada localmente para consumir uma API externa de
+                                filmes em cartaz. A experiência inclui listagem dos títulos na home, página de detalhes,
+                                favoritos persistidos e acesso rápido ao trailer no YouTube.</p>
+                            <div class="project-actions">
+                                <a class="project-back-link" href="https://github.com/DevRogerFer/primeflix" target="_blank">Ver repositório</a>
+                                <a class="project-back-link" href="../index.html#projects-section">Voltar para Projetos</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-detail-grid">
+                        <section class="project-detail-card">
+                            <h2>Funcionalidades</h2>
+                            <ul class="project-detail-list">
+                                <li>Listagem de 20 filmes em cartaz diretamente na homepage.</li>
+                                <li>Página de detalhes com sinopse, capa alternativa e avaliação.</li>
+                                <li>Salvamento de filmes em favoritos com feedback visual.</li>
+                                <li>Área "Meus Filmes" com leitura dos itens salvos.</li>
+                                <li>Persistência dos favoritos via Local Storage.</li>
+                                <li>Atalho para busca de trailer no YouTube.</li>
+                            </ul>
+                        </section>
+
+                        <section class="project-detail-card">
+                            <h2>Tecnologias</h2>
+                            <ul class="project-detail-list">
+                                <li>React JS para construção da interface baseada em componentes.</li>
+                                <li>React Router DOM para navegação e roteamento entre páginas.</li>
+                                <li>JavaScript para lógica de consumo de API e estado.</li>
+                                <li>CSS para estilização da experiência web.</li>
+                                <li>Local Storage para persistência de favoritos no navegador.</li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <section class="project-detail-section">
+                        <h2>Fluxo principal da aplicação</h2>
+                        <ol class="project-detail-steps">
+                            <li>O usuário abre a home e visualiza os filmes em cartaz retornados pela API.</li>
+                            <li>Ao clicar em um filme, acessa a página de detalhes com informações completas.</li>
+                            <li>Pode salvar o filme nos favoritos e consultar depois em "Meus Filmes".</li>
+                            <li>Se desejar, abre rapidamente a busca de trailer no YouTube.</li>
+                            <li>Ao recarregar a aplicação, os favoritos continuam disponíveis por causa do Local Storage.</li>
+                        </ol>
+                    </section>
+
+                    <section class="project-detail-section">
+                        <h2>Conteúdos praticados</h2>
+                        <ul class="project-detail-list">
+                            <li>Consumo de API REST no front-end.</li>
+                            <li>Gerenciamento de estado com hooks como `useState` e `useEffect`.</li>
+                            <li>Roteamento no React com `react-router-dom`.</li>
+                            <li>Persistência local de dados com `localStorage`.</li>
+                            <li>Organização de projeto React para execução local e estudo prático.</li>
+                        </ul>
+                    </section>
+
+                    <section class="project-detail-section">
+                        <h2>Resumo técnico</h2>
+                        <p class="project-detail-text">O PrimeFlix é um projeto focado em experiência de navegação e
+                            integração com dados externos, ideal para demonstrar fundamentos sólidos de React no
+                            front-end: consumo de API, rotas, persistência local e fluxo completo de interação com o
+                            usuário.</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="footer-container">
+        <div class="social-items">
+            <a href="https://www.linkedin.com/in/devrogerfer" target="_blank"><i
+                    class="fa-brands fa-linkedin fa-2xl"></i></a>
+            <a href="https://github.com/devrogerfer" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
+            <a href="https://www.instagram.com/devrogerfer" target="_blank"><i
+                    class="fa-brands fa-instagram fa-2xl"></i></a>
+            <a href="https://web.facebook.com/roger.sika" target="_blank"><i
+                    class="fa-brands fa-facebook fa-2xl"></i></a>
+            <a href="mailto:roferrock@gmail.com"><i class="fa-solid fa-envelope fa-2xl"></i></a>
+            <a href="https://wa.me/5511992550655" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
+        </div>
+        <p>&copy; 2026 Rogério Fernandes Siqueira. Todos os direitos reservados.</p>
+    </div>
+</body>
+
+</html>

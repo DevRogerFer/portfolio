@@ -145,24 +145,20 @@ a {
     margin-top: 118px;
 }
 
-.projects-content .project-item:nth-child(1),
-.projects-content .project-item:nth-child(3) {
+.projects-content .project-item:nth-child(odd) {
     margin-left: 50px;
 }
 
-.projects-content .project-item:nth-child(2),
-.projects-content .project-item:nth-child(4) {
+.projects-content .project-item:nth-child(even) {
     justify-content: flex-end;
 }
 
-.projects-content .project-item:nth-child(2) .project-item-image,
-.projects-content .project-item:nth-child(4) .project-item-image {
+.projects-content .project-item:nth-child(even) .project-item-image {
     order: 2;
     margin-left: 50px;
 }
 
-.projects-content .project-item:nth-child(2) .project-text,
-.projects-content .project-item:nth-child(4) .project-text {
+.projects-content .project-item:nth-child(even) .project-text {
     order: 1;
     text-align: right;
 }
@@ -212,6 +208,10 @@ a {
 
 .project-item-4 {
     background-image: url('./images/dslist4.svg');
+}
+
+.project-item-5 {
+    background-image: url('./images/primeflix5.svg');
 }
 
 .project-text {

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1600" role="img" aria-label="Capa do projeto PrimeFlix">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#09090b"/>
+      <stop offset="55%" stop-color="#18181b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="poster" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#27272a"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="1600" rx="64" fill="url(#bg)"/>
+
+  <rect x="70" y="90" width="860" height="190" rx="26" fill="#0b0b0c" opacity="0.9"/>
+  <text x="500" y="185" text-anchor="middle" fill="#f4f4f5" font-family="Poppins, Arial, sans-serif" font-size="72" font-weight="800" letter-spacing="1">PrimeFlix</text>
+  <rect x="320" y="216" width="360" height="8" rx="4" fill="url(#red)"/>
+
+  <rect x="90" y="340" width="820" height="190" rx="24" fill="#111827" stroke="#27272a" stroke-width="3"/>
+  <text x="140" y="410" fill="#fafafa" font-family="Poppins, Arial, sans-serif" font-size="30" font-weight="600">Filmes em cartaz</text>
+  <rect x="140" y="438" width="290" height="10" rx="5" fill="#ef4444"/>
+
+  <rect x="120" y="600" width="220" height="330" rx="18" fill="url(#poster)"/>
+  <rect x="390" y="600" width="220" height="330" rx="18" fill="url(#poster)"/>
+  <rect x="660" y="600" width="220" height="330" rx="18" fill="url(#poster)"/>
+
+  <circle cx="500" cy="780" r="62" fill="#ef4444"/>
+  <polygon points="485,748 485,812 536,780" fill="#fff"/>
+
+  <rect x="120" y="990" width="760" height="110" rx="20" fill="#111827"/>
+  <text x="500" y="1060" text-anchor="middle" fill="#f4f4f5" font-family="Poppins, Arial, sans-serif" font-size="36" font-weight="600">Detalhes | Favoritos | Trailer</text>
+
+  <rect x="120" y="1160" width="360" height="310" rx="24" fill="#111827"/>
+  <text x="300" y="1240" text-anchor="middle" fill="#ef4444" font-family="Poppins, Arial, sans-serif" font-size="28" font-weight="700">Meus Filmes</text>
+  <rect x="165" y="1280" width="270" height="18" rx="9" fill="#27272a"/>
+  <rect x="165" y="1318" width="230" height="18" rx="9" fill="#27272a"/>
+  <rect x="165" y="1356" width="250" height="18" rx="9" fill="#27272a"/>
+
+  <rect x="520" y="1160" width="360" height="310" rx="24" fill="#111827"/>
+  <text x="700" y="1240" text-anchor="middle" fill="#ef4444" font-family="Poppins, Arial, sans-serif" font-size="28" font-weight="700">Local Storage</text>
+  <rect x="570" y="1288" width="260" height="26" rx="10" fill="#1f2937"/>
+  <rect x="570" y="1330" width="230" height="26" rx="10" fill="#1f2937"/>
+  <rect x="570" y="1372" width="250" height="26" rx="10" fill="#1f2937"/>
+
+  <text x="500" y="1552" text-anchor="middle" fill="#fca5a5" font-family="Poppins, Arial, sans-serif" font-size="24" letter-spacing="2">REACT JS | ROUTER | API REST</text>
+</svg>
