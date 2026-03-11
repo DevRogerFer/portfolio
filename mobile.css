@@ -1,19 +1,34 @@
 @media(max-width: 1024px) {
+    body {
+        overflow-x: hidden;
+    }
+
     .navbar-container {
         display: none;
     }
 
     /* SHOWCASE */
+    .showcase-container {
+        min-height: 100vh;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
     .showcase-container h1 {
-        font-size: 3rem;
+        font-size: clamp(2rem, 9vw, 3rem);
         text-align: center;
-        line-height: 3.3rem;
+        line-height: 1.15;
+        max-width: 100%;
+        overflow-wrap: anywhere;
     }
 
     .showcase-container p {
-        font-size: 1rem;
+        font-size: 0.95rem;
         text-align: center;
         margin-top: 15px;
+        letter-spacing: 0.08rem;
+        padding-right: 0;
+        max-width: 100%;
     }
 
     /* SOBRE MIM */
@@ -28,6 +43,8 @@
     .about-me-content img {
         width: 200px;
         height: 275px;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .about-me-content p {
@@ -35,6 +52,7 @@
         text-align: center;
         line-height: 1.5rem;
         margin-top: 15px;
+        overflow-wrap: anywhere;
     }
 
     /* HABILIDADES */
@@ -118,6 +136,8 @@
     .project-text p {
         font-size: 1rem;
         margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     /* FORMULÁRIO */
@@ -140,9 +160,25 @@
     /* UTILIDADES */
     .section-title {
         font-size: 2rem;
+        letter-spacing: 0.08rem;
     }
 
     .section-container {
-        padding: 30px;
+        padding: 50px 16px;
+    }
+}
+
+@media(max-width: 480px) {
+    .showcase-container h1 {
+        font-size: 2.3rem;
+    }
+
+    .showcase-container p {
+        font-size: 0.82rem;
+        letter-spacing: 0.06rem;
+    }
+
+    .section-title {
+        font-size: 1.9rem;
     }
 }
