@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../mobile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Projeto DSList | Dev Roger Fer</title>
+    <script src="https://kit.fontawesome.com/6394f12341.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar-container">
+        <ul>
+            <li><a href="../index.html#home-section">Início</a></li>
+            <li><a href="../index.html#about-me-section">Sobre</a></li>
+            <li><a href="../index.html#skills-section">Habilidades</a></li>
+            <li class="active"><a href="../index.html#projects-section">Projetos</a></li>
+            <li><a href="../index.html#contact-section">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main class="project-page-main">
+        <div class="section-container">
+            <div class="section-content">
+                <h1 class="section-title">Projeto DSList</h1>
+                <p class="project-meta">API REST | Java Spring Boot</p>
+
+                <div class="project-page-content">
+                    <div class="project-item">
+                        <div class="project-item-image project-item-4"></div>
+                        <div class="project-text">
+                            <h2>Visão geral</h2>
+                            <p>DSList e uma aplicacao back-end construida durante o Intensivao Java Spring da
+                                DevSuperior. A API organiza uma lista ficticia de games, com titulo, ano,
+                                imagem e descricao, e permite a reorganizacao da ordem dos jogos conforme a
+                                preferencia do usuario.</p>
+                            <div class="project-actions">
+                                <a class="project-back-link" href="https://github.com/DevRogerFer/dslist-backend"
+                                    target="_blank">Ver repositório</a>
+                                <a class="project-back-link" href="../index.html#projects-section">Voltar para
+                                    Projetos</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-detail-grid">
+                        <section class="project-detail-card">
+                            <h2>Funcionalidades</h2>
+                            <ul class="project-detail-list">
+                                <li>Listagem de jogos e listas com endpoints REST.</li>
+                                <li>Consulta detalhada por identificador.</li>
+                                <li>Reordenacao de jogos dentro da lista com operacao de update.</li>
+                                <li>Uso de DTO para trafego de dados entre camadas.</li>
+                                <li>Configuracao de perfis para ambientes test, dev e prod.</li>
+                            </ul>
+                        </section>
+
+                        <section class="project-detail-card">
+                            <h2>Tecnologias</h2>
+                            <ul class="project-detail-list">
+                                <li>Java + Spring Boot.</li>
+                                <li>Spring Data JPA e Hibernate.</li>
+                                <li>Maven para build e gerenciamento de dependencias.</li>
+                                <li>Docker Compose para ambiente local.</li>
+                                <li>Railway e PostgreSQL para producao.</li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <section class="project-detail-section">
+                        <h2>Arquitetura e padroes</h2>
+                        <ul class="project-detail-list">
+                            <li>Arquitetura em camadas MVC: Controller, Service e Repository.</li>
+                            <li>Padrao DTO para separar dados de transporte das entidades.</li>
+                            <li>Relacionamentos N-N com classe de associacao e embedded id.</li>
+                            <li>Consultas SQL no Spring Data JPA e uso de projections.</li>
+                            <li>Boas praticas de API REST, incluindo idempotencia e CORS.</li>
+                        </ul>
+                    </section>
+
+                    <section class="project-detail-section">
+                        <h2>Ambientes e operacao</h2>
+                        <ol class="project-detail-steps">
+                            <li>No ambiente local de homologacao e testes, o projeto utiliza H2 Database.</li>
+                            <li>As rotas foram testadas com Postman durante o desenvolvimento.</li>
+                            <li>Em producao, a API roda no Railway App com PostgreSQL.</li>
+                            <li>O README documenta a esteira de deploy e integracao via GitHub.</li>
+                        </ol>
+                    </section>
+
+                    <section class="project-detail-section">
+                        <h2>Resumo tecnico</h2>
+                        <p class="project-detail-text">O DSList demonstra uma base solida de desenvolvimento back-end
+                            com Java e Spring, cobrindo do desenho de dominio ate deploy em nuvem. E um projeto enxuto,
+                            mas completo, pensado para demonstrar arquitetura, organizacao de codigo e fundamentos de
+                            APIs REST em um cenario realista.</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="footer-container">
+        <div class="social-items">
+            <a href="https://www.linkedin.com/in/devrogerfer" target="_blank"><i
+                    class="fa-brands fa-linkedin fa-2xl"></i></a>
+            <a href="https://github.com/devrogerfer" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
+            <a href="https://www.instagram.com/devrogerfer" target="_blank"><i
+                    class="fa-brands fa-instagram fa-2xl"></i></a>
+            <a href="https://web.facebook.com/roger.sika" target="_blank"><i
+                    class="fa-brands fa-facebook fa-2xl"></i></a>
+            <a href="mailto:roferrock@gmail.com"><i class="fa-solid fa-envelope fa-2xl"></i></a>
+            <a href="https://wa.me/5511992550655" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
+        </div>
+        <p>&copy; 2026 Rogério Fernandes Siqueira. Todos os direitos reservados.</p>
+    </div>
+</body>
+
+</html>

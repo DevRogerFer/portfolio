@@ -41,9 +41,110 @@
                                 base em palavras-chave e respostas pré-definidas. O projeto foi construído como Projeto
                                 5 Estrelas no programa The Accelerator da Workana, com foco em clareza de fluxo e
                                 experiência de uso.</p>
-                            <a class="project-back-link" href="../index.html#projects-section">Voltar para Projetos</a>
+                            <div class="project-actions">
+                                <a class="project-back-link" href="https://github.com/DevRogerFer/chatbot_local"
+                                    target="_blank">Ver repositório</a>
+                                <a class="project-back-link" href="../index.html#projects-section">Voltar para
+                                    Projetos</a>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="project-detail-grid">
+                        <section class="project-detail-card">
+                            <h2>Funcionalidades</h2>
+                            <ul class="project-detail-list">
+                                <li>Interface responsiva e intuitiva com Bootstrap 5.</li>
+                                <li>Sistema de matching por palavras-chave com pontuação.</li>
+                                <li>Mais de 350 respostas sobre tópicos diversos de programação.</li>
+                                <li>Histórico salvo automaticamente no localStorage.</li>
+                                <li>Botão para limpar conversa com confirmação.</li>
+                                <li>Auto-scroll para novas mensagens e suporte à tecla Enter.</li>
+                                <li>Normalização de texto para ignorar acentos e pontuação.</li>
+                                <li>Avatar do bot e interface visual limpa para facilitar a leitura.</li>
+                            </ul>
+                        </section>
+
+                        <section class="project-detail-card">
+                            <h2>Tópicos cobertos</h2>
+                            <ul class="project-detail-list">
+                                <li>Linguagens como JavaScript, Python, TypeScript, Java, C++, C#, PHP, Ruby, Swift,
+                                    Kotlin, Go e Rust.</li>
+                                <li>Frameworks e bibliotecas como React, Vue, Angular, Next.js, Node.js, Express, Django
+                                    e Flask.</li>
+                                <li>Bancos de dados relacionais e NoSQL, incluindo PostgreSQL, MongoDB, MySQL e SQLite.
+                                </li>
+                                <li>Ferramentas e conceitos de arquitetura, DevOps, segurança, web moderna e
+                                    metodologias ágeis.</li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <section class="project-detail-section">
+                        <h2>Como funciona o matching</h2>
+                        <ol class="project-detail-steps">
+                            <li>O texto do usuário é normalizado para reduzir ruído de acentos e pontuação.</li>
+                            <li>O algoritmo atribui maior peso para correspondência exata completa.</li>
+                            <li>Depois avalia se a palavra-chave está contida na mensagem.</li>
+                            <li>Em seguida soma pontuação por palavra individual encontrada.</li>
+                            <li>Também considera matches parciais para palavras maiores.</li>
+                            <li>A resposta com maior pontuação final é a escolhida para o retorno do bot.</li>
+                        </ol>
+                    </section>
+
+                    <section class="project-detail-section">
+                        <h2>Estrutura do projeto</h2>
+                        <div class="project-module-grid">
+                            <div class="project-module-card">
+                                <h3>ChatContainer.jsx</h3>
+                                <p>Componente principal que organiza a experiência da conversa.</p>
+                            </div>
+                            <div class="project-module-card">
+                                <h3>MessageList.jsx</h3>
+                                <p>Renderiza a lista de mensagens e acompanha o histórico da interação.</p>
+                            </div>
+                            <div class="project-module-card">
+                                <h3>MessageItem.jsx</h3>
+                                <p>Responsável por cada mensagem individual, incluindo o avatar do bot.</p>
+                            </div>
+                            <div class="project-module-card">
+                                <h3>InputField.jsx</h3>
+                                <p>Controla a entrada do usuário e o envio das perguntas.</p>
+                            </div>
+                            <div class="project-module-card">
+                                <h3>responses.js</h3>
+                                <p>Banco local de respostas com palavras-chave e conteúdo associado.</p>
+                            </div>
+                            <div class="project-module-card">
+                                <h3>chatLogic.js</h3>
+                                <p>Implementa a lógica de matching e seleção da melhor resposta.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="project-detail-section">
+                        <h2>Tecnologias e execução</h2>
+                        <ul class="project-detail-list">
+                            <li>React.js para a interface baseada em componentes.</li>
+                            <li>Vite como ferramenta de build e servidor local de desenvolvimento.</li>
+                            <li>Bootstrap 5 para o layout responsivo e rápido de montar.</li>
+                            <li>JavaScript ES6+ para componentes e lógica de matching.</li>
+                            <li>LocalStorage API para persistência de histórico no navegador.</li>
+                        </ul>
+                        <p class="project-detail-text">O README também documenta uma execução totalmente local: instalar
+                            dependências com `npm install`, iniciar com `npm run dev` e testar em
+                            `http://localhost:5173/`. Isso torna o projeto simples de demonstrar e fácil de
+                            personalizar.</p>
+                    </section>
+
+                    <section class="project-detail-section">
+                        <h2>Possibilidades de evolução</h2>
+                        <p class="project-detail-text">Entre as melhorias futuras citadas no README estão integração com
+                            APIs de IA como GPT, exportação do histórico de conversas, modo escuro, sugestões de
+                            perguntas, múltiplos idiomas e mecanismos de feedback do usuário. Isso mostra um projeto
+                            simples na base, mas com espaço claro para crescer em direção a um assistente mais
+                            sofisticado.</p>
+                    </section>
                 </div>
             </div>
         </div>
