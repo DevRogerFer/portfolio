@@ -42,9 +42,97 @@
                                 áudio e vídeo, geração de resumos e avaliação de humor com apoio de IA. O sistema também
                                 treina uma base vetorial por paciente para permitir consultas conversacionais sobre o
                                 histórico das sessões.</p>
-                            <a class="project-back-link" href="../index.html#projects-section">Voltar para Projetos</a>
+                            <div class="project-actions">
+                                <a class="project-back-link" href="https://github.com/DevRogerFer/psique_core"
+                                    target="_blank">Ver repositório</a>
+                                <a class="project-back-link" href="../index.html#projects-section">Voltar para
+                                    Projetos</a>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="project-detail-grid">
+                        <section class="project-detail-card">
+                            <h2>Funcionalidades</h2>
+                            <ul class="project-detail-list">
+                                <li>Cadastro e gestão de pacientes no módulo de usuários.</li>
+                                <li>Upload de gravações diretamente pelo dashboard de consultas.</li>
+                                <li>Armazenamento de vídeos em Cloudinary.</li>
+                                <li>Transcrição automática com OpenAI Whisper.</li>
+                                <li>Geração de resumo objetivo da sessão e avaliação de humor de 1 a 5.</li>
+                                <li>Base vetorial FAISS por paciente com metadados de data e gravação.</li>
+                                <li>Chat com recuperação contextual via RAG e respostas em streaming.</li>
+                                <li>Envio de resumos para WhatsApp Cloud API quando configurado.</li>
+                                <li>Processamento assíncrono com django-q2 e Redis.</li>
+                            </ul>
+                        </section>
+
+                        <section class="project-detail-card">
+                            <h2>Tecnologias</h2>
+                            <ul class="project-detail-list">
+                                <li>Django 5 como framework principal.</li>
+                                <li>PostgreSQL hospedado no Railway.</li>
+                                <li>Redis com django-q2 para filas e workers.</li>
+                                <li>Gunicorn e Whitenoise para entrega da aplicação.</li>
+                                <li>Cloudinary para arquivos de mídia.</li>
+                                <li>OpenAI API com Whisper e GPT-4.1-mini.</li>
+                                <li>LangChain e FAISS para a camada RAG.</li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <section class="project-detail-section">
+                        <h2>Fluxo de processamento</h2>
+                        <ol class="project-detail-steps">
+                            <li>O profissional envia a gravação e marca a opção de transcrição.</li>
+                            <li>Um sinal `post_save` dispara uma cadeia de tarefas com django-q.</li>
+                            <li>A tarefa `transcribe_recording` baixa o vídeo do Cloudinary e gera transcrição e
+                                segmentos com Whisper.</li>
+                            <li>A tarefa `task_rag` quebra a transcrição em chunks e atualiza o índice FAISS do
+                                paciente.</li>
+                            <li>A tarefa `summary_recording` produz resumo em tópicos e nota de humor usando agentes
+                                baseados em LangChain.</li>
+                            <li>O dashboard exibe o status da transcrição, do resumo e o identificador da gravação para
+                                consulta detalhada.</li>
+                        </ol>
+                    </section>
+
+                    <section class="project-detail-section">
+                        <h2>Módulos principais</h2>
+                        <div class="project-module-grid">
+                            <div class="project-module-card">
+                                <h3>core/settings.py</h3>
+                                <p>Centraliza apps, banco, Redis, Cloudinary, OpenAI e arquivos estáticos.</p>
+                            </div>
+                            <div class="project-module-card">
+                                <h3>consultas/views.py</h3>
+                                <p>Orquestra dashboard, upload de gravações, chat e visualização das consultas.</p>
+                            </div>
+                            <div class="project-module-card">
+                                <h3>consultas/tasks.py</h3>
+                                <p>Executa as etapas assíncronas de transcrição, RAG e resumo.</p>
+                            </div>
+                            <div class="project-module-card">
+                                <h3>consultas/agents.py</h3>
+                                <p>Concentra os agentes para resumo, avaliação de humor e contexto vetorial.</p>
+                            </div>
+                            <div class="project-module-card">
+                                <h3>consultas/signals.py</h3>
+                                <p>Dispara automaticamente o encadeamento de tarefas ao salvar novas gravações.</p>
+                            </div>
+                            <div class="project-module-card">
+                                <h3>entrypoint.prod.sh</h3>
+                                <p>Prepara migrações, estáticos, worker qcluster e inicialização em produção.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="project-detail-section">
+                        <h2>Infraestrutura</h2>
+                        <p class="project-detail-text">O README também documenta a configuração por variáveis de
+                            ambiente para PostgreSQL, Redis, OpenAI, Cloudinary e WhatsApp Cloud API. O deploy foi
+                            pensado para Railway, com serviços separados para aplicação web, banco e Redis.</p>
+                    </section>
                 </div>
             </div>
         </div>

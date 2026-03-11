@@ -140,6 +140,35 @@
         margin-right: 10px;
     }
 
+    .project-actions {
+        justify-content: center;
+    }
+
+    .project-page-content {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .project-detail-grid,
+    .project-module-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-detail-card,
+    .project-detail-section,
+    .project-module-card {
+        padding: 24px 18px;
+    }
+
+    .project-detail-card h2,
+    .project-detail-section h2 {
+        font-size: 1.35rem;
+    }
+
+    .project-module-card h3 {
+        font-size: 1rem;
+    }
+
     /* FORMULÁRIO */
     .contact-form {
         margin-top: 40px;
