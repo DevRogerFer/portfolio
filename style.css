@@ -61,7 +61,7 @@ a {
     background-position: center;
 
     /* Overlay */
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     background-blend-mode: color;
 }
 
@@ -435,4 +435,27 @@ a {
 .form-button:hover {
     background-color: #202020;
     cursor: pointer;
+}
+
+.form-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.form-honeypot {
+    display: none;
+}
+
+.form-status {
+    margin-top: 14px;
+    min-height: 1.4rem;
+    font-size: 1rem;
+}
+
+.form-status.success {
+    color: #7ee787;
+}
+
+.form-status.error {
+    color: #ff7b72;
 }
