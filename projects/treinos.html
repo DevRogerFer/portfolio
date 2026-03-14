@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../mobile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Projeto Gestão de Treinos | Dev Roger Fer</title>
+    <script src="https://kit.fontawesome.com/6394f12341.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar-container">
+        <ul>
+            <li><a href="../index.html#home-section">Início</a></li>
+            <li><a href="../index.html#about-me-section">Sobre</a></li>
+            <li><a href="../index.html#skills-section">Habilidades</a></li>
+            <li class="active"><a href="../index.html#projects-section">Projetos</a></li>
+            <li><a href="../index.html#contact-section">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main class="project-page-main">
+        <div class="section-container">
+            <div class="section-content">
+                <h1 class="section-title">Projeto Gestão de Treinos</h1>
+                <p class="project-meta">Domine Seus Treinos com IA | Full Stack</p>
+
+                <div class="project-page-content">
+                    <div class="project-item">
+                        <div class="project-item-image project-item-6"></div>
+                        <div class="project-text">
+                            <h2>Visão geral</h2>
+                            <p>Aplicação web para gestão de treinos, permitindo cadastrar, organizar e acompanhar
+                                rotinas de exercícios. Possui API back-end responsável pelo gerenciamento dos dados de
+                                treinos e usuários, e um front-end que fornece interface intuitiva para criação,
+                                visualização e administração das rotinas, facilitando o controle e planejamento de
+                                atividades físicas.</p>
+                            <div class="project-actions">
+                                <a class="project-back-link" href="https://github.com/DevRogerFer/treinos_api"
+                                    target="_blank">Backend</a>
+                                <a class="project-back-link" href="https://github.com/DevRogerFer/treinos_frontend"
+                                    target="_blank">Frontend</a>
+                                <a class="project-back-link" href="../index.html#projects-section">Voltar para
+                                    Projetos</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-detail-grid">
+                        <section class="project-detail-card">
+                            <h2>O que o sistema entrega</h2>
+                            <ul class="project-detail-list">
+                                <li>Autenticação social com Google via Better-Auth, com sessão persistente.</li>
+                                <li>Onboarding guiado por IA para configurar perfil e criar o primeiro plano de treino.
+                                </li>
+                                <li>Gestão completa de planos de treino com dias e exercícios personalizados.</li>
+                                <li>Registro de sessões com timestamps de início e conclusão por dia de treino.</li>
+                                <li>Estatísticas detalhadas: streak, consistência semanal, taxa de conclusão e tempo
+                                    total.</li>
+                            </ul>
+                        </section>
+
+                        <section class="project-detail-card">
+                            <h2>Arquitetura do projeto</h2>
+                            <ul class="project-detail-list">
+                                <li>Backend em Fastify 5, TypeScript 5.9 e Prisma 7 com PostgreSQL 16.</li>
+                                <li>Autenticação baseada em sessão com Better-Auth e OAuth Google.</li>
+                                <li>Frontend web em Next.js com App Router, React 19 e Tailwind CSS 4.</li>
+                                <li>Client da API gerado automaticamente pelo Orval via especificação OpenAPI.</li>
+                                <li>Containerização do backend com Docker (multi-stage build) e deploy independente.
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <section class="project-detail-section">
+                        <h2>Camada backend</h2>
+                        <p class="project-detail-text">A API REST foi construída com Fastify 5, priorizando
+                            performance e organização em camadas (Routes → Use Cases → Prisma). Todos os endpoints —
+                            exceto autenticação — exigem sessão ativa. A documentação interativa está disponível via
+                            Scalar no endpoint <code>/docs</code>, com especificação OpenAPI em
+                            <code>/swagger.json</code>.
+                        </p>
+                        <div class="project-module-grid">
+                            <div class="project-module-card">
+                                <h3>Core</h3>
+                                <p>Fastify 5 e TypeScript 5.9 sobre Node.js 24 como runtime base da API.</p>
+                            </div>
+                            <div class="project-module-card">
+                                <h3>Banco de dados</h3>
+                                <p>PostgreSQL 16 gerenciado pelo Prisma 7 com suporte a migrations e tipos gerados.</p>
+                            </div>
+                            <div class="project-module-card">
+                                <h3>Autenticação</h3>
+                                <p>Better-Auth 1.4 com login social via Google OAuth e sessão persistente.</p>
+                            </div>
+                            <div class="project-module-card">
+                                <h3>Validação</h3>
+                                <p>Zod 4.3 para schemas de entrada, com erros customizados mapeados para HTTP.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="project-detail-section">
+                        <h2>Camada frontend web</h2>
+                        <p class="project-detail-text">A interface foi desenvolvida mobile-first com tema dark ativado
+                            por padrão. O App Router do Next.js organiza Server e Client Components de forma separada,
+                            com Server Actions para operações de treino. O client da API é gerado pelo Orval a partir
+                            da especificação OpenAPI, garantindo tipagem completa e integração automática com cookies
+                            de sessão.</p>
+                        <ul class="project-detail-list">
+                            <li>Next.js 16.1 com App Router, SSR e Server Actions para operações de treino.</li>
+                            <li>React 19, TypeScript 5 e Tailwind CSS 4 com shadcn/ui (estilo New York).</li>
+                            <li>Orval 8.1 para geração automática do client e tipos da API via OpenAPI.</li>
+                            <li>Better-Auth no frontend para autenticação com Google e proteção de rotas.</li>
+                            <li>Navegação inferior mobile com 5 itens: Home, Calendário, IA, Stats e Perfil.</li>
+                        </ul>
+                    </section>
+
+                    <section class="project-detail-section">
+                        <h2>Personal Trainer com IA</h2>
+                        <p class="project-detail-text">Um chatbot flutuante alimentado pelo GPT-4o-mini está disponível
+                            em todas as telas da aplicação. Durante o onboarding, o assistente coleta dados físicos e
+                            cria o primeiro plano de treino personalizado via conversa. Em uso contínuo, pode listar
+                            planos, criar novos e atualizar o perfil do usuário diretamente pelo chat.</p>
+                        <ul class="project-detail-list">
+                            <li>AI SDK 6.0 integrado no backend (Fastify) e no frontend (Next.js Route Handler).</li>
+                            <li>Chat em tempo real via streaming SSE com renderização de markdown animada.</li>
+                            <li>Ferramentas (tools) no backend permitem ao modelo consultar e gravar dados reais.</li>
+                            <li>Sugestões pré-definidas para facilitar o início da conversa no chatbot.</li>
+                            <li>Onboarding guiado: de dados físicos ao primeiro plano de treino via conversa.</li>
+                        </ul>
+                    </section>
+
+                    <section class="project-detail-section">
+                        <h2>Modelo de dados</h2>
+                        <p class="project-detail-text">O modelo relacional conecta usuários, planos, dias e sessões
+                            de forma hierárquica. Apenas um plano pode estar ativo por usuário; a ativação de um novo
+                            desativa o anterior automaticamente via caso de uso <code>CreateWorkoutPlan</code>.</p>
+                        <ol class="project-detail-steps">
+                            <li><strong>User</strong> — usuário autenticado com dados físicos opcionais (peso, altura,
+                                idade e % de gordura corporal).</li>
+                            <li><strong>WorkoutPlan</strong> — plano de treino; somente um pode estar ativo por usuário
+                                por vez.</li>
+                            <li><strong>WorkoutDay</strong> — dia do plano, podendo ser treino (com exercícios) ou
+                                descanso.</li>
+                            <li><strong>WorkoutExercise</strong> — exercício com séries, repetições e tempo de
+                                descanso configurados.</li>
+                            <li><strong>WorkoutSession</strong> — sessão iniciada e concluída, com timestamps de
+                                início e fim registrados.</li>
+                        </ol>
+                    </section>
+
+                    <section class="project-detail-section">
+                        <h2>Resumo técnico</h2>
+                        <p class="project-detail-text">Gestão de Treinos é um projeto full stack focado em experiência
+                            mobile-first e integração com IA. A API REST em Fastify 5 + TypeScript + Prisma 7 +
+                            PostgreSQL 16 serve uma aplicação Next.js + React 19 + Tailwind CSS 4, com autenticação
+                            via Better-Auth (Google OAuth), client gerado pelo Orval e um personal trainer virtual
+                            alimentado pelo GPT-4o-mini com suporte a streaming e criação de planos por conversa.</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="footer-container">
+        <div class="social-items">
+            <a href="https://www.linkedin.com/in/devrogerfer" target="_blank"><i
+                    class="fa-brands fa-linkedin fa-2xl"></i></a>
+            <a href="https://github.com/devrogerfer" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
+            <a href="https://www.instagram.com/devrogerfer" target="_blank"><i
+                    class="fa-brands fa-instagram fa-2xl"></i></a>
+            <a href="https://web.facebook.com/roger.sika" target="_blank"><i
+                    class="fa-brands fa-facebook fa-2xl"></i></a>
+            <a href="mailto:roferrock@gmail.com"><i class="fa-solid fa-envelope fa-2xl"></i></a>
+            <a href="https://wa.me/5511992550655" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
+        </div>
+        <p>&copy; 2026 Rogério Fernandes Siqueira. Todos os direitos reservados.</p>
+    </div>
+</body>
+
+</html>
