@@ -197,11 +197,15 @@ a {
     background-position: center;
 }
 
-.project-item-1 {
+.project-item-6 {
+    background-image: url('./images/treinos.jpg');
+}
+
+.project-item-5 {
     background-image: url('./images/psique2.png');
 }
 
-.project-item-2 {
+.project-item-4 {
     background-image: url('./images/pizzaria1.png');
 }
 
@@ -209,11 +213,11 @@ a {
     background-image: url('./images/chatbot3.png');
 }
 
-.project-item-4 {
+.project-item-2 {
     background-image: url('./images/dslist4.svg');
 }
 
-.project-item-5 {
+.project-item-1 {
     background-image: url('./images/primeflix5.svg');
 }
 
