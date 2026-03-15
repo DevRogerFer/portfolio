@@ -50,6 +50,13 @@ As habilidades exibidas no portfólio foram expandidas para refletir melhor os p
 
 ## 💼 Projetos
 
+### 🏋🏻‍♂️ Treinos
+
+<img src="./images/treinos.jpg" alt="Projeto Psique" width="420" />
+
+- Página local: `./projects/treinos.html`
+- Repositório: https://github.com/DevRogerFer/treinos_frontend
+
 ### 🧠 Psiquê
 
 <img src="./images/psique2.png" alt="Projeto Psique" width="420" />
@@ -76,14 +83,14 @@ As habilidades exibidas no portfólio foram expandidas para refletir melhor os p
 
 ### 🎮 DSList
 
-<img src="./images/dslist4.svg" alt="Projeto DSList" width="320" />
+<img src="./images/dslist4.svg" alt="Projeto DSList" width="420" />
 
 - Página local: `./projects/dslist.html`
 - Repositório: https://github.com/DevRogerFer/dslist-backend
 
 ### 🎬 PrimeFlix
 
-<img src="./images/primeflix5.svg" alt="Projeto PrimeFlix" width="320" />
+<img src="./images/primeflix5.svg" alt="Projeto PrimeFlix" width="420" />
 
 - Página local: `./projects/primeflix.html`
 - Repositório: https://github.com/DevRogerFer/primeflix
@@ -111,11 +118,11 @@ portfolio/
 └── LICENSE
 ```
 
-## ⚙️ Execução Local
+## ⚙️ Produção
 
-Como é um projeto estático, basta abrir o `index.html` no navegador.
+Deploy na Vercel com hospedagem de domínio próprio na Cloudflare.
 
-Para melhor experiência de desenvolvimento, use uma extensão como Live Server no VS Code.
+Acessar o link https://www.rogerfer.dev
 
 ## 👨‍💻 Autor
 
