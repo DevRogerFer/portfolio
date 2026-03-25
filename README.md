@@ -50,9 +50,16 @@ As habilidades exibidas no portfólio foram expandidas para refletir melhor os p
 
 ## 💼 Projetos
 
+### 🥗 Dietas
+
+<img src="./images/dietas.png" alt="Projeto Dietas" width="420" />
+
+- Página local: `./projects/dietas.html`
+- Repositório: https://github.com/DevRogerFer/dietas_web
+
 ### 🏋🏻‍♂️ Treinos
 
-<img src="./images/treinos.jpg" alt="Projeto Psique" width="420" />
+<img src="./images/treinos.jpg" alt="Projeto Treinos" width="420" />
 
 - Página local: `./projects/treinos.html`
 - Repositório: https://github.com/DevRogerFer/treinos_frontend
