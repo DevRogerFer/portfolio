@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Projeto Gerador de Dietas | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li><a href="../index.html#home-section">Início</a></li>
+        <li><a href="../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../index.html#skills-section">Habilidades</a></li>
+        <li class="active">
+          <a href="../index.html#projects-section">Projetos</a>
+        </li>
+        <li><a href="../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="project-page-main">
+      <div class="section-container">
+        <div class="section-content">
+          <h1 class="section-title">Projeto Gerador de Dietas</h1>
+          <p class="project-meta">
+            Sua dieta ideal, gerada com inteligência | Full Stack
+          </p>
+
+          <div class="project-page-content">
+            <div class="project-item">
+              <div class="project-item-image project-item-7"></div>
+              <div class="project-text">
+                <h2>Visão geral</h2>
+                <p>
+                  Aplicação completa para geração de dietas personalizadas com
+                  IA, composta por backend em Node.js que valida dados e entrega
+                  respostas em streaming, e frontend em Next.js que coleta
+                  informações do usuário e exibe o plano alimentar em tempo
+                  real. A solução integra validação, prompts estruturados e
+                  renderização dinâmica para uma experiência fluida.
+                </p>
+                <div class="project-actions">
+                  <a
+                    class="project-back-link"
+                    href="https://github.com/DevRogerFer/dietas_backend"
+                    target="_blank"
+                    >Backend</a
+                  >
+                  <a
+                    class="project-back-link"
+                    href="https://github.com/DevRogerFer/dietas_web"
+                    target="_blank"
+                    >Frontend</a
+                  >
+                  <a
+                    class="project-back-link"
+                    href="../index.html#projects-section"
+                    >Voltar para Projetos</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="project-detail-grid">
+              <section class="project-detail-card">
+                <h2>O que o sistema entrega</h2>
+                <ul class="project-detail-list">
+                  <li>Geração automática de dietas semanais personalizadas.</li>
+                  <li>Interface intuitiva para entrada de dados.</li>
+                  <li>Resposta em tempo real via streaming.</li>
+                  <li>Planos estruturados por dias e refeições.</li>
+                  <li>Adaptação conforme objetivo e nível de atividade.</li>
+                </ul>
+              </section>
+
+              <section class="project-detail-card">
+                <h2>Arquitetura do projeto</h2>
+                <ul class="project-detail-list">
+                  <li>
+                    O projeto segue uma arquitetura fullstack desacoplada.
+                  </li>
+                  <li>
+                    Frontend (Next.js) responsável pela interface e experiência.
+                  </li>
+                  <li>
+                    Backend (Node.js + Fastify) responsável pelo processamento e
+                    IA.
+                  </li>
+                  <li>
+                    Comunicação via API REST com streaming (text/event-stream).
+                  </li>
+                  <li>
+                    Essa separação garante escalabilidade, manutenção facilitada
+                    e melhor organização do código.
+                  </li>
+                </ul>
+              </section>
+            </div>
+
+            <section class="project-detail-section">
+              <h2>Camada backend</h2>
+              <p class="project-detail-text">
+                Estrutura ideal para aplicações modernas de nutrição/saúde que
+                utilizam Inteligência Artificial. A combinação de validação
+                estrita, streaming de dados e conhecimento local garante
+                segurança, performance e melhor experiência do usuário (UX).
+              </p>
+              <div class="project-module-grid">
+                <div class="project-module-card">
+                  <h3>Validação</h3>
+                  <p>
+                    Validação de dados com Zod, ideal para garantir integridade
+                    e consistência.
+                  </p>
+                </div>
+                <div class="project-module-card">
+                  <h3>Prompts</h3>
+                  <p>
+                    Construção de prompts estruturados para Inteligência
+                    Artificial, garantindo respostas precisas e relevantes.
+                  </p>
+                </div>
+                <div class="project-module-card">
+                  <h3>Streaming</h3>
+                  <p>
+                    Integração com OpenAI (streaming), permitindo respostas em
+                    tempo real.
+                  </p>
+                </div>
+                <div class="project-module-card">
+                  <h3>User Experience</h3>
+                  <p>
+                    Retorno progressivo da resposta (melhor UX), garantindo uma
+                    experiência mais fluida e interativa para o usuário.
+                  </p>
+                </div>
+                <div class="project-module-card">
+                  <h3>Base de Conhecimento</h3>
+                  <p>
+                    Leitura de base de conhecimento local para consistência,
+                    garantindo que as respostas sejam baseadas em informações
+                    atualizadas e confiáveis.
+                  </p>
+                </div>
+                <div class="project-module-card">
+                  <h3>CORS</h3>
+                  <p>
+                    Inclui controle de CORS, tipagem forte e estrutura modular,
+                    garantindo segurança e flexibilidade na comunicação entre
+                    frontend e backend.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section class="project-detail-section">
+              <h2>Camada frontend web</h2>
+              <p class="project-detail-text">
+                Uma estrutura de frontend moderna e de alta performance, focada
+                em UX (Experiência do Usuário) utilizando o estado da arte do
+                ecossistema React.
+              </p>
+              <ul class="project-detail-list">
+                <li>Formulário completo com validação.</li>
+                <li>Interface moderna com Next.js + Tailwind + shadcn/ui.</li>
+                <li>Consumo de streaming da API em tempo real.</li>
+                <li>Renderização do plano em Markdown.</li>
+                <li>Controle de estado e cancelamento de requisição.</li>
+              </ul>
+            </section>
+
+            <section class="project-detail-section">
+              <h2>Modelo de dados</h2>
+              <p class="project-detail-text">
+                O sistema utiliza um modelo simples baseado em entrada do
+                usuário. Esse payload é validado no backend e utilizado como
+                base para geração da dieta.
+              </p>
+              <div class="project-json-block" aria-label="Payload JSON">
+                <pre><code>{
+  "nome": "string",
+  "idade": number,
+  "altura_cm": number,
+  "peso_kg": number,
+  "sexo": "masculino | feminino",
+  "nivel_atividade": "sedentario | 2x_semana | ...",
+  "objetivo": "perda_de_peso | hipertrofia | manter_massa_muscular"
+}</code></pre>
+              </div>
+            </section>
+
+            <section class="project-detail-section">
+              <h2>Resumo técnico</h2>
+              <p class="project-detail-text">
+                Projeto fullstack moderno com foco em IA generativa e streaming
+                de dados. Combina validação tipada, arquitetura desacoplada e
+                renderização em tempo real para entregar uma experiência
+                responsiva e personalizada. Ideal como aplicação prática de
+                integração entre frontend moderno e backend orientado a eventos.
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="footer-container">
+      <div class="social-items">
+        <a href="https://www.linkedin.com/in/devrogerfer" target="_blank"
+          ><i class="fa-brands fa-linkedin fa-2xl"></i
+        ></a>
+        <a href="https://github.com/devrogerfer" target="_blank"
+          ><i class="fa-brands fa-github fa-2xl"></i
+        ></a>
+        <a href="https://www.instagram.com/devrogerfer" target="_blank"
+          ><i class="fa-brands fa-instagram fa-2xl"></i
+        ></a>
+        <a href="https://web.facebook.com/roger.sika" target="_blank"
+          ><i class="fa-brands fa-facebook fa-2xl"></i
+        ></a>
+        <a href="mailto:roferrock@gmail.com"
+          ><i class="fa-solid fa-envelope fa-2xl"></i
+        ></a>
+        <a href="https://wa.me/5511992550655" target="_blank"
+          ><i class="fa-brands fa-whatsapp fa-2xl"></i
+        ></a>
+      </div>
+      <p>
+        &copy; 2026 Rogério Fernandes Siqueira. Todos os direitos reservados.
+      </p>
+    </div>
+  </body>
+</html>
