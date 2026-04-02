@@ -199,6 +199,10 @@ a {
   background-position: center;
 }
 
+.project-item-8 {
+  background-image: url("./images/aparatus.jpg");
+}
+
 .project-item-7 {
   background-image: url("./images/dietas.png");
 }
