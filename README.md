@@ -50,6 +50,20 @@ As habilidades exibidas no portfólio foram expandidas para refletir melhor os p
 
 ## 💼 Projetos
 
+### 📝 Lista de Tarefas
+
+<img src="./images/task-list.jpg" alt="Projeto Lista de Tarefas" width="420" />
+
+- Página local: `./projects/task_list.html`
+- Repositório: https://github.com/DevRogerFer/task_list
+
+### 💇🏻‍♂️ Aparatus
+
+<img src="./images/aparatus.jpg" alt="Projeto Aparatus" width="420" />
+
+- Página local: `./projects/aparatus.html`
+- Repositório: https://github.com/DevRogerFer/aparatus
+
 ### 🥗 Dietas
 
 <img src="./images/dietas.png" alt="Projeto Dietas" width="420" />
