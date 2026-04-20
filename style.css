@@ -199,6 +199,10 @@ a {
   background-position: center;
 }
 
+.project-item-9 {
+  background-image: url("./images/task-list.jpg");
+}
+
 .project-item-8 {
   background-image: url("./images/aparatus.jpg");
 }
