@@ -199,28 +199,30 @@ a {
   background-position: center;
 }
 
-.project-item-9 {
-  background-image: url("./images/task-list.jpg");
-}
-
-.project-item-8 {
+/* PROJETOS EM DESTAQUE */
+.project-item-home-4 {
   background-image: url("./images/aparatus.jpg");
 }
 
-.project-item-7 {
-  background-image: url("./images/dietas.png");
-}
-
-.project-item-6 {
+.project-item-home-3 {
   background-image: url("./images/treinos.jpg");
 }
 
-.project-item-5 {
+.project-item-home-2 {
   background-image: url("./images/psique2.png");
 }
 
-.project-item-4 {
+.project-item-home-1 {
   background-image: url("./images/pizzaria1.png");
+}
+
+/* DEMAIS PROJETOS */
+.project-item-5 {
+  background-image: url("./images/task-list.jpg");
+}
+
+.project-item-4 {
+  background-image: url("./images/dietas.png");
 }
 
 .project-item-3 {
@@ -377,6 +379,15 @@ a {
   font-size: 0.96rem;
   line-height: 1.7;
   white-space: pre;
+}
+
+.see-more-projects h2 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: underline;
+  background-color: #111;
+  color: #fff;
 }
 
 /* FORMULÁRIO */
