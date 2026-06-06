@@ -7,6 +7,11 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 a {
@@ -218,6 +223,10 @@ a {
 }
 
 /* DEMAIS PROJETOS */
+.project-item-6 {
+  background-image: url("../images/rag_documents.jpeg");
+}
+
 .project-item-5 {
   background-image: url("../images/task-list.jpg");
 }
@@ -336,6 +345,14 @@ a {
   line-height: 1.7;
 }
 
+.project-detail-list li code,
+.project-detail-steps li code {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: "Consolas", "Courier New", monospace;
+}
+
 .project-module-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -358,6 +375,26 @@ a {
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.75;
   font-size: 1.05rem;
+}
+
+.project-module-card p code {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: "Consolas", "Courier New", monospace;
+}
+
+.project-detail-text {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.75;
+  font-size: 1.05rem;
+}
+
+.project-detail-text code {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: "Consolas", "Courier New", monospace;
 }
 
 .project-json-block {
@@ -389,6 +426,92 @@ a {
   text-decoration: underline;
   background-color: #111;
   color: #fff;
+}
+
+.code-block {
+  background: #0f172a;
+  border-radius: 8px;
+  padding: 1.5rem;
+  overflow-x: auto;
+  max-width: 100%;
+  font-family: Consolas, Monaco, "Courier New", monospace;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  white-space: pre;
+}
+
+.code-block pre {
+  margin: 0;
+}
+
+.project-detail-section pre {
+  max-width: 100%;
+  margin: 0;
+}
+
+.comment {
+  color: #94a3b8;
+}
+
+.key {
+  color: #f59e0b;
+}
+
+.value {
+  color: #f8fafc;
+}
+
+.install-section {
+  max-width: 900px;
+  color: #f8fafc;
+}
+
+.install-section h3 {
+  margin: 2rem 0 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.requirements {
+  margin-bottom: 2rem;
+}
+
+.requirements li {
+  margin-bottom: .75rem;
+  line-height: 1.6;
+}
+
+.requirements a {
+  color: #60a5fa;
+  text-decoration: underline;
+}
+
+.code-container {
+  background: #111827;
+  border-radius: 8px;
+  padding: 1.5rem;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.code-container pre {
+  margin: 0;
+  white-space: pre;
+}
+
+.code-block code,
+.code-container code {
+  display: block;
+  width: max-content;
+  min-width: 100%;
+  font-family: Consolas, Monaco, "Courier New", monospace;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #f8fafc;
+}
+
+.comment {
+  color: #94a3b8;
 }
 
 /* FORMULÁRIO */
