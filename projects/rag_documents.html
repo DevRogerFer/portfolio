@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mobile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Projeto Consulta de Documentos | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg?v=1">
+    <link rel="alternate icon" type="image/svg+xml" href="../images/favicon.svg?v=1">
+    <link rel="apple-touch-icon" href="../images/favicon.svg?v=1">
+    <script src="https://kit.fontawesome.com/6394f12341.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar-container">
+        <ul>
+            <li><a href="../index.html#home-section">Início</a></li>
+            <li><a href="../index.html#about-me-section">Sobre</a></li>
+            <li><a href="../index.html#skills-section">Habilidades</a></li>
+            <li class="active"><a href="../index.html#projects-section">Projetos</a></li>
+            <li><a href="../index.html#contact-section">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main class="project-page-main">
+        <div class="section-container">
+            <div class="section-content">
+                <h1 class="section-title">Projeto Consulta de Documentos</h1>
+                <p class="project-meta">Inteligência que transforma documentos em conhecimento</p>
+
+                <div class="project-page-content">
+                    <div class="project-item">
+                        <div class="project-item-image project-item-6"></div>
+                        <div class="project-text">
+                            <h2>Visão geral</h2>
+                            <p>Aplicação RAG (Retrieval-Augmented Generation) desenvolvida com Streamlit, LangChain,
+                                Azure OpenAI e Azure AI Search para consulta inteligente de documentos PDF. Realiza
+                                extração, fragmentação e indexação vetorial de conteúdo utilizando embeddings
+                                text-embedding-3-large, recuperando trechos relevantes por busca semântica para gerar
+                                respostas contextualizadas com gpt-5.4-mini. Possui isolamento de sessão, suporte a
+                                múltiplos PDFs e deploy via Railway.</p>
+                            <div class="project-actions">
+                                <a class="project-back-link" href="https://github.com/DevRogerFer/rag_document_query"
+                                    target="_blank">Respositório</a>
+                                <a class="project-back-link" href="./projects.html">Voltar para
+                                    Projetos</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <section class="project-detail-section">
+                        <h2>Sobre o Projeto</h2>
+                        <p class="project-detail-text">
+                            O RAG Document Query é uma aplicação web que combina Azure OpenAI e Azure AI Search para
+                            permitir consultas em linguagem natural sobre documentos PDF enviados pelo usuário.
+                            O fluxo é simples: o usuário faz upload de um ou mais PDFs, a aplicação os fragmenta, gera
+                            embeddings vetoriais e os indexa no Azure AI Search. A cada nova pergunta, os trechos mais
+                            relevantes são recuperados e enviados ao modelo GPT para gerar uma resposta contextualizada.
+                        </p>
+                    </section>
+
+                    <div class="project-detail-grid">
+                        <section class="project-detail-card">
+                            <h2>Upload e Processamento de Documentos</h2>
+                            <ul class="project-detail-list">
+                                <li>Upload de múltiplos arquivos PDF (até 200 MB cada) via interface web.</li>
+                                <li>Extração de texto via <code>PyPDF2</code> com fallback para
+                                    <code>PyPDFLoader</code>.
+                                </li>
+                                <li>Fragmentação inteligente com <code>TokenTextSplitter</code>.</li>
+                                <li>Barra de progresso e preview do conteúdo extraído.</li>
+                            </ul>
+                        </section>
+
+                        <section class="project-detail-card">
+                            <h2>Consulta com IA</h2>
+                            <ul class="project-detail-list">
+                                <li>Interface de chat para perguntas em linguagem natural.</li>
+                                <li>Pipeline RAG com LCEL (LangChain Expression Language).</li>
+                                <li>Recuperação dos trechos mais relevantes via busca vetorial.</li>
+                                <li>Geração de resposta com <code>gpt-5.4-mini</code> baseada apenas no contexto
+                                    recuperado.</li>
+                            </ul>
+                        </section>
+
+                        <section class="project-detail-card">
+                            <h2>Indexação Vetorial</h2>
+                            <ul class="project-detail-list">
+                                <li>Geração de embeddings com <code>text-embedding-3-large</code> (3072 dimensões).</li>
+                                <li>Indexação no Azure AI Search com busca por similaridade vetorial.</li>
+                                <li>Limpeza automática do índice antes de cada novo processamento, garantindo isolamento
+                                    total entre documentos.</li>
+                            </ul>
+                        </section>
+
+                        <section class="project-detail-card">
+                            <h2>Infraestrutura</h2>
+                            <ul class="project-detail-list">
+                                <li>Suporte a dois recursos Azure OpenAI distintos (embeddings e chat em regiões
+                                    separadas).</li>
+                                <li>Variáveis de ambiente via <code>.env</code> (sem credenciais no código).</li>
+                                <li>Deploy pronto para Railway com <code>Procfile</code>.</li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <section class="project-detail-section">
+                        <h2>Tecnologias</h2>
+                        <div class="project-module-grid">
+                            <div class="project-module-card">
+                                <h3>Streamlit</h3>
+                                <p>Interface web.</p>
+                            </div>
+                            <div class="project-module-card">
+                                <h3>Azure OpenAI</h3>
+                                <p>Embeddings (<code>text-embedding-3-large</code>) e Chat (<code>gpt-5.4-mini</code>).
+                                </p>
+                            </div>
+                            <div class="project-module-card">
+                                <h3>Azure AI Search</h3>
+                                <p>Indexação e busca vetorial.</p>
+                            </div>
+                            <div class="project-module-card">
+                                <h3>LangChain</h3>
+                                <p>Orquestração do pipeline RAG.</p>
+                            </div>
+                            <div class="project-module-card">
+                                <h3>langchain-openai</h3>
+                                <p>Integração LangChain com Azure OpenAI.</p>
+                            </div>
+                            <div class="project-module-card">
+                                <h3>langchain-community</h3>
+                                <p><code>AzureSearch</code>, <code>PyPDFLoader</code>.</p>
+                            </div>
+                            <div class="project-module-card">
+                                <h3>azure-search-documents</h3>
+                                <p><code>SearchIndexClient</code> para gerenciar índices.</p>
+                            </div>
+                            <div class="project-module-card">
+                                <h3>PyPDF2</h3>
+                                <p>Extração de texto de PDFs.</p>
+                            </div>
+                            <div class="project-module-card">
+                                <h3>python-dotenv</h3>
+                                <p>Carregamento de variáveis de ambiente.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="project-detail-section">
+                        <h2>Estrutura do Projeto</h2>
+                        <div class="code-container">
+                            <pre><code>rag_document_query/
+├── app.py            # Aplicação principal (UI + pipeline RAG)
+├── requirements.txt  # Dependências Python
+├── Procfile          # Configuração de deploy para Railway
+├── .env              # Variáveis de ambiente (não versionado)
+└── .gitignore        # Ignora .env e __pycache__</code></pre>
+                        </div>
+                    </section>
+
+                    <section class="project-detail-section">
+                        <h2>Arquitetura RAG</h2>
+                        <div class="code-container">
+                            <pre><code>PDF Upload
+    │
+    ▼
+PyPDF2 / PyPDFLoader
+    │ (extração de texto)
+    ▼
+TokenTextSplitter
+    │ (fragmentação em chunks)
+    ▼
+AzureOpenAIEmbeddings (text-embedding-3-large)
+    │ (geração de vetores 3072d)
+    ▼
+Azure AI Search Index
+    │
+    │ ← Pergunta do usuário
+    ▼
+Busca por Similaridade Vetorial
+    │ (k trechos mais relevantes)
+    ▼
+AzureChatOpenAI (gpt-5.4-mini)
+    │ (geração de resposta contextualizada)
+    ▼
+Resposta ao Usuário</code></pre>
+                        </div>
+                    </section>
+
+                    <section class="project-detail-section">
+                        <h2>Variáveis de Ambiente</h2>
+                        <p class="project-detail-text">Crie um arquivo <code>.env</code> na raiz do projeto e adicione
+                            as seguintes variáveis:</p>
+                        <pre class="code-block"><code>
+                            <span class="comment"># Azure AI Search</span>
+                            <span class="key">AZURE_AI_SEARCH_SERVICE_NAME</span>=<span class="value">https://&lt;seu-servico&gt;.search.windows.net</span>
+                            <span class="key">AZURE_AI_SEARCH_API_KEY</span>=<span class="value">&lt;sua-chave&gt;</span>
+                            <span class="key">AZURE_AI_SEARCH_INDEX_NAME</span>=<span class="value">&lt;nome-do-indice&gt;</span>
+
+                            <span class="comment"># Azure OpenAI — Embeddings (ex: swedencentral)</span>
+                            <span class="key">AZURE_OPENAI_ENDPOINT</span>=<span class="value">https://&lt;seu-recurso-embeddings&gt;.openai.azure.com/</span>
+                            <span class="key">AZURE_OPENAI_API_KEY</span>=<span class="value">&lt;chave-embeddings&gt;</span>
+                            <span class="key">AZURE_EMBEDDING_MODEL</span>=<span class="value">text-embedding-3-large</span>
+
+                            <span class="comment"># Azure OpenAI — Chat (ex: northcentralus)</span>
+                            <span class="key">AZURE_OPENAI_CHAT_ENDPOINT</span>=<span class="value">https://&lt;seu-recurso-chat&gt;.openai.azure.com/</span>
+                            <span class="key">AZURE_OPENAI_CHAT_API_KEY</span>=<span class="value">&lt;chave-chat&gt;</span>
+                            <span class="key">AZURE_OPENAI_MODEL</span>=<span class="value">gpt-5.4-mini</span>
+                        </code></pre>
+                    </section>
+
+                    <section class="project-detail-section">
+                        <h2>Como Executar - Pré-requisitos</h2>
+                        <section class="install-section">
+
+                            <ul class="project-detail-list">
+                                <li><a href="#">Python</a> 3.10+</li>
+                                <li>Recursos Azure: Azure OpenAI (embeddings + chat) e Azure AI Search</li>
+                            </ul>
+
+                            <h3>Passo a passo</h3>
+
+                            <div class="code-container">
+                                <pre><code><span class="comment"># 1. Clonar o repositório</span>
+git clone https://github.com/DevRogerFer/rag_document_query.git
+cd rag_document_query
+
+<span class="comment"># 2. Criar e ativar o ambiente virtual</span>
+python -m venv venv
+source venv/bin/activate        <span class="comment"># Linux/macOS</span>
+venv\Scripts\activate           <span class="comment"># Windows</span>
+
+<span class="comment"># 3. Instalar dependências</span>
+pip install -r requirements.txt
+
+<span class="comment"># 4. Configurar variáveis de ambiente</span>
+# Crie o arquivo .env conforme a seção acima
+
+<span class="comment"># 5. Iniciar a aplicação</span>
+streamlit run app.py</code></pre>
+                            </div>
+                        </section>
+
+                    </section>
+
+                    <section class="project-detail-section">
+                        <h2>Deploy</h2>
+                        <p class="project-detail-text">O projeto está configurado para deploy no Railway:</p>
+                        <ol class="project-detail-steps">
+                            <li>Conecte o repositório no Railway.</li>
+                            <li>Configure todas as variáveis de ambiente no painel do Railway.</li>
+                            <li>O deploy ocorre automaticamente a cada <code>git push</code> na
+                                <code>branch main</code>.
+                            </li>
+                            <li>O Procfile já instrui o Railway a iniciar o Streamlit na porta correta.</li>
+                        </ol>
+                        <p class="project-detail-text">
+                            <code>web: streamlit run app.py --server.port=$PORT --server.address=0.0.0.0</code>
+                        </p>
+                    </section>
+
+                    <section class="project-detail-section">
+                        <h2>Resumo técnico</h2>
+                        <p class="project-detail-text">Aplicação RAG desenvolvida com Streamlit, LangChain, Azure OpenAI
+                            e Azure AI Search para consulta inteligente de documentos PDF. Realiza extração de texto,
+                            fragmentação em chunks, geração de embeddings vetoriais, indexação semântica e recuperação
+                            de contexto para responder perguntas em linguagem natural com base exclusivamente no
+                            conteúdo dos documentos enviados.</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="footer-container">
+        <div class="social-items">
+            <a href="https://www.linkedin.com/in/devrogerfer" target="_blank"><i
+                    class="fa-brands fa-linkedin fa-2xl"></i></a>
+            <a href="https://github.com/devrogerfer" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
+            <a href="https://www.instagram.com/devrogerfer" target="_blank"><i
+                    class="fa-brands fa-instagram fa-2xl"></i></a>
+            <a href="https://web.facebook.com/roger.sika" target="_blank"><i
+                    class="fa-brands fa-facebook fa-2xl"></i></a>
+            <a href="mailto:roferrock@gmail.com"><i class="fa-solid fa-envelope fa-2xl"></i></a>
+            <a href="https://wa.me/5511992550655" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
+        </div>
+        <p>&copy; 2026 Rogério Fernandes Siqueira. Todos os direitos reservados.</p>
+    </div>
+</body>
+
+</html>
