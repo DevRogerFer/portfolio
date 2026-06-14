@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <title>Flexbox vs Grid | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg?v=1" />
+    <link rel="alternate icon" type="image/svg+xml" href="../images/favicon.svg?v=1" />
+    <link rel="apple-touch-icon" href="../images/favicon.svg?v=1" />
+    <script src="https://kit.fontawesome.com/6394f12341.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar-container">
+        <ul>
+            <li class="active"><a href="../index.html#home-section">Início</a></li>
+            <li><a href="../index.html#about-me-section">Sobre</a></li>
+            <li><a href="../index.html#skills-section">Habilidades</a></li>
+            <li><a href="../index.html#projects-section">Projetos</a></li>
+            <li><a href="../index.html#posts-section">Postagens</a></li>
+            <li><a href="../index.html#contact-section">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main class="post-page-main">
+        <div class="section-container" id="posts-section">
+            <div class="section-content">
+                <h1 class="section-title">Flexbox vs Grid</h1>
+                <p class="post-meta">Eles competem menos do que parecem — eles se complementam.</p>
+
+                <div class="post-page-content">
+                    <section class="post-detail-section">
+                        <h2>🗺️ 🗂️ Flexbox vs Grid: quando usar cada um?</h2>
+                        <p class="post-detail-text">
+                            Se você trabalha com CSS moderno, em algum momento já se fez essa pergunta:
+                        </p>
+                        <p class="post-detail-text">👉 <em>"Resolvo com Flexbox ou com Grid?"</em></p>
+                        <p class="post-detail-text">A resposta curta é: <strong>depende do problema de layout</strong>.
+                        </p>
+                        <p class="post-detail-text">
+                            A resposta profissional é entender <strong>como cada tecnologia pensa a organização dos
+                                elementos</strong>.
+                        </p>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>🧭 A diferença fundamental</h2>
+                        <p class="post-detail-text">
+                            <strong>Flexbox</strong> foi criado para organizar elementos em <strong>uma
+                                dimensão</strong>
+                            — linha <em>ou</em> coluna.
+                        </p>
+                        <p class="post-detail-text">
+                            <strong>Grid</strong> foi projetado para trabalhar em <strong>duas dimensões ao mesmo
+                                tempo</strong> — linhas <em>e</em> colunas.
+                        </p>
+                        <p class="post-detail-text">
+                            Essa distinção muda completamente a forma como modelamos interfaces.
+                        </p>
+                    </section>
+
+                    <div class="post-detail-grid">
+                        <section class="post-detail-card">
+                            <h2>📦 Quando o Flexbox brilha</h2>
+                            <ul class="post-detail-list">
+                                <li>✅ alinhar itens em uma direção.</li>
+                                <li>✅ distribuir espaço automaticamente.</li>
+                                <li>✅ centralizar conteúdo com facilidade.</li>
+                                <li>✅ reorganizar elementos.</li>
+                                <li>✅ criar componentes internos (menus, cards, toolbars).</li>
+                            </ul>
+                            <p class="post-detail-text">
+                                Ele é extremamente eficiente para estruturas menores e comportamentos dinâmicos.
+                            </p>
+                            <p class="post-detail-text">
+                                Exemplo clássico: navbar, lista de botões, alinhamento de ícones com texto.
+                            </p>
+                        </section>
+
+                        <section class="post-detail-card">
+                            <h2>🧱 Quando o Grid domina</h2>
+                            <ul class="post-detail-list">
+                                <li>✅ controle simultâneo de linhas e colunas.</li>
+                                <li>✅ áreas bem definidas da página.</li>
+                                <li>✅ sobreposição ou expansão de regiões.</li>
+                                <li>✅ organização macro da interface.</li>
+                            </ul>
+                            <p class="post-detail-text">
+                                É a ferramenta ideal para o <strong>esqueleto da página</strong>.
+                            </p>
+                            <p class="post-detail-text">
+                                Pense em: header, sidebar, conteúdo, rodapé, dashboards, galerias.
+                            </p>
+                        </section>
+                    </div>
+
+                    <section class="post-detail-section">
+                        <h2>⚙️ Vantagens e desvantagens</h2>
+                        <div class="post-detail-grid">
+                            <section class="post-detail-card">
+                                <h3>Flexbox</h3>
+                                <p class="post-detail-text"><strong>Vantagens</strong></p>
+                                <ul class="post-detail-list">
+                                    <li>✔ simples de entender.</li>
+                                    <li>✔ excelente para alinhamento.</li>
+                                    <li>✔ ótimo para componentes.</li>
+                                    <li>✔ adaptação natural ao conteúdo.</li>
+                                </ul>
+                                <p class="post-detail-text"><strong>Desvantagens</strong></p>
+                                <ul class="post-detail-list">
+                                    <li>✖ não foi feito para layouts bidimensionais complexos.</li>
+                                    <li>✖ pode exigir gambiarras em estruturas maiores.</li>
+                                </ul>
+                            </section>
+
+                            <section class="post-detail-card">
+                                <h3>Grid</h3>
+                                <p class="post-detail-text"><strong>Vantagens</strong></p>
+                                <ul class="post-detail-list">
+                                    <li>✔ controle total do layout.</li>
+                                    <li>✔ leitura visual clara.</li>
+                                    <li>✔ ideal para páginas complexas.</li>
+                                    <li>✔ poderoso para responsividade.</li>
+                                </ul>
+                                <p class="post-detail-text"><strong>Desvantagens</strong></p>
+                                <ul class="post-detail-list">
+                                    <li>✖ curva de aprendizado maior.</li>
+                                    <li>✖ às vezes é "demais" para tarefas simples.</li>
+                                </ul>
+                            </section>
+                        </div>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>🎯 O pensamento que diferencia iniciantes de profissionais</h2>
+                        <p class="post-detail-text">Quem está começando costuma perguntar:</p>
+                        <blockquote class="post-highlight-quote">
+                            <p><em>qual é melhor?</em></p>
+                        </blockquote>
+                        <p class="post-detail-text">Quem já trabalha no mercado pergunta:</p>
+                        <blockquote class="post-highlight-quote">
+                            <p><em>qual resolve melhor esse problema específico?</em></p>
+                        </blockquote>
+                        <p class="post-detail-text">
+                            Projetos reais usam <strong>os dois juntos</strong>.
+                        </p>
+                        <p class="post-detail-text">Grid organiza a macroestrutura.</p>
+                        <p class="post-detail-text">Flexbox organiza os componentes internos.</p>
+                        <p class="post-detail-text">
+                            Eles competem menos do que parecem — <strong>eles se complementam</strong>.
+                        </p>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>🚀 Em resumo</h2>
+                        <p class="post-detail-text">Se o desafio é <strong>fluxo e alinhamento</strong> → Flexbox.</p>
+                        <p class="post-detail-text">
+                            Se o desafio é <strong>estrutura e posicionamento global</strong> → Grid.
+                        </p>
+                        <p class="post-detail-text">
+                            Dominar ambos é o que transforma CSS em ferramenta estratégica.
+                        </p>
+                        <div class="post-actions">
+                            <a class="post-back-link" href="./posts_css.html">Voltar para Postagens CSS</a>
+                            <a class="post-back-link"
+                                href="https://www.linkedin.com/posts/devrogerfer_css-frontend-webdev-activity-7427332210019676160-sMXr?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA6hXl8Bda0blKRhIl4yOmoURpoppCReiqw"
+                                target="_blank" rel="noopener noreferrer">Ver no LinkedIn</a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
