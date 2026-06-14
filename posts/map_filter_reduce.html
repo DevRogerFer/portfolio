@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <title>Map, Filter e Reduce | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg?v=1" />
+    <link rel="alternate icon" type="image/svg+xml" href="../images/favicon.svg?v=1" />
+    <link rel="apple-touch-icon" href="../images/favicon.svg?v=1" />
+    <script src="https://kit.fontawesome.com/6394f12341.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar-container">
+        <ul>
+            <li class="active"><a href="../index.html#home-section">Início</a></li>
+            <li><a href="../index.html#about-me-section">Sobre</a></li>
+            <li><a href="../index.html#skills-section">Habilidades</a></li>
+            <li><a href="../index.html#projects-section">Projetos</a></li>
+            <li><a href="../index.html#posts-section">Postagens</a></li>
+            <li><a href="../index.html#contact-section">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main class="post-page-main">
+        <div class="section-container" id="posts-section">
+            <div class="section-content">
+                <h1 class="section-title">Map, Filter e Reduce</h1>
+                <p class="post-meta">JavaScript | Programação Funcional</p>
+
+                <div class="post-page-content">
+
+                    <section class="post-detail-section">
+                        <h2>🚀 Métodos Map, Filter e Reduce em JavaScript</h2>
+                        <p class="post-detail-text">
+                            No ecossistema do JavaScript moderno, os métodos <code>map()</code>, <code>filter()</code>
+                            e <code>reduce()</code> são essenciais para manipulação de arrays de forma funcional,
+                            elegante e eficiente — eliminando loops verbosos e tornando o código mais declarativo.
+                        </p>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>🧩 map(): Transformação de dados</h2>
+                        <p class="post-detail-text">
+                            O <code>map()</code> percorre um array e <strong>retorna um novo array</strong> com os
+                            valores transformados a partir de uma função callback. Ele não altera o array original.
+                        </p>
+                        <p class="post-detail-text">👉 Ideal para: conversões, cálculos e formatações.</p>
+                        <div class="post-json-block">
+                            <pre><code>const nums = [1, 2, 3];
+const dobrados = nums.map(n => n * 2);
+// [2, 4, 6]</code></pre>
+                        </div>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>🔍 filter(): Filtragem de elementos</h2>
+                        <p class="post-detail-text">
+                            O <code>filter()</code> cria um novo array contendo apenas os elementos que
+                            <strong>passam em um teste lógico (true/false)</strong> definido na função callback.
+                        </p>
+                        <p class="post-detail-text">👉 Ideal para: buscas, validações e remoção de dados indesejados.
+                        </p>
+                        <div class="post-json-block">
+                            <pre><code>const nums = [5, 10, 15];
+const maiores = nums.filter(n => n > 10);
+// [15]</code></pre>
+                        </div>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>⚙️ reduce(): Acumulação de valores</h2>
+                        <p class="post-detail-text">
+                            O <code>reduce()</code> executa uma função acumuladora e transforma o array em
+                            <strong>um único valor final</strong> (número, objeto, string etc.).
+                        </p>
+                        <p class="post-detail-text">👉 Ideal para: somas, agrupamentos e cálculos complexos.</p>
+                        <div class="post-json-block">
+                            <pre><code>const nums = [1, 2, 3, 4];
+const soma = nums.reduce((acc, n) => acc + n, 0);
+// 10</code></pre>
+                        </div>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>🔗 Encadeamento poderoso (Chaining)</h2>
+                        <p class="post-detail-text">
+                            Esses métodos podem ser combinados para criar pipelines de dados:
+                        </p>
+                        <div class="post-json-block">
+                            <pre><code>const resultado = [1, 2, 3, 4]
+  .filter(n => n % 2 === 0)
+  .map(n => n * 2)
+  .reduce((acc, n) => acc + n, 0);
+// 12</code></pre>
+                        </div>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>💡 Conclusão</h2>
+                        <p class="post-detail-text">
+                            Esses métodos são pilares da programação funcional em JavaScript, permitindo escrever
+                            código mais limpo, reutilizável e expressivo. Eles iteram sobre arrays utilizando
+                            callbacks e retornam novos valores sem mutar o original — uma prática altamente
+                            recomendada.
+                        </p>
+                        <div class="post-actions">
+                            <a class="post-back-link" href="./posts_java_script.html">Voltar para Postagens
+                                JavaScript</a>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
