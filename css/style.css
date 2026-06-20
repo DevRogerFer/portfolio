@@ -732,6 +732,35 @@ a {
   font-family: "Consolas", "Courier New", monospace;
 }
 
+.post-code-example {
+  margin-top: 12px;
+}
+
+.post-code-block {
+  margin: 0;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  background: linear-gradient(145deg, #101010, #1a1a1a);
+  overflow-x: auto;
+}
+
+.post-code-block code {
+  display: block;
+  width: max-content;
+  min-width: 100%;
+  color: #f4f4f5;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  white-space: pre;
+}
+
+.post-code-block code.hljs {
+  background: transparent;
+  padding: 0;
+}
+
 .post-table-wrap {
   margin-top: 12px;
   overflow-x: auto;
