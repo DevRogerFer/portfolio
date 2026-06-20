@@ -191,6 +191,11 @@
         height: auto;
     }
 
+    .post-comparison-table {
+        min-width: 560px;
+        font-size: 0.95rem;
+    }
+
     .mobile-only {
         display: inline-block;
     }

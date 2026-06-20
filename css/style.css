@@ -732,6 +732,34 @@ a {
   font-family: "Consolas", "Courier New", monospace;
 }
 
+.post-table-wrap {
+  margin-top: 12px;
+  overflow-x: auto;
+}
+
+.post-comparison-table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.post-comparison-table th,
+.post-comparison-table td {
+  text-align: left;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.9);
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.post-comparison-table th {
+  font-weight: 600;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
 .post-json-block {
   margin-top: 14px;
   border: 1px solid rgba(255, 255, 255, 0.16);
