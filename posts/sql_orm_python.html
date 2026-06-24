@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/mobile.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <title>Integração com Banco de Dados em Python: SQL vs ORM | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg?v=1" />
+    <link rel="alternate icon" type="image/svg+xml" href="../images/favicon.svg?v=1" />
+    <link rel="apple-touch-icon" href="../images/favicon.svg?v=1" />
+    <script src="https://kit.fontawesome.com/6394f12341.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/python.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/sql.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar-container">
+        <ul>
+            <li class="active"><a href="../index.html#home-section">Início</a></li>
+            <li><a href="../index.html#about-me-section">Sobre</a></li>
+            <li><a href="../index.html#skills-section">Habilidades</a></li>
+            <li><a href="../index.html#projects-section">Projetos</a></li>
+            <li><a href="../index.html#posts-section">Postagens</a></li>
+            <li><a href="../index.html#contact-section">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main class="post-page-main">
+        <div class="section-container" id="posts-section">
+            <div class="section-content">
+                <h1 class="section-title">SQL vs ORM em Python</h1>
+                <p class="post-meta">Python | Banco de Dados | SQL | ORM</p>
+
+                <div class="post-page-content">
+
+                    <section class="post-detail-section">
+                        <h2>💻 Integração com Banco de Dados em Python: SQL vs ORM</h2>
+                        <p class="post-detail-text">
+                            Ao desenvolver aplicações em <strong>Python</strong>, a integração com bancos de dados
+                            relacionais é uma etapa essencial. Nesse cenário, duas abordagens são bastante comuns: o
+                            uso de <strong>SQL direto</strong> e o uso de <strong>ORM (Object-Relational
+                                Mapping)</strong>.
+                            Cada uma possui vantagens e limitações que devem ser consideradas de acordo com o contexto
+                            do projeto.
+                        </p>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>🔎 SQL Direto: controle e performance</h2>
+                        <p class="post-detail-text">
+                            No SQL direto, o desenvolvedor escreve manualmente as consultas para inserir, consultar,
+                            atualizar e excluir dados. Essa abordagem oferece <strong>controle total sobre as
+                                queries</strong>,
+                            permitindo otimizações específicas e melhor desempenho em cenários complexos ou com grande
+                            volume de dados.
+                        </p>
+                        <p class="post-detail-text">Exemplo de consulta:</p>
+                        <figure class="post-code-example">
+                            <pre
+                                class="post-code-block"><code class="language-sql">SELECT * FROM users WHERE name = 'Maria';</code></pre>
+                        </figure>
+                        <p class="post-detail-text">
+                            Por outro lado, o uso intenso de SQL manual pode tornar o código <strong>mais difícil de
+                                manter</strong>,
+                            especialmente em projetos grandes. Além disso, aumenta o risco de erros de sintaxe e
+                            problemas de segurança, como SQL Injection, caso boas práticas não sejam seguidas.
+                        </p>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>⚙️ ORM: produtividade e abstração</h2>
+                        <p class="post-detail-text">
+                            O ORM mapeia tabelas do banco de dados para <strong>objetos da aplicação</strong>,
+                            permitindo
+                            que o desenvolvedor interaja com o banco utilizando a própria linguagem Python. Ferramentas
+                            como <strong>SQLAlchemy</strong> convertem automaticamente essas operações em SQL.
+                        </p>
+                        <p class="post-detail-text">Exemplo com ORM:</p>
+                        <figure class="post-code-example">
+                            <pre
+                                class="post-code-block"><code class="language-python">session.query(User).filter(User.name == 'Maria').all()</code></pre>
+                        </figure>
+                        <p class="post-detail-text">
+                            Essa abordagem aumenta a <strong>produtividade</strong>, reduz código repetitivo e facilita
+                            a manutenção do sistema. Além disso, geralmente oferece recursos integrados para
+                            <strong>transações e integridade de dados</strong>.
+                        </p>
+                        <p class="post-detail-text">
+                            No entanto, ORMs podem gerar consultas menos eficientes em operações complexas e possuem
+                            uma curva de aprendizado inicial.
+                        </p>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>🚀 Qual escolher?</h2>
+                        <p class="post-detail-text">Não existe uma única resposta.</p>
+                        <ul class="post-detail-list">
+                            <li>🔹 <strong>SQL direto</strong> é ideal quando se precisa de máximo controle e
+                                performance.</li>
+                            <li>🔹 <strong>ORM</strong> é excelente para acelerar o desenvolvimento e melhorar a
+                                organização do código.</li>
+                        </ul>
+                        <p class="post-detail-text">
+                            Na prática, muitos projetos combinam <strong>as duas abordagens</strong>, utilizando ORM
+                            para operações comuns e SQL direto para consultas mais complexas.
+                        </p>
+                        <p class="post-detail-text">
+                            💡 O mais importante é entender as características de cada estratégia para tomar decisões
+                            técnicas mais eficientes no desenvolvimento de aplicações Python.
+                        </p>
+                        <div class="post-actions">
+                            <a class="post-back-link" href="./posts_python_django.html">Voltar para Postagens Python /
+                                Django</a>
+                            <a class="post-back-link"
+                                href="https://www.linkedin.com/posts/devrogerfer_python-bancodedados-sql-share-7439262577014079489-aHxk/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA6hXl8Bda0blKRhIl4yOmoURpoppCReiqw"
+                                target="_blank" rel="noopener noreferrer">Ver no LinkedIn</a>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (window.hljs) {
+            window.hljs.highlightAll();
+        }
+    });
+</script>
+
+</html>
