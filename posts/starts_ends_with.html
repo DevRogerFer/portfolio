@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/mobile.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <title>StartsWith vs EndsWith em JavaScript | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg?v=1" />
+    <link rel="alternate icon" type="image/svg+xml" href="../images/favicon.svg?v=1" />
+    <link rel="apple-touch-icon" href="../images/favicon.svg?v=1" />
+    <script src="https://kit.fontawesome.com/6394f12341.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script defer
+        src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/javascript.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar-container">
+        <ul>
+            <li class="active"><a href="../index.html#home-section">Início</a></li>
+            <li><a href="../index.html#about-me-section">Sobre</a></li>
+            <li><a href="../index.html#skills-section">Habilidades</a></li>
+            <li><a href="../index.html#projects-section">Projetos</a></li>
+            <li><a href="../index.html#posts-section">Postagens</a></li>
+            <li><a href="../index.html#contact-section">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main class="post-page-main">
+        <div class="section-container" id="posts-section">
+            <div class="section-content">
+                <h1 class="section-title">StartsWith vs EndsWith em JavaScript</h1>
+                <p class="post-meta">JavaScript | Strings | Métodos ES6</p>
+
+                <div class="post-page-content">
+
+                    <section class="post-detail-section">
+                        <h2>🚀 StartsWith vs EndsWith em JavaScript: quando usar cada um?</h2>
+                        <p class="post-detail-text">
+                            No universo do JavaScript, trabalhar com <strong>strings</strong> é essencial e métodos
+                            como <strong>.startsWith()</strong> e <strong>.endsWith()</strong> são extremamente úteis
+                            para validações rápidas e elegantes.
+                        </p>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>🔍 O que é o .startsWith()?</h2>
+                        <p class="post-detail-text">
+                            O método <strong>.startsWith()</strong> verifica se uma string começa com determinado
+                            valor, retornando <strong>true</strong> ou <strong>false</strong>.
+                        </p>
+                        <p class="post-detail-text">
+                            Também é possível informar a posição inicial da busca.
+                        </p>
+                        <figure class="post-code-example">
+                            <pre class="post-code-block"><code class="language-javascript">const texto = "JavaScript é incrível";
+console.log(texto.startsWith("Java")); // true</code></pre>
+                        </figure>
+                        <p class="post-detail-text">
+                            Ideal para validar prefixos, como URLs, nomes ou padrões iniciais.
+                        </p>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>📍 O que é o .endsWith()?</h2>
+                        <p class="post-detail-text">
+                            Já o método <strong>.endsWith()</strong> verifica se uma string termina com determinado
+                            valor, também retornando <strong>true</strong> ou <strong>false</strong>.
+                        </p>
+                        <figure class="post-code-example">
+                            <pre class="post-code-block"><code class="language-javascript">const texto = "arquivo.pdf";
+console.log(texto.endsWith(".pdf")); // true</code></pre>
+                        </figure>
+                        <p class="post-detail-text">
+                            Muito usado para validar extensões de arquivos ou sufixos.
+                        </p>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>⚖️ Semelhanças entre eles</h2>
+                        <ul class="post-detail-list">
+                            <li>✅ ambos retornam valores booleanos (true ou false)</li>
+                            <li>✅ são case sensitive, sensíveis a maiúsculas e minúsculas</li>
+                            <li>✅ não aceitam expressões regulares, apenas strings</li>
+                            <li>✅ foram introduzidos no ES6 (ES2015)</li>
+                        </ul>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>⚔️ Principais diferenças</h2>
+                        <ul class="post-detail-list">
+                            <li>🔸 <strong>.startsWith()</strong> verifica o início da string</li>
+                            <li>🔸 <strong>.endsWith()</strong> verifica o final da string</li>
+                            <li>🔸 <strong>.startsWith()</strong> aceita parâmetro de posição inicial</li>
+                            <li>🔸 <strong>.endsWith()</strong> aceita posição final, tamanho da string</li>
+                        </ul>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>💡 Quando usar cada um?</h2>
+                        <ul class="post-detail-list">
+                            <li>✔ use <strong>.startsWith()</strong> para validar prefixos, como https em URLs</li>
+                            <li>✔ use <strong>.endsWith()</strong> para validar sufixos, como .jpg ou .pdf</li>
+                        </ul>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>🧠 Resumo prático</h2>
+                        <p class="post-detail-text">
+                            Se você quer saber como começa, use <strong>.startsWith()</strong>.
+                        </p>
+                        <p class="post-detail-text">
+                            Se quer validar como termina, use <strong>.endsWith()</strong>.
+                        </p>
+                        <p class="post-detail-text">
+                            Dominar esses métodos torna seu código mais legível, expressivo e evita soluções mais
+                            complexas com <strong>indexOf()</strong> ou regex.
+                        </p>
+                        <div class="post-actions">
+                            <a class="post-back-link" href="./posts_java_script.html">Voltar para Postagens
+                                JavaScript</a>
+                            <a class="post-back-link"
+                                href="https://www.linkedin.com/posts/devrogerfer_startswith-endswith-activity-7449446024424800256-NMEP?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA6hXl8Bda0blKRhIl4yOmoURpoppCReiqw"
+                                target="_blank" rel="noopener noreferrer">Ver no LinkedIn</a>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (window.hljs) {
+            window.hljs.highlightAll();
+        }
+    });
+</script>
+
+</html>
