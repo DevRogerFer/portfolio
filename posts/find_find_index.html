@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/mobile.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <title>Find vs FindIndex em JavaScript | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg?v=1" />
+    <link rel="alternate icon" type="image/svg+xml" href="../images/favicon.svg?v=1" />
+    <link rel="apple-touch-icon" href="../images/favicon.svg?v=1" />
+    <script src="https://kit.fontawesome.com/6394f12341.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script defer
+        src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/javascript.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar-container">
+        <ul>
+            <li class="active"><a href="../index.html#home-section">Início</a></li>
+            <li><a href="../index.html#about-me-section">Sobre</a></li>
+            <li><a href="../index.html#skills-section">Habilidades</a></li>
+            <li><a href="../index.html#projects-section">Projetos</a></li>
+            <li><a href="../index.html#posts-section">Postagens</a></li>
+            <li><a href="../index.html#contact-section">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main class="post-page-main">
+        <div class="section-container" id="posts-section">
+            <div class="section-content">
+                <h1 class="section-title">Find vs FindIndex em JavaScript</h1>
+                <p class="post-meta">JavaScript | Métodos de Array | Programação Funcional</p>
+
+                <div class="post-page-content">
+
+                    <section class="post-detail-section">
+                        <h2>🚀 Find vs FindIndex em JavaScript: quando usar cada um?</h2>
+                        <p class="post-detail-text">
+                            No ecossistema do JavaScript, métodos de arrays são essenciais para escrever códigos mais
+                            limpos e eficientes.
+                        </p>
+                        <p class="post-detail-text">
+                            Entre eles, <strong>.find()</strong> e <strong>.findIndex()</strong> se destacam por
+                            resolverem problemas semelhantes, mas com retornos diferentes.
+                        </p>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>🔍 O que é o .find()?</h2>
+                        <p class="post-detail-text">
+                            O método <strong>.find()</strong> percorre o array e retorna o
+                            <strong>primeiro elemento</strong> que satisfaz uma condição (callback).
+                        </p>
+                        <p class="post-detail-text">
+                            Caso não encontre, retorna <strong>undefined</strong>.
+                        </p>
+                        <figure class="post-code-example">
+                            <pre class="post-code-block"><code class="language-javascript">const nums = [10, 20, 30];
+const result = nums.find(n => n > 15);
+
+// 20</code></pre>
+                        </figure>
+                        <p class="post-detail-text">
+                            Ideal quando você precisa do valor em si.
+                        </p>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>📍 O que é o .findIndex()?</h2>
+                        <p class="post-detail-text">
+                            Já o <strong>.findIndex()</strong> retorna o <strong>índice</strong> do primeiro elemento
+                            que atende à condição.
+                        </p>
+                        <p class="post-detail-text">
+                            Se não encontrar, retorna <strong>-1</strong>.
+                        </p>
+                        <figure class="post-code-example">
+                            <pre class="post-code-block"><code class="language-javascript">const nums = [10, 20, 30];
+const index = nums.findIndex(n => n > 15);
+
+// 1</code></pre>
+                        </figure>
+                        <p class="post-detail-text">
+                            Perfeito quando você precisa da posição no array.
+                        </p>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>⚖️ Semelhanças entre eles</h2>
+                        <ul class="post-detail-list">
+                            <li>✅ ambos recebem uma função de teste (callback)</li>
+                            <li>✅ percorrem o array até encontrar o primeiro match</li>
+                            <li>✅ param a execução assim que encontram o resultado</li>
+                            <li>✅ são métodos iterativos modernos (ES6+)</li>
+                        </ul>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>⚔️ Principais diferenças</h2>
+                        <ul class="post-detail-list">
+                            <li>🔸 <strong>.find()</strong> retorna o elemento</li>
+                            <li>🔸 <strong>.findIndex()</strong> retorna o índice</li>
+                            <li>🔸 <strong>.find()</strong> retorna undefined se não encontrar</li>
+                            <li>🔸 <strong>.findIndex()</strong> retorna -1 se não encontrar</li>
+                        </ul>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>💡 Quando usar cada um?</h2>
+                        <ul class="post-detail-list">
+                            <li>✔ use <strong>.find()</strong> quando precisa manipular diretamente o objeto ou valor
+                                encontrado</li>
+                            <li>✔ use <strong>.findIndex()</strong> quando precisa atualizar, remover ou acessar via
+                                índice</li>
+                        </ul>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>🧠 Resumo prático</h2>
+                        <p class="post-detail-text">Se você quer o conteúdo, use <strong>.find()</strong>.</p>
+                        <p class="post-detail-text">Se você quer a posição, use <strong>.findIndex()</strong>.</p>
+                        <p class="post-detail-text">
+                            Dominar essa diferença evita loops desnecessários e deixa seu código muito mais
+                            expressivo.
+                        </p>
+                        <div class="post-actions">
+                            <a class="post-back-link" href="./posts_java_script.html">Voltar para Postagens
+                                JavaScript</a>
+                            <a class="post-back-link"
+                                href="https://www.linkedin.com/posts/devrogerfer_find-e-findindex-ugcPost-7448873185833467904-Yayl/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA6hXl8Bda0blKRhIl4yOmoURpoppCReiqw"
+                                target="_blank" rel="noopener noreferrer">Ver no LinkedIn</a>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (window.hljs) {
+            window.hljs.highlightAll();
+        }
+    });
+</script>
+
+</html>
