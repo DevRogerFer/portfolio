@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/mobile.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <title>Métodos some() e every() em JavaScript | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg?v=1" />
+    <link rel="alternate icon" type="image/svg+xml" href="../images/favicon.svg?v=1" />
+    <link rel="apple-touch-icon" href="../images/favicon.svg?v=1" />
+    <script src="https://kit.fontawesome.com/6394f12341.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script defer
+        src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/javascript.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar-container">
+        <ul>
+            <li class="active"><a href="../index.html#home-section">Início</a></li>
+            <li><a href="../index.html#about-me-section">Sobre</a></li>
+            <li><a href="../index.html#skills-section">Habilidades</a></li>
+            <li><a href="../index.html#projects-section">Projetos</a></li>
+            <li><a href="../index.html#posts-section">Postagens</a></li>
+            <li><a href="../index.html#contact-section">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main class="post-page-main">
+        <div class="section-container" id="posts-section">
+            <div class="section-content">
+                <h1 class="section-title">Métodos some() e every() em JavaScript</h1>
+                <p class="post-meta">JavaScript | Métodos de Array | Programação Funcional</p>
+
+                <div class="post-page-content">
+
+                    <section class="post-detail-section">
+                        <h2>🚀 Diferenças entre os métodos .some() e .every() em JavaScript</h2>
+                        <p class="post-detail-text">
+                            No dia a dia de quem trabalha com arrays em JavaScript, entender bem esses dois métodos
+                            pode elevar muito a qualidade do código.
+                        </p>
+                        <p class="post-detail-text">
+                            Ambos são funções de alta ordem que retornam valores booleanos, mas com propósitos
+                            diferentes.
+                        </p>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>🔍 O que é o .some()?</h2>
+                        <p class="post-detail-text">
+                            O método <strong>.some()</strong> verifica se <strong>pelo menos um elemento</strong> do
+                            array satisfaz uma condição.
+                        </p>
+                        <p class="post-detail-text">
+                            Em outras palavras: existe algum item que atende ao critério?
+                        </p>
+                        <ul class="post-detail-list">
+                            <li>✔ retorna true assim que encontra o primeiro elemento válido</li>
+                            <li>✔ interrompe a execução, otimizando performance</li>
+                            <li>✔ retorna false se nenhum elemento passar no teste</li>
+                        </ul>
+                        <figure class="post-code-example">
+                            <pre class="post-code-block"><code class="language-javascript">const nums = [5, 10, 15];
+const resultado = nums.some(n => n > 10);
+
+// true</code></pre>
+                        </figure>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>✅ O que é o .every()?</h2>
+                        <p class="post-detail-text">
+                            Já o método <strong>.every()</strong> valida se <strong>todos os elementos</strong> do
+                            array atendem a uma condição.
+                        </p>
+                        <p class="post-detail-text">
+                            Ou seja: todos os itens passam nesse teste?
+                        </p>
+                        <ul class="post-detail-list">
+                            <li>✔ retorna false ao encontrar o primeiro elemento inválido</li>
+                            <li>✔ retorna true apenas se todos passarem</li>
+                            <li>✔ também interrompe a execução antecipadamente</li>
+                        </ul>
+                        <figure class="post-code-example">
+                            <pre class="post-code-block"><code class="language-javascript">const nums = [5, 10, 15];
+const resultado = nums.every(n => n > 3);
+
+// true</code></pre>
+                        </figure>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>⚖️ Principais diferenças</h2>
+                        <ul class="post-detail-list">
+                            <li>🔹 <strong>.some()</strong> exige apenas um elemento válido</li>
+                            <li>🔹 <strong>.every()</strong> exige que todos os elementos sejam válidos</li>
+                        </ul>
+                        <p class="post-detail-text">Resumindo:</p>
+                        <ul class="post-detail-list">
+                            <li>🔹 <strong>.some()</strong>: existe pelo menos um?</li>
+                            <li>🔹 <strong>.every()</strong>: todos são?</li>
+                        </ul>
+                        <p class="post-detail-text">
+                            Ambos não modificam o array original e são ideais para validações rápidas e legíveis.
+                        </p>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>💡 Quando usar cada um?</h2>
+                        <p class="post-detail-text">Use <strong>.some()</strong> quando:</p>
+                        <ul class="post-detail-list">
+                            <li>🔹 precisa verificar existência, como usuário ativo ou item válido</li>
+                        </ul>
+                        <p class="post-detail-text">Use <strong>.every()</strong> quando:</p>
+                        <ul class="post-detail-list">
+                            <li>🔹 precisa garantir consistência total, como validação de formulário</li>
+                        </ul>
+                    </section>
+
+                    <section class="post-detail-section">
+                        <h2>🔥 Conclusão</h2>
+                        <p class="post-detail-text">
+                            Dominar <strong>.some()</strong> e <strong>.every()</strong> é essencial para escrever
+                            código mais declarativo, limpo e eficiente.
+                        </p>
+                        <p class="post-detail-text">
+                            Eles transformam loops complexos em expressões simples e diretas, algo essencial no
+                            desenvolvimento moderno.
+                        </p>
+                        <div class="post-actions">
+                            <a class="post-back-link" href="./posts_java_script.html">Voltar para Postagens
+                                JavaScript</a>
+                            <a class="post-back-link"
+                                href="https://www.linkedin.com/posts/devrogerfer_m%C3%A9todo-some-vs-every-ugcPost-7447601196648828928-p2Ua/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA6hXl8Bda0blKRhIl4yOmoURpoppCReiqw"
+                                target="_blank" rel="noopener noreferrer">Ver no LinkedIn</a>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (window.hljs) {
+            window.hljs.highlightAll();
+        }
+    });
+</script>
+
+</html>
