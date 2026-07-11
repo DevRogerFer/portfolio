@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Métodos de Classe, Instância e Estáticos | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/python.min.js"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">Métodos em Python</h1>
+          <p class="post-meta">
+            Python | Programação Orientada a Objetos | Boas Práticas
+          </p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>
+                🐍 Métodos de Classe vs. Métodos de Instância vs. Métodos
+                Estáticos no Python
+              </h2>
+              <p class="post-detail-text">
+                Na programação orientada a objetos em Python, além dos
+                atributos, também existem diferentes tipos de métodos. Entender
+                a diferença entre <strong>métodos de instância</strong>,
+                <strong>métodos de classe</strong> e
+                <strong>métodos estáticos</strong> é essencial para modelar
+                corretamente suas classes.
+              </p>
+              <p class="post-detail-text">
+                Métodos são funções definidas dentro da classe e seu
+                comportamento depende de como são declarados.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔎 Métodos de Instância</h2>
+              <p class="post-detail-text">
+                São os mais comuns. Recebem <code>self</code> como primeiro
+                parâmetro, representando a própria instância.
+              </p>
+              <p class="post-detail-text">Exemplo:</p>
+              <figure class="post-code-example">
+                <pre
+                  class="post-code-block"
+                ><code class="language-python">class Pessoa:
+	def falar(self):
+		return self.nome</code></pre>
+              </figure>
+              <p class="post-detail-text">Características:</p>
+              <ul class="post-detail-list">
+                <li>🔹 Acessam e modificam atributos da instância</li>
+                <li>🔹 Dependem do estado do objeto</li>
+                <li>🔹 São chamados a partir da instância</li>
+              </ul>
+              <p class="post-detail-text">
+                São ideais quando o comportamento depende dos dados específicos
+                de cada objeto.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🏛 Métodos de Classe</h2>
+              <p class="post-detail-text">
+                São definidos com o decorador <code>@classmethod</code> e
+                recebem <code>cls</code> como primeiro parâmetro, representando
+                a própria classe.
+              </p>
+              <p class="post-detail-text">Exemplo:</p>
+              <figure class="post-code-example">
+                <pre
+                  class="post-code-block"
+                ><code class="language-python">class Pessoa:
+	@classmethod
+	def especie(cls):
+		return "Humano"</code></pre>
+              </figure>
+              <p class="post-detail-text">Características:</p>
+              <ul class="post-detail-list">
+                <li>🔹 Acessam atributos da classe</li>
+                <li>🔹 Podem modificar o estado da classe</li>
+                <li>🔹 São chamados pela classe ou pela instância</li>
+              </ul>
+              <p class="post-detail-text">
+                São muito utilizados como
+                <strong>métodos de fábrica</strong> (<em>factory methods</em>).
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚙️ Métodos Estáticos</h2>
+              <p class="post-detail-text">
+                São definidos com o decorador <code>@staticmethod</code> e não
+                recebem nem <code>self</code> nem <code>cls</code>.
+              </p>
+              <p class="post-detail-text">Exemplo:</p>
+              <figure class="post-code-example">
+                <pre
+                  class="post-code-block"
+                ><code class="language-python">class Pessoa:
+	@staticmethod
+	def validar_idade(idade):
+		return idade >= 18</code></pre>
+              </figure>
+              <p class="post-detail-text">Características:</p>
+              <ul class="post-detail-list">
+                <li>🔹 Não acessam atributos da instância nem da classe</li>
+                <li>
+                  🔹 Funcionam como funções comuns dentro do escopo da classe
+                </li>
+                <li>🔹 Organizam responsabilidades relacionadas à classe</li>
+              </ul>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🎯 Conclusão</h2>
+              <ul class="post-detail-list">
+                <li>
+                  ✔ Use método de instância quando precisar acessar dados do
+                  objeto.
+                </li>
+                <li>
+                  ✔ Use método de classe quando precisar acessar ou modificar
+                  dados da classe.
+                </li>
+                <li>
+                  ✔ Use método estático quando a função estiver conceitualmente
+                  ligada à classe, mas não depender de seu estado.
+                </li>
+              </ul>
+              <p class="post-detail-text">
+                Dominar essas diferenças torna seu código mais organizado,
+                reutilizável e alinhado às boas práticas do Python.
+              </p>
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_python_django.html"
+                  >Voltar para Postagens Python / Django</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://www.linkedin.com/posts/devrogerfer_python-pythonprogramming-programacao-share-7434907664360464384-9vBT/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA6hXl8Bda0blKRhIl4yOmoURpoppCReiqw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.hljs) {
+        window.hljs.highlightAll();
+      }
+    });
+  </script>
+</html>
