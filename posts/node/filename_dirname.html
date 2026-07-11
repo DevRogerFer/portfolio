@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>__filename e __dirname no Node.js | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">
+            Módulos Nativos no Node.js: Entendendo __filename e __dirname
+          </h1>
+          <p class="post-meta">Node.js | Back-end com JavaScript</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>
+                🚀 Módulos Nativos no Node.js: Entendendo
+                <code>__filename</code> e <code>__dirname</code>
+              </h2>
+              <p class="post-detail-text">
+                Se você já começou a trabalhar com Node.js, provavelmente já viu
+                duas variáveis que parecem simples, mas são extremamente
+                poderosas: <code>__filename</code> e <code>__dirname</code>.
+                Bora entender isso de forma prática? 👇
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📍 O que é <code>__filename</code>?</h2>
+              <p class="post-detail-text">
+                Essa variável global retorna o
+                <strong>caminho completo do arquivo que está sendo executado</strong>.
+                Ou seja, não é só o nome do arquivo, mas todo o caminho absoluto
+                até ele.
+              </p>
+              <p class="post-detail-text">
+                👉 Ela representa exatamente o arquivo atual em execução,
+                incluindo seu diretório completo.
+              </p>
+              <p class="post-detail-text">
+                💡 Na prática: ideal para logs, debugging e rastreamento de
+                arquivos.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📂 E o <code>__dirname</code>?</h2>
+              <p class="post-detail-text">
+                Já o <code>__dirname</code> retorna o
+                <strong>caminho completo da pasta onde o arquivo está localizado</strong>.
+              </p>
+              <p class="post-detail-text">
+                👉 Essa variável representa o diretório atual do arquivo em
+                execução.
+              </p>
+              <p class="post-detail-text">
+                💡 Ou seja, enquanto <code>__filename</code> aponta para o
+                arquivo, o <code>__dirname</code> aponta para a pasta.
+              </p>
+            </section>
+
+            <div class="post-detail-grid">
+              <section class="post-detail-card">
+                <h2>⚙️ Por que isso é importante?</h2>
+                <p class="post-detail-text">
+                  Essas variáveis são essenciais quando você precisa trabalhar
+                  com arquivos no sistema operacional.
+                </p>
+                <p class="post-detail-text">
+                  Elas ajudam a evitar problemas com caminhos relativos,
+                  garantindo que seu código funcione corretamente em qualquer
+                  ambiente.
+                </p>
+              </section>
+
+              <section class="post-detail-card">
+                <h2>🔥 Exemplos de uso</h2>
+                <ul class="post-detail-list">
+                  <li>✔ Localizar arquivos com precisão</li>
+                  <li>✔ Criar caminhos absolutos</li>
+                  <li>✔ Garantir compatibilidade entre sistemas</li>
+                  <li>✔ Melhorar a organização do projeto</li>
+                </ul>
+              </section>
+            </div>
+
+            <section class="post-detail-section">
+              <h2>🧠 Resumo rápido</h2>
+              <ul class="post-detail-list">
+                <li>
+                  📄 <code>__filename</code> → caminho completo do arquivo
+                </li>
+                <li>
+                  📁 <code>__dirname</code> → caminho completo do diretório
+                </li>
+              </ul>
+              <p class="post-detail-text">
+                Simples, mas indispensável no dia a dia de quem trabalha com
+                Node.js.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>💡 Conclusão</h2>
+              <p class="post-detail-text">
+                Dominar essas duas variáveis é um passo fundamental para evoluir
+                no backend com Node.js. Elas parecem detalhes, mas fazem toda a
+                diferença quando o projeto cresce e começa a lidar com múltiplos
+                arquivos e estruturas.
+              </p>
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_node_express.html"
+                  >Voltar para Postagens Node.js / Express</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://www.linkedin.com/posts/devrogerfer_nodejs-javascript-backend-share-7455974217394667520-5kMP/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA6hXl8Bda0blKRhIl4yOmoURpoppCReiqw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
