@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>__filename, __dirname e path no Node.js | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/javascript.min.js"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">
+            Dominando caminhos no Node.js com __filename, __dirname e path
+          </h1>
+          <p class="post-meta">Node.js | Back-end com JavaScript</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>
+                🚀 Dominando caminhos no Node.js com
+                <code>__filename</code>, <code>__dirname</code> e
+                <code>path</code>
+              </h2>
+              <p class="post-detail-text">
+                Se você trabalha com arquivos no Node.js, entender como lidar
+                com caminhos é essencial. E é aqui que entram duas variáveis
+                globais poderosas: <code>__filename</code> e
+                <code>__dirname</code>, combinadas com o módulo nativo
+                <code>path</code>.
+              </p>
+              <p class="post-detail-text">
+                📌 <code>__filename</code> representa o
+                <strong>caminho completo do arquivo atual</strong>, enquanto
+                <code>__dirname</code> indica o
+                <strong>diretório onde o arquivo está localizado</strong>.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📁 O que cada um faz?</h2>
+              <p class="post-detail-text">
+                🧾 <strong><code>__filename</code></strong>
+              </p>
+              <p class="post-detail-text">
+                Retorna o caminho absoluto do arquivo em execução. Ideal para
+                identificar exatamente qual arquivo está rodando.
+              </p>
+              <p class="post-detail-text">
+                📂 <strong><code>__dirname</code></strong>
+              </p>
+              <p class="post-detail-text">
+                Retorna o caminho absoluto da pasta onde o arquivo está.
+                Perfeito para trabalhar com diretórios.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚙️ E onde entra o módulo <code>path</code>?</h2>
+              <p class="post-detail-text">
+                O módulo <code>path</code> é fundamental para manipular caminhos
+                de forma segura e compatível com qualquer sistema operacional.
+              </p>
+              <p class="post-detail-text">
+                💡 Ele evita problemas com separadores de diretório (como
+                <code>/</code> ou <code>\</code>), garantindo portabilidade.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔗 Integração poderosa na prática</h2>
+              <p class="post-detail-text">
+                Quando você combina essas variáveis com o <code>path</code>,
+                você ganha controle total sobre arquivos e diretórios:
+              </p>
+              <p class="post-detail-text">👉 Obter o nome do arquivo:</p>
+              <figure class="post-code-example">
+                <pre
+                  class="post-code-block"
+                ><code class="language-javascript">path.basename(__filename); // ex: "app.js"</code></pre>
+              </figure>
+              <p class="post-detail-text">👉 Obter a extensão:</p>
+              <figure class="post-code-example">
+                <pre
+                  class="post-code-block"
+                ><code class="language-javascript">path.extname(__filename); // ex: ".js"</code></pre>
+              </figure>
+              <p class="post-detail-text">👉 Criar caminhos seguros:</p>
+              <figure class="post-code-example">
+                <pre
+                  class="post-code-block"
+                ><code class="language-javascript">path.join(__dirname, "arquivo.txt"); // ex: "/home/user/projeto/arquivo.txt"</code></pre>
+              </figure>
+              <p class="post-detail-text">
+                Essa abordagem é essencial para garantir que arquivos sejam
+                criados no local correto, independentemente do ambiente.
+              </p>
+            </section>
+
+            <div class="post-detail-grid">
+              <section class="post-detail-card">
+                <h2>🧠 Por que isso é tão importante?</h2>
+                <p class="post-detail-text">
+                  Sem essas ferramentas, você dependeria de caminhos relativos
+                  frágeis, que podem quebrar facilmente em produção.
+                </p>
+                <p class="post-detail-text">Com elas, você:</p>
+                <ul class="post-detail-list">
+                  <li>✔ Garante consistência</li>
+                  <li>✔ Evita erros de caminho</li>
+                  <li>✔ Torna seu código mais profissional</li>
+                  <li>✔ Cria aplicações mais robustas</li>
+                </ul>
+              </section>
+
+              <section class="post-detail-card">
+                <h2>💡 Dica de ouro</h2>
+                <p class="post-detail-text">
+                  Sempre que for manipular arquivos no Node.js,
+                  <strong>evite caminhos fixos</strong>. Use
+                  <code>__dirname</code> + <code>path.join()</code> para
+                  construir caminhos dinâmicos e confiáveis.
+                </p>
+              </section>
+            </div>
+
+            <section class="post-detail-section">
+              <h2>🔥 Conclusão</h2>
+              <p class="post-detail-text">
+                Dominar <code>__filename</code>, <code>__dirname</code> e o
+                módulo <code>path</code> é um passo essencial para evoluir no
+                Node.js. Eles são a base para trabalhar com arquivos de forma
+                segura, escalável e profissional.
+              </p>
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_node_express.html"
+                  >Voltar para Postagens Node.js / Express</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://www.linkedin.com/posts/devrogerfer_nodejs-javascript-backend-share-7457012699256815616-yfmn/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA6hXl8Bda0blKRhIl4yOmoURpoppCReiqw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.hljs) {
+        window.hljs.highlightAll();
+      }
+    });
+  </script>
+</html>
