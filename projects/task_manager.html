@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Projeto To-Do Manager | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li><a href="../index.html#home-section">Início</a></li>
+        <li><a href="../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../index.html#skills-section">Habilidades</a></li>
+        <li class="active">
+          <a href="../index.html#projects-section">Projetos</a>
+        </li>
+        <li><a href="../index.html#posts-section">Postagens</a></li>
+        <li><a href="../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="project-page-main">
+      <div class="section-container">
+        <div class="section-content">
+          <h1 class="section-title">Projeto To-Do Manager</h1>
+          <p class="project-meta">
+            Gerencie suas tarefas com eficiência | Full Stack
+          </p>
+
+          <div class="project-page-content">
+            <div class="project-item">
+              <div class="project-item-image project-item-7"></div>
+              <div class="project-text">
+                <h2>Visão geral</h2>
+                <p>
+                  Aplicação fullstack de gerenciamento de tarefas composta por
+                  um frontend em React com Vite e Tailwind CSS, e uma API REST
+                  leve construída com JSON Server e hospedada na Vercel. Permite
+                  criar, visualizar, editar e excluir tarefas com diferentes
+                  status —
+                  <em>not started</em>, <em>in progress</em> e <em>done</em> —,
+                  além de exibir um dashboard com resumo geral das atividades.
+                </p>
+                <div class="project-actions">
+                  <a
+                    class="project-back-link"
+                    href="https://github.com/DevRogerFer/to-do-app-api"
+                    target="_blank"
+                    >API</a
+                  >
+                  <a
+                    class="project-back-link"
+                    href="https://github.com/DevRogerFer/to-do-app"
+                    target="_blank"
+                    >Frontend</a
+                  >
+                  <a
+                    class="project-back-link"
+                    href="https://to-do-app-kappa-lilac.vercel.app/"
+                    target="_blank"
+                    >Demo</a
+                  >
+                  <a class="project-back-link" href="./projects.html"
+                    >Voltar para Projetos</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="project-detail-grid">
+              <section class="project-detail-card">
+                <h2>O que o sistema entrega</h2>
+                <ul class="project-detail-list">
+                  <li>Listagem de tarefas com filtro por status.</li>
+                  <li>Adição de novas tarefas com validação de formulário.</li>
+                  <li>Edição e atualização de tarefas existentes.</li>
+                  <li>Exclusão de tarefas.</li>
+                  <li>Dashboard com resumo de tarefas por status.</li>
+                  <li>Visualização detalhada de cada tarefa.</li>
+                  <li>Notificações toast com feedback de ações.</li>
+                  <li>Interface responsiva e estilizada com Tailwind CSS.</li>
+                </ul>
+              </section>
+
+              <section class="project-detail-card">
+                <h2>Arquitetura do projeto</h2>
+                <ul class="project-detail-list">
+                  <li>
+                    O projeto segue uma arquitetura fullstack desacoplada.
+                  </li>
+                  <li>
+                    Frontend (React + Vite) responsável pela interface e
+                    experiência.
+                  </li>
+                  <li>
+                    API (JSON Server + Node.js) responsável pela persistência e
+                    CRUD.
+                  </li>
+                  <li>Comunicação via API REST com Axios.</li>
+                  <li>
+                    Estado do servidor gerenciado com React Query (cache e
+                    sincronização).
+                  </li>
+                  <li>
+                    Essa separação garante escalabilidade e manutenção
+                    facilitada.
+                  </li>
+                </ul>
+              </section>
+            </div>
+
+            <section class="project-detail-section">
+              <h2>Camada de API</h2>
+              <p class="project-detail-text">
+                API REST leve e funcional construída com JSON Server, pronta
+                para consumo por qualquer cliente front-end. Hospedada de forma
+                serverless na Vercel com roteamento configurado via
+                <code>vercel.json</code>, oferece CRUD completo de tarefas com
+                filtragem por status e período do dia.
+              </p>
+              <div class="project-module-grid">
+                <div class="project-module-card">
+                  <h3>JSON Server</h3>
+                  <p>
+                    Fake REST API completa gerada a partir de um arquivo
+                    <code>db.json</code>, permitindo desenvolvimento ágil sem
+                    necessidade de banco de dados dedicado.
+                  </p>
+                </div>
+                <div class="project-module-card">
+                  <h3>CRUD Completo</h3>
+                  <p>
+                    Endpoints para criação, leitura, atualização parcial e
+                    total, e exclusão de tarefas via métodos GET, POST, PUT,
+                    PATCH e DELETE.
+                  </p>
+                </div>
+                <div class="project-module-card">
+                  <h3>Filtragem</h3>
+                  <p>
+                    Suporte a filtragem de tarefas por status
+                    (<code>todo</code>, <code>in_progress</code>,
+                    <code>done</code>) e por período do dia
+                    (<code>morning</code>, <code>afternoon</code>,
+                    <code>evening</code>).
+                  </p>
+                </div>
+                <div class="project-module-card">
+                  <h3>Deploy Serverless</h3>
+                  <p>
+                    Hospedagem na Vercel com rewrite configurado para
+                    compatibilidade de rotas, garantindo disponibilidade
+                    contínua sem necessidade de servidor dedicado.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section class="project-detail-section">
+              <h2>Camada frontend</h2>
+              <p class="project-detail-text">
+                Interface moderna e de alta performance construída com React 18,
+                Vite e Tailwind CSS. O gerenciamento de estado do servidor é
+                feito com TanStack React Query, garantindo cache, sincronização
+                e experiência fluida ao usuário.
+              </p>
+              <div class="project-module-grid">
+                <div class="project-module-card">
+                  <h3>React + Vite</h3>
+                  <p>
+                    Biblioteca de UI com build tool de alta performance,
+                    garantindo carregamento rápido e hot reload eficiente
+                    durante o desenvolvimento.
+                  </p>
+                </div>
+                <div class="project-module-card">
+                  <h3>Tailwind CSS</h3>
+                  <p>
+                    Estilização utilitária que permite construir interfaces
+                    responsivas e consistentes de forma ágil, sem sair do HTML.
+                  </p>
+                </div>
+                <div class="project-module-card">
+                  <h3>React Query</h3>
+                  <p>
+                    Gerenciamento de estado do servidor com cache automático,
+                    revalidação e sincronização de dados, eliminando chamadas
+                    redundantes à API.
+                  </p>
+                </div>
+                <div class="project-module-card">
+                  <h3>React Hook Form</h3>
+                  <p>
+                    Gerenciamento eficiente de formulários com validação
+                    integrada, minimizando re-renderizações e melhorando a
+                    performance.
+                  </p>
+                </div>
+                <div class="project-module-card">
+                  <h3>React Router DOM</h3>
+                  <p>
+                    Roteamento client-side para navegação entre páginas sem
+                    recarregamento, proporcionando experiência de Single Page
+                    Application (SPA).
+                  </p>
+                </div>
+                <div class="project-module-card">
+                  <h3>Sonner</h3>
+                  <p>
+                    Notificações toast elegantes com feedback visual imediato
+                    para ações como criação, atualização e exclusão de tarefas.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section class="project-detail-section">
+              <h2>Endpoints da API</h2>
+              <p class="project-detail-text">
+                Base URL: <code>https://to-do-app-api-ten.vercel.app/api</code>
+              </p>
+              <div class="post-table-wrap">
+                <table class="post-comparison-table">
+                  <thead>
+                    <tr>
+                      <th>Método</th>
+                      <th>Rota</th>
+                      <th>Descrição</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>GET</code></td>
+                      <td><code>/tasks</code></td>
+                      <td>Lista todas as tarefas</td>
+                    </tr>
+                    <tr>
+                      <td><code>GET</code></td>
+                      <td><code>/tasks/:id</code></td>
+                      <td>Retorna uma tarefa pelo ID</td>
+                    </tr>
+                    <tr>
+                      <td><code>GET</code></td>
+                      <td><code>/tasks?status=done</code></td>
+                      <td>Filtra tarefas por status</td>
+                    </tr>
+                    <tr>
+                      <td><code>GET</code></td>
+                      <td><code>/tasks?time=morning</code></td>
+                      <td>Filtra tarefas por período</td>
+                    </tr>
+                    <tr>
+                      <td><code>POST</code></td>
+                      <td><code>/tasks</code></td>
+                      <td>Cria uma nova tarefa</td>
+                    </tr>
+                    <tr>
+                      <td><code>PUT</code></td>
+                      <td><code>/tasks/:id</code></td>
+                      <td>Atualiza uma tarefa por completo</td>
+                    </tr>
+                    <tr>
+                      <td><code>PATCH</code></td>
+                      <td><code>/tasks/:id</code></td>
+                      <td>Atualiza parcialmente uma tarefa</td>
+                    </tr>
+                    <tr>
+                      <td><code>DELETE</code></td>
+                      <td><code>/tasks/:id</code></td>
+                      <td>Remove uma tarefa</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="project-detail-section">
+              <h2>Modelo de dados</h2>
+              <p class="project-detail-text">
+                Cada tarefa é representada pelo seguinte objeto JSON. O campo
+                <code>status</code> aceita <code>todo</code>,
+                <code>in_progress</code> e <code>done</code>. O campo
+                <code>time</code> aceita <code>morning</code>,
+                <code>afternoon</code> e <code>evening</code>.
+              </p>
+              <div
+                class="project-json-block"
+                aria-label="Modelo de tarefa JSON"
+              >
+                <pre><code>{
+  "id": "1",
+  "title": "Estudar React",
+  "description": "Estudar os conceitos básicos de React e criar um projeto simples.",
+  "time": "morning",
+  "status": "done"
+}</code></pre>
+              </div>
+            </section>
+
+            <section class="project-detail-section">
+              <h2>Estrutura dos projetos</h2>
+              <p class="project-detail-text">Frontend</p>
+              <div class="code-container">
+                <pre><code>src/
+├── assets/         # Fontes e ícones
+├── components/     # Componentes reutilizáveis
+├── hooks/
+│   └── data/       # Hooks de dados (React Query)
+├── keys/           # Chaves de queries e mutations
+├── lib/            # Configuração do Axios
+└── pages/          # Páginas da aplicação</code></pre>
+              </div>
+              <p class="project-detail-text" style="margin-top: 1.5rem">API</p>
+              <div class="code-container">
+                <pre><code>to-do-app-api/
+├── api/
+│   └── server.js
+├── db.json
+├── package.json
+└── vercel.json</code></pre>
+              </div>
+            </section>
+
+            <section class="project-detail-section">
+              <h2>Como executar</h2>
+              <p class="project-detail-text">
+                <strong>Pré-requisito:</strong> Node.js 18+
+              </p>
+              <p class="project-detail-text">API</p>
+              <div class="code-container">
+                <pre><code><span class="comment"># Clone o repositório da API</span>
+git clone https://github.com/DevRogerFer/to-do-app-api
+cd to-do-app-api
+
+<span class="comment"># Instale as dependências</span>
+npm install
+
+<span class="comment"># Inicie o servidor</span>
+npm start</code></pre>
+              </div>
+              <p class="project-detail-text" style="margin-top: 1.5rem">
+                O servidor estará disponível em
+                <code>http://localhost:3000</code>.
+              </p>
+              <p class="project-detail-text" style="margin-top: 1.5rem">
+                Frontend
+              </p>
+              <div class="code-container">
+                <pre><code><span class="comment"># Clone o repositório do frontend</span>
+git clone https://github.com/DevRogerFer/to-do-app
+cd to-do-app
+
+<span class="comment"># Instale as dependências</span>
+npm install
+
+<span class="comment"># Inicie a API fake (json-server)</span>
+npm run server
+
+<span class="comment"># Em outro terminal, inicie o servidor de desenvolvimento</span>
+npm run dev</code></pre>
+              </div>
+            </section>
+
+            <section class="project-detail-section">
+              <h2>Resumo técnico</h2>
+              <p class="project-detail-text">
+                Projeto fullstack moderno focado em boas práticas de
+                desenvolvimento front-end, separação de responsabilidades e
+                gerenciamento de estado do servidor via React Query. Combina uma
+                API REST leve e serverless com uma interface responsiva e
+                acessível, demonstrando domínio do ecossistema React e
+                integração com serviços externos. Ideal como aplicação prática
+                de CRUD completo com deploy em produção.
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="footer-container">
+      <div class="social-items">
+        <a href="https://www.linkedin.com/in/devrogerfer" target="_blank"
+          ><i class="fa-brands fa-linkedin fa-2xl"></i
+        ></a>
+        <a href="https://github.com/devrogerfer" target="_blank"
+          ><i class="fa-brands fa-github fa-2xl"></i
+        ></a>
+        <a href="https://www.instagram.com/devrogerfer" target="_blank"
+          ><i class="fa-brands fa-instagram fa-2xl"></i
+        ></a>
+        <a href="https://web.facebook.com/roger.sika" target="_blank"
+          ><i class="fa-brands fa-facebook fa-2xl"></i
+        ></a>
+        <a href="mailto:roferrock@gmail.com"
+          ><i class="fa-solid fa-envelope fa-2xl"></i
+        ></a>
+        <a href="https://wa.me/5511992550655" target="_blank"
+          ><i class="fa-brands fa-whatsapp fa-2xl"></i
+        ></a>
+      </div>
+      <p>
+        &copy; 2026 Rogério Fernandes Siqueira. Todos os direitos reservados.
+      </p>
+    </div>
+  </body>
+</html>

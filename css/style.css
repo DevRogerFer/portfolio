@@ -224,6 +224,10 @@ a {
 }
 
 /* DEMAIS PROJETOS */
+.project-item-7 {
+  background-image: url("../images/capa.png");
+}
+
 .project-item-6 {
   background-image: url("../images/rag_documents.jpeg");
 }
@@ -478,7 +482,7 @@ a {
 }
 
 .requirements li {
-  margin-bottom: .75rem;
+  margin-bottom: 0.75rem;
   line-height: 1.6;
 }
 
