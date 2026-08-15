@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Módulo fs no Node.js | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/javascript.min.js"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">
+            Módulo fs no Node.js: dominando o sistema de arquivos
+          </h1>
+          <p class="post-meta">Node.js | Back-end com JavaScript</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>🗂️ Módulo fs no Node.js: dominando o sistema de arquivos</h2>
+              <p class="post-detail-text">
+                Se você trabalha com Node.js, dominar o módulo
+                <strong>fs (File System)</strong> é essencial para criar
+                aplicações robustas e eficientes. Ele permite interagir
+                diretamente com arquivos e diretórios — leitura, escrita,
+                criação e muito mais 🚀
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📌 O que é o módulo fs?</h2>
+              <p class="post-detail-text">
+                O módulo <strong>fs</strong> é nativo do Node.js e oferece uma
+                API poderosa para manipular o sistema de arquivos de forma
+                assíncrona ou síncrona. Isso significa que você pode trabalhar
+                com arquivos sem travar a execução da sua aplicação — algo
+                crucial para performance em ambientes reais.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚙️ Principais operações</h2>
+
+              <p class="post-detail-text">
+                📁 <strong>Criação de diretórios e arquivos</strong>
+              </p>
+              <p class="post-detail-text">
+                É possível criar pastas e arquivos facilmente utilizando funções
+                como <code>mkdir</code> e <code>writeFile</code>. Isso permite
+                estruturar dinamicamente seu projeto ou gerar arquivos
+                automaticamente.
+              </p>
+              <figure class="post-code-example">
+                <pre
+                  class="post-code-block"
+                ><code class="language-javascript">import fs from "fs/promises";
+
+// Cria um diretório chamado "dados"
+await fs.mkdir("dados", { recursive: true });
+
+// Cria (ou sobrescreve) um arquivo com conteúdo inicial
+await fs.writeFile("dados/registro.txt", "Primeiro registro\n", "utf-8");
+
+console.log("Diretório e arquivo criados com sucesso!");</code></pre>
+              </figure>
+
+              <p class="post-detail-text">
+                ✏️ <strong>Escrita e atualização de conteúdo</strong>
+              </p>
+              <p class="post-detail-text">
+                Vemos o uso do método <code>appendFile</code> para adicionar
+                conteúdo a arquivos existentes. Isso é muito útil para logs,
+                históricos ou atualizações contínuas de dados.
+              </p>
+              <figure class="post-code-example">
+                <pre
+                  class="post-code-block"
+                ><code class="language-javascript">import fs from "fs/promises";
+
+// Adiciona uma nova linha sem sobrescrever o conteúdo existente
+await fs.appendFile("dados/registro.txt", "Nova entrada de log\n", "utf-8");
+
+console.log("Conteúdo adicionado com sucesso!");</code></pre>
+              </figure>
+
+              <p class="post-detail-text">
+                📖 <strong>Leitura de arquivos</strong>
+              </p>
+              <p class="post-detail-text">
+                O método <code>readFile</code> é utilizado para acessar o
+                conteúdo de arquivos, sendo necessário definir o encoding (como
+                UTF-8) para leitura correta de textos.
+              </p>
+              <figure class="post-code-example">
+                <pre
+                  class="post-code-block"
+                ><code class="language-javascript">import fs from "fs/promises";
+
+// Lê o conteúdo do arquivo como texto
+const conteudo = await fs.readFile("dados/registro.txt", "utf-8");
+
+console.log("Conteúdo do arquivo:");
+console.log(conteudo);</code></pre>
+              </figure>
+
+              <p class="post-detail-text">
+                🔗 <strong>Integração com o módulo path</strong>
+              </p>
+              <p class="post-detail-text">
+                Uma prática recomendada é usar o módulo
+                <strong>path</strong> junto com o <strong>fs</strong>,
+                garantindo que os caminhos funcionem corretamente em qualquer
+                sistema operacional. Isso evita erros comuns relacionados a
+                diretórios.
+              </p>
+              <figure class="post-code-example">
+                <pre
+                  class="post-code-block"
+                ><code class="language-javascript">import fs from "fs/promises";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+// Caminho absoluto e portável para qualquer sistema operacional
+const caminhoArquivo = path.join(__dirname, "dados", "registro.txt");
+
+const conteudo = await fs.readFile(caminhoArquivo, "utf-8");
+console.log(conteudo);</code></pre>
+              </figure>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>💡 Por que isso importa?</h2>
+              <p class="post-detail-text">
+                O módulo fs é a base para funcionalidades como:
+              </p>
+              <ul class="post-detail-list">
+                <li>✔️ Upload e download de arquivos</li>
+                <li>✔️ Geração de relatórios</li>
+                <li>✔️ Manipulação de logs</li>
+                <li>✔️ Persistência simples de dados</li>
+              </ul>
+            </section>
+
+            <div class="post-detail-grid">
+              <section class="post-detail-card">
+                <h2>⚡ Assíncrono vs Síncrono</h2>
+                <p class="post-detail-text">
+                  O módulo <code>fs</code> oferece versões assíncronas
+                  (recomendadas) e síncronas (sufixo <code>Sync</code>) para
+                  cada operação.
+                </p>
+                <ul class="post-detail-list">
+                  <li>✔ <code>fs.readFile</code> — assíncrono com callback</li>
+                  <li>
+                    ✔ <code>fs.readFileSync</code> — síncrono (bloqueia a
+                    thread)
+                  </li>
+                  <li>
+                    ✔ <code>fs/promises</code> — assíncrono com async/await
+                  </li>
+                </ul>
+              </section>
+
+              <section class="post-detail-card">
+                <h2>💡 Dica de ouro</h2>
+                <p class="post-detail-text">
+                  Prefira sempre a API <code>fs/promises</code> com
+                  <code>async/await</code>. Ela mantém o código limpo, legível e
+                  não bloqueia a event loop, aproveitando ao máximo a
+                  arquitetura non-blocking do Node.js.
+                </p>
+              </section>
+            </div>
+
+            <section class="post-detail-section">
+              <h2>🔥 Em resumo</h2>
+              <p class="post-detail-text">
+                Dominar o <strong>fs</strong> significa ter controle total sobre
+                arquivos na sua aplicação Node.js — uma habilidade essencial
+                para qualquer desenvolvedor backend.
+              </p>
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_node_express.html"
+                  >Voltar para Postagens Node.js / Express</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://www.linkedin.com/posts/devrogerfer_nodejs-javascript-backend-share-7457735410207739904-IeXU/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA6hXl8Bda0blKRhIl4yOmoURpoppCReiqw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.hljs) {
+        window.hljs.highlightAll();
+      }
+    });
+  </script>
+</html>
