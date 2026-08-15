@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Módulo crypto no Node.js | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/javascript.min.js"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">
+            Segurança e Identidade com o Módulo Crypto no Node.js
+          </h1>
+          <p class="post-meta">Node.js | Back-end com JavaScript</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>🔐 Segurança e Identidade com o Módulo Crypto no Node.js</h2>
+              <p class="post-detail-text">
+                Se você trabalha com backend, segurança não é opcional — é
+                essencial. E é exatamente aí que entra o poderoso módulo
+                <strong>crypto</strong> do Node.js 🚀
+              </p>
+              <p class="post-detail-text">
+                Ele é nativo, robusto e oferece recursos fundamentais para
+                proteger dados, gerar identificadores únicos e implementar
+                mecanismos criptográficos confiáveis.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚙️ O que é o módulo crypto?</h2>
+              <p class="post-detail-text">
+                O <strong>crypto</strong> fornece ferramentas para criptografia,
+                hashing, geração de chaves e muito mais. Ele é amplamente
+                utilizado em autenticação, segurança de APIs e proteção de
+                informações sensíveis, seguindo padrões modernos da própria
+                plataforma Node.js.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧬 Gerando identificadores únicos (UUID)</h2>
+              <p class="post-detail-text">
+                Um dos recursos mais práticos é o método
+                <code>crypto.randomUUID()</code>. Esse método cria um
+                identificador único aleatório, extremamente útil para:
+              </p>
+              <ul class="post-detail-list">
+                <li>✔️ IDs de usuários</li>
+                <li>✔️ Tokens de autenticação</li>
+                <li>✔️ Identificação de registros</li>
+              </ul>
+              <p class="post-detail-text">
+                Isso elimina a necessidade de bibliotecas externas para UUID,
+                trazendo mais simplicidade e segurança.
+              </p>
+              <figure class="post-code-example">
+                <pre
+                  class="post-code-block"
+                ><code class="language-javascript">import crypto from "crypto";
+
+// Gera um UUID v4 aleatório e criptograficamente seguro
+const userId = crypto.randomUUID();
+const sessionToken = crypto.randomUUID();
+
+console.log(userId);       // ex: "550e8400-e29b-41d4-a716-446655440000"
+console.log(sessionToken); // ex: "f47ac10b-58cc-4372-a567-0e02b2c3d479"</code></pre>
+              </figure>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔒 Aplicações reais do crypto</h2>
+              <p class="post-detail-text">
+                Na prática, o módulo crypto permite:
+              </p>
+              <ul class="post-detail-list">
+                <li>✔️ Criar hashes seguros (ex: senhas)</li>
+                <li>✔️ Gerar tokens criptográficos</li>
+                <li>✔️ Implementar assinaturas digitais</li>
+                <li>✔️ Trabalhar com criptografia simétrica e assimétrica</li>
+              </ul>
+              <p class="post-detail-text">
+                Tudo isso com alta performance e integração direta com o
+                ecossistema Node.js.
+              </p>
+              <p class="post-detail-text">
+                👉 <strong>Hash de senha com SHA-256:</strong>
+              </p>
+              <figure class="post-code-example">
+                <pre
+                  class="post-code-block"
+                ><code class="language-javascript">import crypto from "crypto";
+
+function hashSenha(senha) {
+  return crypto
+    .createHash("sha256")
+    .update(senha)
+    .digest("hex");
+}
+
+const hash = hashSenha("minha_senha_secreta");
+console.log(hash);
+// ex: "3b4c1a2e8f9d0e7c5b6a1f2d3e4c5b6a1f2d3e4c5b6a1f2d3e4c5b6a1f2d3e4c"</code></pre>
+              </figure>
+              <p class="post-detail-text">
+                👉 <strong>Geração de token aleatório seguro:</strong>
+              </p>
+              <figure class="post-code-example">
+                <pre
+                  class="post-code-block"
+                ><code class="language-javascript">import crypto from "crypto";
+
+// Gera 32 bytes aleatórios e os converte para hexadecimal
+const token = crypto.randomBytes(32).toString("hex");
+
+console.log(token);
+// ex: "a3f5c2b1e8d7f6a5c4b3e2d1f0a9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4e3f2a1"</code></pre>
+              </figure>
+            </section>
+
+            <div class="post-detail-grid">
+              <section class="post-detail-card">
+                <h2>💡 Por que usar o módulo nativo?</h2>
+                <p class="post-detail-text">
+                  Além de confiável, o crypto já faz parte do Node.js, o que
+                  reduz dependências externas e melhora a segurança do projeto.
+                  Ele segue padrões consolidados de criptografia, sendo ideal
+                  para aplicações modernas.
+                </p>
+                <ul class="post-detail-list">
+                  <li>✔ Zero dependências externas</li>
+                  <li>✔ Padrões criptográficos consolidados</li>
+                  <li>✔ Alta performance nativa</li>
+                  <li>✔ Mantido pela própria plataforma Node.js</li>
+                </ul>
+              </section>
+
+              <section class="post-detail-card">
+                <h2>⚠️ Ponto de atenção</h2>
+                <p class="post-detail-text">
+                  Para hashing de senhas em produção, prefira algoritmos
+                  específicos como <strong>bcrypt</strong> ou
+                  <strong>Argon2</strong>. O SHA-256 é rápido demais para esse
+                  fim — o que o torna vulnerável a ataques de força bruta. Use
+                  <code>crypto</code> diretamente para tokens, UUIDs e
+                  assinaturas digitais.
+                </p>
+              </section>
+            </div>
+
+            <section class="post-detail-section">
+              <h2>🔥 Conclusão</h2>
+              <p class="post-detail-text">
+                Dominar o módulo crypto é um passo importante para qualquer
+                desenvolvedor que deseja criar aplicações seguras e
+                profissionais. Seja para gerar IDs únicos ou proteger dados
+                críticos, ele é uma ferramenta indispensável no seu arsenal.
+              </p>
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_node_express.html"
+                  >Voltar para Postagens Node.js / Express</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://www.linkedin.com/posts/devrogerfer_nodejs-crypto-seguranaexadainformaaexaeto-share-7458493801624416257-kEKa/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA6hXl8Bda0blKRhIl4yOmoURpoppCReiqw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.hljs) {
+        window.hljs.highlightAll();
+      }
+    });
+  </script>
+</html>
