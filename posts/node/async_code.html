@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Entendendo código assíncrono no Node.js | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/javascript.min.js"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">Entendendo código assíncrono no Node.js</h1>
+          <p class="post-meta">Node.js / Express | Async | JavaScript</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>🚀 Entendendo código assíncrono no Node.js</h2>
+              <p class="post-detail-text">
+                Se você está começando no Node.js, existe um conceito que vai
+                mudar completamente sua forma de programar: o
+                <strong>código assíncrono</strong>. 🔥
+              </p>
+              <p class="post-detail-text">
+                Diferente de muitas linguagens tradicionais, o Node.js foi
+                projetado para executar operações sem bloquear a aplicação. Isso
+                significa que tarefas demoradas — como consultas em banco de
+                dados, chamadas de API ou leitura de arquivos — podem acontecer
+                “em segundo plano”, enquanto o restante do código continua sendo
+                executado normalmente.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>👨‍💻 Exemplo simples</h2>
+              <figure class="post-code-example">
+                <pre
+                  class="post-code-block"
+                ><code class="language-javascript">console.log("Primeira linha");
+
+setTimeout(() => {
+  console.log("Segunda linha");
+}, 5000);
+
+console.log("Terceira linha");</code></pre>
+              </figure>
+
+              <p class="post-detail-text">📌 Resultado:</p>
+              <ul class="post-detail-list">
+                <li>1️⃣ Primeira linha</li>
+                <li>2️⃣ Terceira linha</li>
+                <li>3️⃣ Segunda linha (após 5 segundos)</li>
+              </ul>
+              <p class="post-detail-text">
+                Isso acontece porque o <code>setTimeout()</code> é uma operação
+                assíncrona. O Node.js não fica “travado” esperando os 5 segundos
+                acabarem. Em vez disso, ele continua executando o restante do
+                código imediatamente.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚡ O maior diferencial do Node.js</h2>
+              <p class="post-detail-text">
+                Esse comportamento é um dos maiores diferenciais do Node.js e é
+                o que permite criar aplicações extremamente rápidas e
+                escaláveis, principalmente em APIs, sistemas em tempo real e
+                aplicações web modernas.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>💡 Na prática, operações assíncronas são essenciais para:</h2>
+              <ul class="post-detail-list">
+                <li>✅ Requisições HTTP</li>
+                <li>✅ Integrações com APIs</li>
+                <li>✅ Consultas em bancos de dados</li>
+                <li>✅ Uploads de arquivos</li>
+                <li>✅ Processamento em segundo plano</li>
+              </ul>
+              <p class="post-detail-text">
+                Segundo a documentação oficial do Node.js, o JavaScript
+                assíncrono permite que operações demoradas sejam tratadas sem
+                bloquear a thread principal da aplicação, melhorando desempenho
+                e experiência do usuário.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🎯 Entender código assíncrono é o primeiro passo</h2>
+              <p class="post-detail-text">
+                Quando você compreende como essas operações funcionam, fica
+                muito mais fácil criar aplicações performáticas, organizadas e
+                preparadas para lidar com milhares de requisições
+                simultaneamente.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔥 E esse é apenas o começo</h2>
+              <p class="post-detail-text">
+                Depois desse conceito, entram temas ainda mais poderosos que
+                formam a base da programação moderna com JavaScript no backend:
+              </p>
+              <ul class="post-detail-list">
+                <li>➡️ Call Stack</li>
+                <li>➡️ Callback Queue</li>
+                <li>➡️ Event Loop</li>
+                <li>➡️ Promises</li>
+                <li>➡️ Async/Await</li>
+              </ul>
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_node_express.html"
+                  >Voltar para Postagens Node.js / Express</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/daqHW4qd"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.hljs) {
+        window.hljs.highlightAll();
+      }
+    });
+  </script>
+</html>
