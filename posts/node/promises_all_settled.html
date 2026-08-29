@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>
+      Promise.all() e Promise.allSettled() no Node.js | Dev Roger Fer
+    </title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">
+            Promise.all() e Promise.allSettled() no Node.js
+          </h1>
+          <p class="post-meta">Node.js / Express | Async | JavaScript</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>
+                🚀 Promise.all() e Promise.allSettled() no Node.js: mais
+                performance para aplicações assíncronas
+              </h2>
+              <p class="post-detail-text">
+                Uma das maiores vantagens do Node.js é sua capacidade de lidar
+                com múltiplas operações assíncronas ao mesmo tempo. 💡
+              </p>
+              <p class="post-detail-text">
+                Quando trabalhamos com APIs, bancos de dados, arquivos ou
+                serviços externos, muitas vezes precisamos executar várias
+                operações simultaneamente — e é exatamente aí que entram
+                <code>Promise.all()</code> e <code>Promise.allSettled()</code>.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🎯 O que é o <code>Promise.all()</code>?</h2>
+              <p class="post-detail-text">
+                O <code>Promise.all()</code> recebe um array de Promises e
+                executa todas elas em paralelo. A Promise resultante só será
+                resolvida quando <strong>todas</strong> as operações forem
+                concluídas com sucesso.
+              </p>
+              <p class="post-detail-text">Ütil em cenários como:</p>
+              <ul class="post-detail-list">
+                <li>🌐 Carregar múltiplas APIs</li>
+                <li>💾 Buscar dados em diferentes tabelas</li>
+                <li>📂 Ler vários arquivos ao mesmo tempo</li>
+                <li>☁️ Processar integrações simultâneas</li>
+              </ul>
+              <p class="post-detail-text">
+                🔥
+                <strong>O grande benefício está na performance.</strong> Imagine
+                três operações que levam 3 segundos cada. Executadas em
+                sequência: 9 segundos. Com <code>Promise.all()</code>: ~3
+                segundos. 🚀
+              </p>
+              <p class="post-detail-text">
+                📌 <strong>Detalhe importante:</strong> se apenas
+                <strong>uma</strong> Promise falhar, todo o
+                <code>Promise.all()</code> será rejeitado imediatamente — mesmo
+                que outras operações tenham sido concluídas com sucesso.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚡ O que é o <code>Promise.allSettled()</code>?</h2>
+              <p class="post-detail-text">
+                O <code>Promise.allSettled()</code> também executa várias
+                Promises em paralelo, mas com uma diferença fundamental:
+              </p>
+              <ul class="post-detail-list">
+                <li>
+                  ✅ Ele <strong>sempre</strong> retorna o resultado de todas as
+                  operações
+                </li>
+                <li>✅ Não importa se algumas falharam</li>
+                <li>✅ Cada Promise retorna seu status individual</li>
+              </ul>
+              <div class="post-detail-grid">
+                <section class="post-detail-card">
+                  <h2>✔️ fulfilled</h2>
+                  <p class="post-detail-text">
+                    A Promise foi concluída com <strong>sucesso</strong> e o
+                    valor resultante está disponível.
+                  </p>
+                </section>
+
+                <section class="post-detail-card">
+                  <h2>❌ rejected</h2>
+                  <p class="post-detail-text">
+                    A Promise <strong>falhou</strong> e o motivo do erro está
+                    disponível para tratamento.
+                  </p>
+                </section>
+              </div>
+              <p class="post-detail-text">
+                Isso torna o <code>Promise.allSettled()</code> ideal para
+                cenários onde <strong>falhas parciais são aceitáveis</strong>,
+                como:
+              </p>
+              <ul class="post-detail-list">
+                <li>🔹 Carregamento de múltiplos widgets independentes</li>
+                <li>🔹 Dashboards com várias fontes de dados</li>
+                <li>🔹 Integrações externas opcionais</li>
+                <li>🔹 Processamento em lote</li>
+                <li>🔹 Relatórios assíncronos</li>
+              </ul>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚡ Em resumo</h2>
+              <ul class="post-detail-list">
+                <li>
+                  ✅ <code>Promise.all()</code> → falha se uma Promise falhar
+                </li>
+                <li>
+                  ✅ <code>Promise.allSettled()</code> → retorna todos os
+                  resultados, mesmo com erros
+                </li>
+              </ul>
+              <p class="post-detail-text">
+                Dominar esses métodos é um passo importante para escrever
+                aplicações Node.js mais rápidas, modernas e preparadas para
+                cenários reais de alta concorrência. 🚀💚
+              </p>
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_node_express.html"
+                  >Voltar para Postagens Node.js / Express</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dzJBNWux"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
