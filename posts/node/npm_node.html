@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>NPM: O coração do ecossistema Node.js | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">NPM: O coração do ecossistema Node.js</h1>
+          <p class="post-meta">Node.js / Express | NPM | JavaScript</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>🚀 NPM: O coração do ecossistema Node.js</h2>
+              <p class="post-detail-text">
+                Se você desenvolve com Node.js, provavelmente usa o NPM todos os
+                dias — mesmo sem perceber o tamanho da sua importância. 😄
+              </p>
+              <p class="post-detail-text">
+                O <strong>NPM (Node Package Manager)</strong> é o maior
+                repositório de pacotes JavaScript do mundo e uma das principais
+                razões da popularidade do Node.js. Com ele, conseguimos instalar
+                bibliotecas, compartilhar código, automatizar tarefas e acelerar
+                o desenvolvimento de aplicações modernas. ⚡
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📦 Tudo começa com <code>npm init</code></h2>
+              <p class="post-detail-text">
+                Esse comando cria o famoso <code>package.json</code>, arquivo
+                responsável por armazenar informações do projeto, scripts e
+                dependências. Ele funciona praticamente como o “DNA” da
+                aplicação.
+              </p>
+              <pre
+                class="post-code-block"
+              ><code class="language-bash">npm init</code></pre>
+              <p class="post-detail-text">
+                Outro ponto fundamental é a pasta
+                <code>node_modules</code>. É nela que ficam armazenadas todas as
+                dependências instaladas no projeto. Como essa pasta pode ficar
+                gigantesca, ela nunca deve ser enviada para o GitHub — por isso
+                usamos o <code>.gitignore</code>. 🧠
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔧 Ferramentas incríveis via NPM</h2>
+              <p class="post-detail-text">
+                Além disso, o NPM permite instalar ferramentas incríveis como:
+              </p>
+              <ul class="post-detail-list">
+                <li>
+                  🔹 <strong>Nodemon</strong> → reinicia automaticamente a
+                  aplicação durante o desenvolvimento
+                </li>
+                <li>🔹 <strong>UUID</strong> → gera identificadores únicos</li>
+                <li>
+                  🔹 <strong>ESLint e Prettier</strong> → ajudam na padronização
+                  e qualidade do código
+                </li>
+              </ul>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>💻 Scripts no <code>package.json</code></h2>
+              <p class="post-detail-text">
+                Um recurso extremamente poderoso são os scripts no
+                <code>package.json</code>. Com eles, podemos automatizar
+                comandos e simplificar a rotina do projeto:
+              </p>
+              <pre
+                class="post-code-block"
+              ><code class="language-bash">npm run start</code></pre>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📦 Tipos de dependências</h2>
+              <p class="post-detail-text">
+                Também é essencial entender os tipos de dependências:
+              </p>
+              <div class="post-detail-grid">
+                <section class="post-detail-card">
+                  <h2>🟢 Dependências de produção</h2>
+                  <p class="post-detail-text">
+                    Necessárias para a aplicação funcionar.
+                  </p>
+                </section>
+
+                <section class="post-detail-card">
+                  <h2>🟡 Dependências de desenvolvimento</h2>
+                  <p class="post-detail-text">
+                    Usadas apenas durante o desenvolvimento.
+                  </p>
+                </section>
+
+                <section class="post-detail-card">
+                  <h2>🔵 Dependências globais</h2>
+                  <p class="post-detail-text">
+                    Disponíveis no sistema inteiro.
+                  </p>
+                </section>
+              </div>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔒 <code>package-lock.json</code></h2>
+              <p class="post-detail-text">
+                O <code>package-lock.json</code> garante que toda a equipe
+                utilize exatamente as mesmas versões das dependências, evitando
+                bugs inesperados.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔥 Conclusão</h2>
+              <p class="post-detail-text">
+                Dominar o NPM não significa apenas instalar pacotes. Significa
+                entender como organizar projetos, controlar versões, automatizar
+                tarefas e construir aplicações mais profissionais e escaláveis.
+                🚀
+              </p>
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_node_express.html"
+                  >Voltar para Postagens Node.js / Express</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/duA2t9_p"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
