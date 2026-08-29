@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>ESModules no Node.js | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">ESModules no Node.js</h1>
+          <p class="post-meta">Node.js / Express | ESM | JavaScript</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>
+                🚀 ESModules no Node.js: o futuro da modularização JavaScript
+              </h2>
+              <p class="post-detail-text">
+                Se você ainda utiliza apenas <code>require()</code> e
+                <code>module.exports</code> no Node.js, talvez seja a hora de
+                conhecer os <strong>ESModules (ESM)</strong> — o padrão moderno
+                de importação e exportação introduzido no ES6 e oficialmente
+                suportado pelo Node.js.
+              </p>
+              <p class="post-detail-text">
+                Com ESModules, o código fica mais limpo, organizado e alinhado
+                com o ecossistema moderno do JavaScript 🌍
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📦 A evolução da modularização</h2>
+              <p class="post-detail-text">
+                Durante muitos anos, o Node.js utilizou o padrão
+                <strong>CommonJS</strong> para importar e exportar
+                funcionalidades.
+              </p>
+              <p class="post-detail-text">
+                Hoje, os ESModules representam uma abordagem mais moderna e
+                padronizada, aproximando o backend JavaScript do mesmo modelo
+                utilizado no frontend com frameworks como React, Vue e Angular.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚡ Por que os ESModules são importantes?</h2>
+              <p class="post-detail-text">
+                Um dos principais benefícios é a clareza na estrutura do
+                projeto. A sintaxe baseada em <code>import</code> e
+                <code>export</code> facilita a leitura do código, melhora a
+                manutenção e torna os módulos mais organizados e reutilizáveis.
+              </p>
+              <p class="post-detail-text">
+                Além disso, os ESModules oferecem melhor interoperabilidade com
+                o JavaScript moderno e são o caminho recomendado para novos
+                projetos.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🛠️ Como habilitar ESModules no Node.js</h2>
+              <p class="post-detail-text">
+                Para utilizar ESModules, o Node.js precisa reconhecer que o
+                projeto utilizará o novo padrão de módulos. Isso pode ser
+                configurado diretamente no <code>package.json</code> ou através
+                de arquivos com extensão <code>.mjs</code>.
+              </p>
+              <p class="post-detail-text">
+                Essa mudança permite que o projeto utilize recursos modernos de
+                modularização nativamente.
+              </p>
+            </section>
+
+            <div class="post-detail-grid">
+              <section class="post-detail-card">
+                <h2>🔄 Exportações nomeadas e padrão</h2>
+                <p class="post-detail-text">
+                  É possível exportar múltiplos recursos específicos de um
+                  arquivo ou definir uma exportação principal padrão para o
+                  módulo, melhorando a organização e a reutilização de
+                  funcionalidades.
+                </p>
+              </section>
+
+              <section class="post-detail-card">
+                <h2>📥 Importações mais organizadas</h2>
+                <p class="post-detail-text">
+                  Permite importar funcionalidades específicas ou módulos
+                  inteiros de maneira mais intuitiva, tornando a estrutura do
+                  projeto mais previsível em aplicações maiores.
+                </p>
+              </section>
+            </div>
+
+            <section class="post-detail-section">
+              <h2>🔥 Compatibilidade com projetos antigos</h2>
+              <p class="post-detail-text">
+                Apesar das vantagens, é importante lembrar que muitas
+                bibliotecas antigas ainda utilizam CommonJS. Por isso, em alguns
+                cenários, pode ser necessário combinar ESModules com
+                <code>require()</code> para manter compatibilidade com projetos
+                legados.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🚀 O futuro do JavaScript moderno</h2>
+              <p class="post-detail-text">
+                A evolução do Node.js mostra como o ecossistema JavaScript está
+                cada vez mais unificado entre frontend e backend. Dominar
+                ESModules hoje significa escrever aplicações mais modernas,
+                escaláveis e preparadas para o futuro.
+              </p>
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_node_express.html"
+                  >Voltar para Postagens Node.js / Express</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/duhiz_xi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
