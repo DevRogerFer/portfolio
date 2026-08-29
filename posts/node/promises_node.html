@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Promises no Node.js | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">Promises no Node.js</h1>
+          <p class="post-meta">Node.js / Express | Async | JavaScript</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>
+                🚀 Promises no Node.js: escrevendo código assíncrono de forma
+                mais limpa e moderna
+              </h2>
+              <p class="post-detail-text">
+                Quando começamos a trabalhar com programação assíncrona no
+                Node.js, é comum utilizar funções callback para controlar a
+                execução das operações. Porém, conforme a aplicação cresce, o
+                código pode rapidamente se tornar difícil de entender e manter.
+                😵
+              </p>
+              <p class="post-detail-text">
+                Foi justamente para resolver esse problema que surgiram as
+                <strong>Promises</strong> no JavaScript — uma solução mais
+                moderna, organizada e legível para lidar com operações
+                assíncronas. 💡
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🎯 O que é uma Promise?</h2>
+              <p class="post-detail-text">
+                Uma <strong>Promise</strong> é um objeto que representa o
+                resultado futuro de uma operação assíncrona — uma “promessa” de
+                que uma tarefa será concluída em algum momento.
+              </p>
+              <div class="post-detail-grid">
+                <section class="post-detail-card">
+                  <h2>✅ Sucesso</h2>
+                  <p class="post-detail-text">
+                    Operação <strong>resolvida</strong>: a tarefa foi concluída
+                    com êxito e o resultado está disponível.
+                  </p>
+                </section>
+
+                <section class="post-detail-card">
+                  <h2>❌ Erro</h2>
+                  <p class="post-detail-text">
+                    Operação <strong>rejeitada</strong>: algo falhou e o erro
+                    pode ser capturado e tratado.
+                  </p>
+                </section>
+              </div>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📡 Onde Promises são utilizadas?</h2>
+              <p class="post-detail-text">
+                Em aplicações Node.js, Promises são extremamente utilizadas em:
+              </p>
+              <ul class="post-detail-list">
+                <li>💾 Consultas em banco de dados</li>
+                <li>🌐 Requisições HTTP</li>
+                <li>📂 Leitura de arquivos</li>
+                <li>☁️ Integrações com APIs externas</li>
+              </ul>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔥 Do Callback Hell ao encadeamento limpo</h2>
+              <p class="post-detail-text">
+                Antes das Promises, era muito comum encontrar o famoso 😵
+                <strong>“Callback Hell”</strong> — excesso de aninhamento que
+                dificultava:
+              </p>
+              <ul class="post-detail-list">
+                <li>❌ Leitura do código</li>
+                <li>❌ Manutenção</li>
+                <li>❌ Escalabilidade</li>
+                <li>❌ Tratamento de erros</li>
+              </ul>
+              <p class="post-detail-text">
+                Com Promises, o código passou a utilizar encadeamentos muito
+                mais organizados através dos métodos
+                <code>.then()</code> e <code>.catch()</code>, permitindo
+                controlar a sequência das operações e centralizar o tratamento
+                de erros de forma mais elegante.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📌 Evolução do JavaScript moderno</h2>
+              <p class="post-detail-text">
+                Promises serviram como base para recursos ainda mais poderosos:
+              </p>
+              <ul class="post-detail-list">
+                <li>✅ Async/Await</li>
+                <li>✅ Promise.all()</li>
+                <li>✅ Promise.allSettled()</li>
+              </ul>
+              <p class="post-detail-text">
+                Essas funcionalidades tornaram o desenvolvimento backend muito
+                mais produtivo e profissional, melhorando também a performance
+                em aplicações que executam múltiplas operações assíncronas
+                simultaneamente.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📚 Por que dominar Promises?</h2>
+              <p class="post-detail-text">
+                No Node.js moderno, compreender Promises deixou de ser um
+                diferencial e passou a ser um
+                <strong>requisito fundamental</strong>
+                para desenvolver APIs, microsserviços e aplicações escaláveis.
+              </p>
+              <p class="post-detail-text">
+                Entender como Promises funcionam é um passo essencial para
+                dominar a programação assíncrona e construir sistemas mais
+                limpos, eficientes e fáceis de manter.
+              </p>
+              <p class="post-detail-text">
+                E você? Já sofreu com Callback Hell antes de conhecer Promises?
+                😅
+              </p>
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_node_express.html"
+                  >Voltar para Postagens Node.js / Express</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dq86m93m"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
