@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Funções Callback no Node.js | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">Funções Callback no Node.js</h1>
+          <p class="post-meta">Node.js / Express | Async | JavaScript</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>
+                🚀 Funções Callback no Node.js: entendendo a base da programação
+                assíncrona
+              </h2>
+              <p class="post-detail-text">
+                Callbacks foram uma das primeiras estratégias utilizadas no
+                JavaScript para lidar com operações assíncronas e representam a
+                base da arquitetura não bloqueante do Node.js.
+              </p>
+              <p class="post-detail-text">
+                Em aplicações modernas, várias tarefas podem levar tempo para
+                serem concluídas:
+              </p>
+              <ul class="post-detail-list">
+                <li>📡 Requisições HTTP</li>
+                <li>💾 Consultas em banco de dados</li>
+                <li>📂 Leitura de arquivos</li>
+                <li>☁️ Consumo de APIs externas</li>
+              </ul>
+              <p class="post-detail-text">
+                Se cada uma dessas operações bloqueasse a execução do sistema
+                até terminar, a aplicação ficaria lenta e pouco eficiente. É
+                justamente aí que entram as callbacks.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🎯 O que é uma Callback?</h2>
+              <p class="post-detail-text">
+                Uma <strong>callback</strong> é uma função passada como
+                argumento para outra função, com o objetivo de ser executada
+                posteriormente, após a conclusão de uma operação assíncrona.
+              </p>
+              <p class="post-detail-text">
+                Esse modelo permite que o Node.js continue executando outras
+                tarefas enquanto determinadas operações acontecem em segundo
+                plano. ⚡
+              </p>
+              <p class="post-detail-text">
+                Esse comportamento é possível graças a componentes importantes
+                da arquitetura do Node.js:
+              </p>
+              <ul class="post-detail-list">
+                <li>🔹 Call Stack</li>
+                <li>🔹 Node APIs</li>
+                <li>🔹 Callback Queue</li>
+                <li>🔹 Event Loop</li>
+              </ul>
+              <p class="post-detail-text">
+                Enquanto operações demoradas são processadas fora da thread
+                principal, o Event Loop monitora a Callback Queue e executa as
+                funções callback assim que o Call Stack estiver livre.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📌 O Callback Hell</h2>
+              <p class="post-detail-text">
+                Quando múltiplas operações assíncronas dependem umas das outras,
+                o código pode ficar profundamente aninhado, gerando o famoso:
+              </p>
+              <p class="post-detail-text">
+                😵 <strong>“Callback Hell”</strong>
+              </p>
+              <p class="post-detail-text">Esse problema dificulta:</p>
+              <ul class="post-detail-list">
+                <li>❌ Leitura do código</li>
+                <li>❌ Manutenção</li>
+                <li>❌ Escalabilidade</li>
+                <li>❌ Tratamento de erros</li>
+              </ul>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>✅ A evolução: Promises e Async/Await</h2>
+              <p class="post-detail-text">
+                Foi justamente para resolver essas limitações que surgiram
+                soluções mais modernas:
+              </p>
+              <div class="post-detail-grid">
+                <section class="post-detail-card">
+                  <h2>✅ Promises</h2>
+                  <p class="post-detail-text">
+                    Representam um valor que pode estar disponível agora, no
+                    futuro ou nunca, melhorando a organização do código
+                    assíncrono.
+                  </p>
+                </section>
+
+                <section class="post-detail-card">
+                  <h2>✅ Async/Await</h2>
+                  <p class="post-detail-text">
+                    Sintaxe moderna que torna o código assíncrono mais legível e
+                    próximo do estilo síncrono, facilitando manutenção e
+                    tratamento de erros.
+                  </p>
+                </section>
+              </div>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📚 Por que ainda aprender callbacks?</h2>
+              <p class="post-detail-text">
+                Mesmo utilizando Async/Await hoje em dia, entender callbacks
+                continua sendo essencial. Muitos recursos internos do Node.js
+                ainda utilizam callbacks, além de ajudar o desenvolvedor a
+                compreender profundamente o funcionamento do Event Loop e da
+                execução assíncrona no JavaScript.
+              </p>
+              <p class="post-detail-text">
+                Aprender callbacks não é apenas estudar uma sintaxe antiga. É
+                entender os fundamentos que fizeram o Node.js se tornar uma das
+                tecnologias mais utilizadas no desenvolvimento backend moderno.
+              </p>
+              <p class="post-detail-text">
+                Quanto maior seu domínio sobre programação assíncrona, maior
+                será sua capacidade de construir aplicações performáticas,
+                escaláveis e profissionais. 🚀
+              </p>
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_node_express.html"
+                  >Voltar para Postagens Node.js / Express</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dD2ykuCg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
