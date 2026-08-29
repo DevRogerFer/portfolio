@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Async/Await no Node.js | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">Async/Await no Node.js</h1>
+          <p class="post-meta">Node.js / Express | Async | JavaScript</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>
+                🚀 Async/Await no Node.js: a forma moderna de trabalhar com
+                código assíncrono
+              </h2>
+              <p class="post-detail-text">
+                Quem começa a estudar Node.js rapidamente percebe uma
+                característica fundamental da plataforma: o processamento
+                assíncrono. 💡
+              </p>
+              <p class="post-detail-text">
+                Operações como requisições HTTP, consultas em banco de dados,
+                leitura de arquivos e consumo de APIs externas podem levar tempo
+                para serem concluídas. Mesmo assim, o Node.js continua
+                executando outras tarefas sem bloquear a aplicação. ⚡
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📌 A evolução do código assíncrono</h2>
+              <p class="post-detail-text">
+                Durante muito tempo, os desenvolvedores utilizaram
+                <strong>callbacks</strong> para controlar a execução de
+                operações assíncronas. O problema é que, conforme a aplicação
+                cresce, o código pode se tornar extremamente aninhado — o famoso
+                😵 <strong>“Callback Hell”</strong>.
+              </p>
+              <p class="post-detail-text">
+                Depois surgiram as <strong>Promises</strong>, melhorando
+                bastante a organização do fluxo assíncrono através de
+                <code>.then()</code> e <code>.catch()</code>.
+              </p>
+              <p class="post-detail-text">
+                Mas foi com o <strong>Async/Await</strong> que o JavaScript
+                alcançou uma abordagem muito mais limpa, moderna e intuitiva. 🚀
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🎯 O que é Async/Await?</h2>
+              <p class="post-detail-text">
+                O <code>async/await</code> é uma forma simplificada de trabalhar
+                com Promises. Na prática:
+              </p>
+              <ul class="post-detail-list">
+                <li>
+                  ✅ O <code>async</code> transforma uma função em assíncrona
+                </li>
+                <li>
+                  ✅ O <code>await</code> aguarda a resolução de uma Promise
+                </li>
+                <li>✅ O código fica com aparência síncrona</li>
+                <li>✅ O fluxo se torna mais legível e organizado</li>
+              </ul>
+            </section>
+
+            <div class="post-detail-grid">
+              <section class="post-detail-card">
+                <h2>🔥 Legibilidade</h2>
+                <p class="post-detail-text">
+                  Ao invés de múltiplos <code>.then()</code> ou callbacks
+                  aninhadas, o código passa a seguir uma sequência muito mais
+                  natural, reduzindo complexidade e melhorando a manutenção.
+                </p>
+              </section>
+
+              <section class="post-detail-card">
+                <h2>📌 Tratamento de erros</h2>
+                <p class="post-detail-text">
+                  Com Async/Await, usamos blocos <code>try...catch</code> para
+                  centralizar o tratamento de exceções, deixando o código mais
+                  profissional e previsível.
+                </p>
+              </section>
+            </div>
+
+            <section class="post-detail-section">
+              <h2>⚡ Integração com o ecossistema moderno</h2>
+              <p class="post-detail-text">
+                Async/Await funciona perfeitamente com recursos como:
+              </p>
+              <ul class="post-detail-list">
+                <li>🔹 <code>Promise.all()</code></li>
+                <li>🔹 <code>Promise.allSettled()</code></li>
+                <li>🔹 APIs assíncronas do Node.js</li>
+              </ul>
+              <p class="post-detail-text">
+                Esses recursos permitem executar múltiplas operações
+                simultaneamente, aumentando a performance da aplicação.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📚 O padrão do backend moderno</h2>
+              <p class="post-detail-text">
+                Hoje, Async/Await não é apenas uma melhoria de sintaxe. Ele se
+                tornou um
+                <strong>padrão no desenvolvimento backend moderno</strong>
+                com JavaScript.
+              </p>
+              <p class="post-detail-text">
+                Dominar esse conceito significa escrever aplicações mais limpas,
+                performáticas, organizadas e preparadas para cenários reais de
+                mercado. 💚🚀
+              </p>
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_node_express.html"
+                  >Voltar para Postagens Node.js / Express</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dtSPKABV"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
