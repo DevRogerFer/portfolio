@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>
+      Call Stack, Callback Queue &amp; Event Loop no Node.js | Dev Roger Fer
+    </title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">
+            Call Stack, Callback Queue &amp; Event Loop no Node.js
+          </h1>
+          <p class="post-meta">Node.js / Express | Async | JavaScript</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>
+                🚀 Call Stack, Callback Queue &amp; Event Loop no Node.js:
+                entendendo a programação assíncrona
+              </h2>
+              <p class="post-detail-text">
+                Se você trabalha com Node.js, provavelmente já se perguntou:
+              </p>
+              <p class="post-detail-text">
+                🤔 “Como o Node consegue lidar com milhares de requisições
+                simultaneamente mesmo rodando em uma única thread?”
+              </p>
+              <p class="post-detail-text">
+                A resposta está em três pilares fundamentais:
+              </p>
+              <ul class="post-detail-list">
+                <li>📌 Call Stack</li>
+                <li>📌 Callback Queue</li>
+                <li>📌 Event Loop</li>
+              </ul>
+              <p class="post-detail-text">
+                O Node.js utiliza uma arquitetura orientada a eventos e não
+                bloqueante, permitindo que tarefas demoradas sejam executadas em
+                segundo plano enquanto o restante da aplicação continua
+                funcionando normalmente.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧠 Call Stack: a pilha de execução</h2>
+              <p class="post-detail-text">
+                A <strong>Call Stack</strong> é responsável por controlar a
+                execução das funções. Ela funciona no modelo
+                <strong>LIFO</strong> (Last In, First Out): a última função que
+                entra é a primeira que sai.
+              </p>
+              <p class="post-detail-text">
+                Tudo que é síncrono passa primeiro pela Call Stack, garantindo
+                que o JavaScript execute uma instrução por vez. O Node.js possui
+                apenas uma Call Stack principal, já que o JavaScript roda em uma
+                única thread.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚙️ Node APIs: processamento em segundo plano</h2>
+              <p class="post-detail-text">
+                Operações assíncronas — como timers, leitura de arquivos,
+                requisições HTTP e acesso a banco de dados — não ficam
+                bloqueando a Call Stack.
+              </p>
+              <p class="post-detail-text">
+                Essas tarefas são delegadas para as APIs internas do Node.js e
+                para o <strong>libuv</strong>, responsável por coordenar
+                operações assíncronas e I/O. Enquanto isso, a aplicação continua
+                executando normalmente.
+              </p>
+            </section>
+
+            <div class="post-detail-grid">
+              <section class="post-detail-card">
+                <h2>📬 Callback Queue: a fila das callbacks</h2>
+                <p class="post-detail-text">
+                  Quando uma operação assíncrona termina, sua callback é enviada
+                  para a <strong>Callback Queue</strong>. Ela aguarda até que a
+                  Call Stack fique livre para então ser executada.
+                </p>
+              </section>
+
+              <section class="post-detail-card">
+                <h2>🔄 Event Loop: o coração do Node.js</h2>
+                <p class="post-detail-text">
+                  O <strong>Event Loop</strong> monitora constantemente a Call
+                  Stack e a Callback Queue. Quando percebe que a pilha está
+                  vazia, ele move a próxima callback da fila para execução.
+                </p>
+              </section>
+            </div>
+
+            <section class="post-detail-section">
+              <h2>🔥 Dominar esses conceitos muda tudo</h2>
+              <p class="post-detail-text">
+                Quando você entende esses conceitos, passa a compreender:
+              </p>
+              <ul class="post-detail-list">
+                <li>✅ por que o Node.js é tão performático;</li>
+                <li>✅ como o JavaScript executa tarefas assíncronas;</li>
+                <li>✅ por que Promises e Async/Await existem;</li>
+                <li>✅ e como evitar bloqueios na aplicação.</li>
+              </ul>
+              <p class="post-detail-text">
+                Programação assíncrona não é apenas teoria: ela é a base das
+                aplicações modernas construídas com Node.js.
+              </p>
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_node_express.html"
+                  >Voltar para Postagens Node.js / Express</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dDXycW76"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
