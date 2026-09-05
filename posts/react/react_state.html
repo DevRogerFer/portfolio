@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>State no React | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">State no React</h1>
+          <p class="post-meta">React | Desenvolvimento Front-end Moderno</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>⚛️ State no React: o coração das aplicações interativas</h2>
+              <p class="post-detail-text">
+                Se componentes são os blocos de construção de uma aplicação
+                React, o State é o que dá vida a eles. 🚀
+              </p>
+              <p class="post-detail-text">
+                Imagine uma interface onde nada muda após a interação do
+                usuário. Sem atualizações, sem respostas a cliques, sem
+                formulários dinâmicos. É exatamente para resolver esse problema
+                que existe o State (Estado).
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧠 O que é State?</h2>
+              <p class="post-detail-text">
+                State é um mecanismo do React utilizado para armazenar
+                informações que podem mudar ao longo do tempo. Sempre que um
+                estado é atualizado, o React renderiza novamente o componente,
+                garantindo que a interface reflita os dados mais recentes.
+              </p>
+              <p class="post-detail-text">
+                Na prática, o State é responsável por tornar aplicações
+                reativas, permitindo que a experiência do usuário seja dinâmica
+                e interativa.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔄 Como funciona?</h2>
+              <p class="post-detail-text">
+                Com o hook useState, podemos criar e gerenciar estados em
+                componentes funcionais. Cada atualização realizada por meio da
+                função de atualização informa ao React que a interface precisa
+                ser sincronizada com os novos dados.
+              </p>
+              <p class="post-detail-text">
+                O mais interessante é que o valor do estado é preservado entre
+                as renderizações, mantendo o contexto da aplicação mesmo após
+                diversas atualizações.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>👆 Quando o State é atualizado?</h2>
+              <p class="post-detail-text">
+                Normalmente por meio de interações do usuário, como:
+              </p>
+              <ul class="post-detail-list">
+                <li>🔹 Cliques em botões</li>
+                <li>🔹 Digitação em campos de formulário</li>
+                <li>🔹 Seleção de opções</li>
+                <li>🔹 Respostas de APIs</li>
+                <li>🔹 Eventos da aplicação</li>
+              </ul>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📋 Boas práticas importantes</h2>
+              <ul class="post-detail-list">
+                <li>✅ Trate o State como imutável.</li>
+                <li>
+                  ✅ Ao atualizar arrays ou objetos, crie novas referências em
+                  vez de modificar os dados existentes.
+                </li>
+                <li>
+                  ✅ Utilize State apenas para informações que realmente
+                  impactam a interface.
+                </li>
+                <li>
+                  ✅ Evite armazenar dados derivados que podem ser calculados
+                  durante a renderização.
+                </li>
+              </ul>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚡ Performance e renderizações</h2>
+              <p class="post-detail-text">
+                Toda atualização de estado provoca uma nova renderização do
+                componente. Embora o React seja extremamente otimizado para
+                isso, é importante entender esse comportamento para construir
+                aplicações mais performáticas e previsíveis.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🎯 Conclusão</h2>
+              <p class="post-detail-text">
+                Dominar State é um dos passos mais importantes para evoluir no
+                React. Ele é a base para formulários, listas dinâmicas,
+                dashboards, autenticação, consumo de APIs e praticamente
+                qualquer aplicação moderna.
+              </p>
+              <p class="post-detail-text">
+                Antes de explorar conceitos mais avançados, como Context API,
+                reducers e gerenciamento global de estado, é fundamental
+                compreender profundamente como o State funciona e como ele
+                influencia o ciclo de vida da interface.
+              </p>
+              <p class="post-detail-text">
+                Quanto melhor você entende State, melhor você entende React. 💙
+              </p>
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_react_next.html"
+                  >Voltar para Postagens React / Next.js</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dqdR3dTg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
