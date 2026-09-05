@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Props no React | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">Props no React</h1>
+          <p class="post-meta">React | Desenvolvimento Front-end Moderno</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>
+                🎯 Props no React: o segredo da reutilização de componentes
+              </h2>
+              <p class="post-detail-text">
+                Quando começamos a desenvolver aplicações com React, um dos
+                conceitos mais importantes que aprendemos é o de Props
+                (Properties).
+              </p>
+              <p class="post-detail-text">
+                🚀 As props são o mecanismo utilizado para passar dados de um
+                componente pai para um componente filho. Pense nelas como
+                parâmetros de uma função: o componente recebe informações
+                externas e as utiliza para exibir conteúdos diferentes sem
+                precisar duplicar código.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧩 Por que as Props são tão importantes?</h2>
+              <p class="post-detail-text">
+                A principal vantagem das props é a reutilização de componentes.
+                Imagine um componente de cabeçalho utilizado em várias páginas
+                da aplicação. Em vez de criar diversos componentes quase
+                idênticos, podemos utilizar o mesmo componente e apenas alterar
+                as informações recebidas por meio das props.
+              </p>
+              <p class="post-detail-text">Isso torna o código:</p>
+              <ul class="post-detail-list">
+                <li>✅ Mais organizado</li>
+                <li>✅ Mais reutilizável</li>
+                <li>✅ Mais fácil de manter</li>
+                <li>✅ Mais escalável para projetos maiores</li>
+              </ul>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔄 Componentes mais flexíveis</h2>
+              <p class="post-detail-text">
+                Com props, um mesmo componente pode assumir diferentes
+                comportamentos e conteúdos dependendo do contexto em que é
+                utilizado. Essa abordagem segue um dos princípios mais
+                importantes do desenvolvimento moderno: evitar repetição de
+                código e criar componentes altamente reutilizáveis.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>👨‍👩‍👧‍👦 O poder do children</h2>
+              <p class="post-detail-text">
+                Além das props personalizadas, o React oferece uma propriedade
+                especial chamada children. Ela representa todo o conteúdo
+                inserido entre a abertura e o fechamento de um componente.
+              </p>
+              <p class="post-detail-text">
+                Isso permite criar componentes mais genéricos e flexíveis,
+                capazes de receber textos, elementos visuais ou até outros
+                componentes como conteúdo.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚡ Boas práticas ao trabalhar com Props</h2>
+              <ul class="post-detail-list">
+                <li>🔹 Trate props como dados somente leitura.</li>
+                <li>🔹 Utilize nomes claros e descritivos.</li>
+                <li>
+                  🔹 Prefira componentes pequenos e focados em uma única
+                  responsabilidade.
+                </li>
+                <li>
+                  🔹 Combine props com componentes reutilizáveis para aumentar a
+                  produtividade da equipe.
+                </li>
+                <li>
+                  🔹 Utilize a desestruturação de props para melhorar a
+                  legibilidade do código.
+                </li>
+              </ul>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🎓 Conclusão</h2>
+              <p class="post-detail-text">
+                As props são um dos pilares do React. Elas permitem que
+                componentes troquem informações de forma simples, organizada e
+                previsível, tornando a construção de interfaces muito mais
+                eficiente.
+              </p>
+              <p class="post-detail-text">
+                Dominar esse conceito é um passo fundamental para criar
+                aplicações modernas, escaláveis e fáceis de manter. Quanto
+                melhor você entender props, mais preparado estará para trabalhar
+                com padrões avançados do ecossistema React.
+              </p>
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_react_next.html"
+                  >Voltar para Postagens React / Next.js</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dMTECEWA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
