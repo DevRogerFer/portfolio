@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Componentes de Classe no React | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">Componentes de Classe no React</h1>
+          <p class="post-meta">React | Desenvolvimento Front-end Moderno</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>
+                🏛️ Componentes de Classe no React: Por que ainda vale a pena
+                conhecê-los?
+              </h2>
+              <p class="post-detail-text">
+                Se você está aprendendo React hoje, provavelmente começou
+                utilizando componentes funcionais e Hooks. Mas existe uma peça
+                importante da história do React que ainda aparece em muitos
+                projetos corporativos: os Componentes de Classe.
+              </p>
+              <p class="post-detail-text">
+                🚀 Embora não sejam mais a abordagem recomendada para novos
+                desenvolvimentos, entender como eles funcionam continua sendo um
+                diferencial para quem deseja atuar profissionalmente com React.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧩 O que são Componentes de Classe?</h2>
+              <p class="post-detail-text">
+                Antes da chegada dos Hooks, os componentes de classe eram a
+                principal forma de criar componentes com estado e lógica mais
+                complexa no React. Eles são construídos a partir de uma classe
+                que herda funcionalidades do React e possuem recursos próprios
+                para gerenciar estado, propriedades e comportamento da
+                interface.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚙️ O que torna esse modelo diferente?</h2>
+              <p class="post-detail-text">
+                Ao trabalhar com componentes de classe, alguns conceitos ganham
+                destaque:
+              </p>
+              <ul class="post-detail-list">
+                <li>
+                  ✅ Uso de estado interno para controlar dados da interface.
+                </li>
+                <li>
+                  ✅ Métodos específicos para manipular eventos e atualizações.
+                </li>
+                <li>
+                  ✅ Necessidade de utilizar referências à própria instância do
+                  componente.
+                </li>
+                <li>✅ Organização da lógica em métodos separados.</li>
+              </ul>
+              <p class="post-detail-text">
+                Essa estrutura foi extremamente importante para a evolução do
+                React e ajudou a consolidar diversos padrões utilizados até
+                hoje.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔄 Por que eles perderam espaço?</h2>
+              <p class="post-detail-text">
+                Com a introdução dos Hooks, o React passou a oferecer uma forma
+                mais simples e intuitiva de trabalhar com estado e outros
+                recursos avançados.
+              </p>
+              <p class="post-detail-text">
+                Os componentes funcionais passaram a exigir menos código,
+                reduziram a complexidade e tornaram o desenvolvimento mais
+                produtivo.
+              </p>
+              <p class="post-detail-text">
+                Além disso, os Hooks permitiram reutilizar lógica entre
+                componentes de forma elegante, algo que era muito mais
+                trabalhoso na abordagem baseada em classes.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>💼 Então devo ignorá-los? Definitivamente não.</h2>
+              <p class="post-detail-text">
+                Muitas aplicações em produção ainda utilizam componentes de
+                classe. Em empresas com sistemas desenvolvidos há vários anos, é
+                comum encontrar telas, módulos e bibliotecas construídas com
+                essa arquitetura.
+              </p>
+              <p class="post-detail-text">
+                Saber ler, compreender e dar manutenção nesse tipo de código
+                pode ser um diferencial importante em processos seletivos e no
+                dia a dia profissional.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🎯 O que realmente importa?</h2>
+              <p class="post-detail-text">
+                Mais importante do que decorar sintaxes é compreender os
+                conceitos por trás do React:
+              </p>
+              <ul class="post-detail-list">
+                <li>🔹 Componentização</li>
+                <li>🔹 Estado (State)</li>
+                <li>🔹 Propriedades (Props)</li>
+                <li>🔹 Reutilização de código</li>
+                <li>🔹 Atualização de interfaces</li>
+                <li>🔹 Organização da aplicação</li>
+              </ul>
+              <p class="post-detail-text">
+                Os componentes funcionais dominam o desenvolvimento moderno, mas
+                os componentes de classe continuam fazendo parte da história e
+                da realidade de muitos projetos.
+              </p>
+              <p class="post-detail-text">
+                Conhecer ambos os modelos amplia sua capacidade de adaptação e
+                fortalece sua base como desenvolvedor React.
+              </p>
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_react_next.html"
+                  >Voltar para Postagens React / Next.js</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dnM8VuXV"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
