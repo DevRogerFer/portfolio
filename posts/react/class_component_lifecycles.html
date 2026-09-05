@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Ciclos de Vida no React | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">Ciclos de Vida no React</h1>
+          <p class="post-meta">React | Desenvolvimento Front-end Moderno</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>⚛️ Ciclos de Vida de Componentes de Classe no React</h2>
+              <p class="post-detail-text">
+                Ao estudar React, é comum focar em componentes, props e state.
+                Mas existe um conceito que ajuda a entender como a interface se
+                comporta ao longo do tempo: os ciclos de vida dos componentes.
+              </p>
+              <p class="post-detail-text">
+                Mesmo que os componentes funcionais e os Hooks sejam o padrão
+                atual, compreender os ciclos de vida continua sendo importante
+                para quem trabalha com projetos legados ou deseja aprofundar
+                seus conhecimentos sobre React.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🚀 O Que São Ciclos de Vida?</h2>
+              <p class="post-detail-text">
+                Todo componente React passa por diferentes etapas desde sua
+                criação até sua remoção da tela. Essas etapas formam o chamado
+                ciclo de vida do componente. Nos componentes de classe, esse
+                processo é dividido em três fases principais.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🟢 Mounting (Montagem)</h2>
+              <p class="post-detail-text">
+                É o momento em que o componente é criado e inserido no DOM pela
+                primeira vez.
+              </p>
+              <p class="post-detail-text">
+                Nessa fase, o React renderiza a interface inicial e permite
+                executar ações logo após a exibição do componente, como
+                carregamento de dados ou inicialização de recursos.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🟡 Updating (Atualização)</h2>
+              <p class="post-detail-text">
+                Após ser montado, o componente pode ser atualizado sempre que
+                ocorrer uma mudança em suas props ou em seu state.
+              </p>
+              <p class="post-detail-text">
+                Essa etapa mantém a interface sincronizada com os dados mais
+                recentes da aplicação, garantindo que as alterações sejam
+                refletidas para o usuário.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔴 Unmounting (Desmontagem)</h2>
+              <p class="post-detail-text">
+                Acontece quando o componente é removido da interface. Isso pode
+                ocorrer durante uma navegação, mudança de rota ou quando
+                determinada condição deixa de ser atendida.
+              </p>
+              <p class="post-detail-text">
+                Nessa fase, é importante realizar limpezas de recursos
+                utilizados pelo componente para evitar comportamentos
+                inesperados e desperdício de memória.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔄 E Como Isso Funciona Hoje?</h2>
+              <p class="post-detail-text">
+                Com a chegada dos Hooks, o React passou a oferecer uma forma
+                mais simples de lidar com comportamentos que antes dependiam dos
+                ciclos de vida dos componentes de classe.
+              </p>
+              <p class="post-detail-text">
+                Ainda assim, os conceitos permanecem os mesmos: montagem,
+                atualização e desmontagem continuam acontecendo,
+                independentemente da abordagem utilizada.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🎯 Por Que Aprender Isso?</h2>
+              <p class="post-detail-text">
+                Conhecer os ciclos de vida ajuda a:
+              </p>
+              <ul class="post-detail-list">
+                <li>✅ Entender aplicações React mais antigas</li>
+                <li>✅ Realizar manutenção em sistemas legados</li>
+                <li>✅ Compreender melhor a renderização de componentes</li>
+                <li>
+                  ✅ Trabalhar com atualizações de estado de forma mais
+                  consciente
+                </li>
+                <li>✅ Evoluir tecnicamente como desenvolvedor React</li>
+              </ul>
+              <p class="post-detail-text">
+                Os componentes de classe podem não ser a escolha mais comum
+                atualmente, mas os conceitos que eles introduziram continuam
+                fundamentais para compreender o funcionamento do React e
+                construir aplicações mais robustas.
+              </p>
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_react_next.html"
+                  >Voltar para Postagens React / Next.js</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dW8qZbub"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
