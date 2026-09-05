@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Virtual DOM e Reconciliation no React | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">Virtual DOM e Reconciliation</h1>
+          <p class="post-meta">React | Desenvolvimento Front-end Moderno</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>
+                🚀 Virtual DOM &amp; Reconciliation no React: o que realmente
+                acontece quando sua interface é atualizada?
+              </h2>
+              <p class="post-detail-text">
+                Uma das maiores vantagens do React não está apenas na criação de
+                componentes, mas na forma inteligente como ele atualiza a
+                interface. E isso acontece graças a dois conceitos fundamentais:
+                Virtual DOM e Reconciliation. 🧠
+              </p>
+              <p class="post-detail-text">
+                Antes de tudo, é importante lembrar que o DOM é a representação
+                da página no navegador. Sempre que alteramos seus elementos
+                diretamente, existe um custo de processamento. Em aplicações
+                grandes, inúmeras atualizações podem impactar a performance e a
+                experiência do usuário.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚡ O papel do Virtual DOM</h2>
+              <p class="post-detail-text">É aqui que entra o Virtual DOM.</p>
+              <p class="post-detail-text">
+                O React mantém em memória uma representação leve da interface.
+                Quando State ou Props mudam, ele cria uma nova árvore virtual e
+                a compara com a versão anterior.
+              </p>
+              <p class="post-detail-text">
+                Esse processo evita modificações desnecessárias no DOM real,
+                concentrando as atualizações apenas nos elementos que realmente
+                sofreram alterações.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔄 Reconciliation e Diffing</h2>
+              <p class="post-detail-text">
+                Esse mecanismo de comparação é chamado de Reconciliation.
+              </p>
+              <p class="post-detail-text">
+                Por meio de um algoritmo conhecido como Diffing, o React
+                identifica rapidamente o que mudou e produz o conjunto mínimo de
+                atualizações necessárias.
+              </p>
+              <p class="post-detail-text">
+                Algumas regras tornam esse processo extremamente eficiente:
+              </p>
+              <ul class="post-detail-list">
+                <li>
+                  ✅ Elementos de tipos diferentes são desmontados e recriados.
+                </li>
+                <li>
+                  ✅ Elementos do mesmo tipo preservam sua estrutura e recebem
+                  apenas as alterações necessárias.
+                </li>
+                <li>
+                  ✅ Em listas, a propriedade key ajuda o React a identificar
+                  itens adicionados, removidos ou reorganizados, reduzindo
+                  renderizações desnecessárias.
+                </li>
+              </ul>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>💡 Uma representação em memória</h2>
+              <p class="post-detail-text">
+                Um detalhe importante: o Virtual DOM não substitui o DOM do
+                navegador.
+              </p>
+              <p class="post-detail-text">
+                Ele funciona como uma representação ideal da interface em
+                memória, permitindo que o React decida quando, onde e como
+                atualizar a tela da forma mais eficiente possível.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🎯 Por que compreender esse funcionamento?</h2>
+              <p class="post-detail-text">
+                Compreender esse funcionamento ajuda você a:
+              </p>
+              <ul class="post-detail-list">
+                <li>✔️ Criar componentes mais performáticos;</li>
+                <li>✔️ Entender melhor os ciclos de renderização;</li>
+                <li>✔️ Utilizar State e Props de forma mais consciente;</li>
+                <li>✔️ Aplicar Keys corretamente em listas;</li>
+                <li>✔️ Evitar renderizações e atualizações desnecessárias.</li>
+              </ul>
+              <p class="post-detail-text">
+                🚀 No fim das contas, Virtual DOM e Reconciliation representam
+                uma das decisões arquiteturais mais importantes do React:
+                abstrair a complexidade das atualizações do DOM e permitir que o
+                desenvolvedor foque no que deve ser exibido, enquanto o React
+                cuida do como.
+              </p>
+              <p class="post-detail-text">
+                E você, já precisou investigar problemas de renderização ou
+                performance em aplicações React? 👇
+              </p>
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_react_next.html"
+                  >Voltar para Postagens React / Next.js</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/d983X2Z2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
