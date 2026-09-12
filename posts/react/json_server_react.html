@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>JSON Server + React | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">JSON Server + React</h1>
+          <p class="post-meta">React | Integração com APIs e Prototipação</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>
+                🌐 JSON Server + React: aprendendo integração com APIs na
+                prática
+              </h2>
+              <p class="post-detail-text">
+                Criar componentes é apenas uma parte do desenvolvimento com
+                React. Em aplicações reais, quase tudo depende da comunicação
+                com uma API: carregar dados, criar registros, atualizar
+                informações e remover conteúdos.
+              </p>
+              <p class="post-detail-text">
+                É justamente nesse momento que o JSON Server se torna uma
+                excelente ferramenta para estudos e prototipação.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🚀 Simulando uma API sem criar um back-end</h2>
+              <p class="post-detail-text">
+                O JSON Server permite transformar um simples arquivo db.json em
+                uma API REST funcional. Assim, é possível desenvolver todo o
+                front-end enquanto o back-end ainda não está pronto, simulando
+                um ambiente muito próximo da realidade.
+              </p>
+              <p class="post-detail-text">
+                Essa abordagem acelera o desenvolvimento, facilita testes e
+                permite validar toda a comunicação da aplicação desde as
+                primeiras etapas do projeto.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔄 React consumindo dados reais</h2>
+              <p class="post-detail-text">
+                Ao substituir arquivos estáticos por uma API, a aplicação passa
+                a buscar as informações dinamicamente.
+              </p>
+              <p class="post-detail-text">
+                Utilizando o useEffect para carregar os dados quando o
+                componente é montado e o fetch para realizar as requisições, o
+                React mantém a interface sincronizada com as informações
+                disponíveis na API.
+              </p>
+              <p class="post-detail-text">
+                Esse é um dos primeiros passos para construir aplicações
+                realmente escaláveis.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📌 Muito além do GET</h2>
+              <p class="post-detail-text">
+                Uma aplicação completa não apenas consulta dados.
+              </p>
+              <p class="post-detail-text">
+                Durante o desenvolvimento do gerenciador de tarefas, foram
+                implementadas operações de criação (POST) e remoção (DELETE),
+                garantindo que cada alteração fosse persistida na API simulada.
+              </p>
+              <p class="post-detail-text">
+                Outro ponto importante foi o tratamento das respostas das
+                requisições, exibindo mensagens de sucesso ou erro para oferecer
+                uma experiência mais confiável ao usuário.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⏳ UX também faz parte da integração</h2>
+              <p class="post-detail-text">
+                Chamadas para APIs podem levar alguns segundos. Por isso,
+                implementar estados de loading faz toda a diferença.
+              </p>
+              <p class="post-detail-text">
+                Enquanto uma tarefa está sendo criada ou excluída, a interface
+                exibe indicadores visuais e desabilita ações temporariamente,
+                evitando múltiplos cliques e transmitindo ao usuário que a
+                operação ainda está em andamento.
+              </p>
+              <p class="post-detail-text">
+                São detalhes como esses que tornam uma aplicação mais
+                profissional.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>💡 Conclusão</h2>
+              <p class="post-detail-text">
+                Aprender React também significa entender como aplicações se
+                comunicam com APIs.
+              </p>
+              <p class="post-detail-text">
+                O JSON Server oferece uma forma simples de praticar requisições
+                HTTP, persistência de dados e operações assíncronas sem depender
+                de um back-end completo, tornando o aprendizado muito mais
+                próximo do ambiente encontrado no mercado.
+              </p>
+              <p class="post-detail-text">
+                E você? Costuma utilizar o JSON Server para desenvolver e testar
+                seus projetos React?
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_react_next.html"
+                  >Voltar para Postagens React / Next.js</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dbfZK9m9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
