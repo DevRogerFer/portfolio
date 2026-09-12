@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Estilização no React | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">Estilização no React</h1>
+          <p class="post-meta">React | Desenvolvimento Front-end Moderno</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>🎨 Estilização no React: muito além do CSS tradicional</h2>
+              <p class="post-detail-text">
+                Quando começamos a desenvolver aplicações em React, é comum
+                pensar apenas em escrever componentes. Porém, tão importante
+                quanto a lógica é a forma como esses componentes são
+                estilizados.
+              </p>
+              <p class="post-detail-text">
+                O React não impõe uma única estratégia de estilização. Pelo
+                contrário: ele permite que cada projeto adote a abordagem mais
+                adequada ao seu contexto, desde arquivos CSS convencionais até
+                soluções modernas baseadas em utilitários ou JavaScript.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🚀 As principais abordagens</h2>
+
+              <h3>📌 CSS tradicional</h3>
+              <p class="post-detail-text">
+                É a forma mais conhecida. Criamos arquivos .css e os importamos
+                nos componentes. Simples, porém pode gerar conflitos de nomes em
+                aplicações maiores.
+              </p>
+
+              <h3>📌 CSS-in-JS</h3>
+              <p class="post-detail-text">
+                Bibliotecas como Styled Components aproximam o estilo da lógica
+                do componente, permitindo criar interfaces mais dinâmicas e
+                encapsuladas. Essa estratégia facilita a reutilização e a
+                personalização dos componentes.
+              </p>
+
+              <h3>📌 Tailwind CSS</h3>
+              <p class="post-detail-text">
+                Hoje, uma das soluções mais adotadas pela comunidade. Em vez de
+                escrever CSS manualmente, utilizamos classes utilitárias
+                diretamente no JSX, acelerando o desenvolvimento e incentivando
+                a padronização visual.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>✨ Organização também faz parte da estilização</h2>
+              <p class="post-detail-text">
+                Uma interface bem construída não depende apenas das cores ou dos
+                espaçamentos. Componentizar elementos como botões, menus
+                laterais e cabeçalhos torna o código mais limpo, reutilizável e
+                fácil de manter.
+              </p>
+              <p class="post-detail-text">
+                Outro ponto importante é manter uma identidade visual
+                consistente. Configurar fontes personalizadas, como a Poppins,
+                diretamente no Tailwind garante que toda a aplicação siga o
+                mesmo padrão sem duplicação de estilos.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧩 Componentização e estilização caminham juntas</h2>
+              <p class="post-detail-text">
+                Durante a construção de uma aplicação React, é comum identificar
+                elementos que se repetem, como botões, menus laterais,
+                cabeçalhos e cartões.
+              </p>
+              <p class="post-detail-text">
+                Transformar esses elementos em componentes reutilizáveis reduz a
+                duplicação de código e facilita futuras alterações. Além disso,
+                variantes permitem criar diferentes estilos para um mesmo
+                componente sem perder consistência visual.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>💡 Conclusão</h2>
+              <p class="post-detail-text">
+                Não existe uma única abordagem perfeita para estilizar
+                aplicações React.
+              </p>
+              <p class="post-detail-text">
+                A melhor escolha depende do contexto, do tamanho do projeto e da
+                equipe envolvida. Porém, combinar componentização, Tailwind CSS,
+                boas práticas de organização e uma padronização consistente da
+                interface resulta em aplicações mais escaláveis, organizadas e
+                fáceis de evoluir.
+              </p>
+              <p class="post-detail-text">
+                Afinal, escrever componentes reutilizáveis é importante. Mas
+                escrever componentes reutilizáveis e visualmente consistentes é
+                o que realmente torna um projeto profissional.
+              </p>
+              <p class="post-detail-text">
+                Qual estratégia de estilização você mais utiliza nos seus
+                projetos React?
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_react_next.html"
+                  >Voltar para Postagens React / Next.js</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dAuXT6XE"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
