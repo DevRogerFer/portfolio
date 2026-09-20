@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>React Hooks: useState | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">React Hooks: useState</h1>
+          <p class="post-meta">React | Hooks | useState</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>⚛️ Dominando os React Hooks: useState</h2>
+              <p class="post-detail-text">
+                Gerenciar dados que mudam ao longo da interação do usuário é uma
+                das necessidades mais comuns em uma interface React. É nesse
+                cenário que o useState se torna fundamental: ele permite
+                adicionar estado a componentes funcionais e atualizar a
+                interface quando esse estado muda.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧠 O que é o useState?</h2>
+              <p class="post-detail-text">
+                O useState é um Hook do React que retorna dois elementos: o
+                valor atual do estado e uma função responsável por atualizá-lo.
+                O estado recebe um valor inicial e, quando a função de
+                atualização é chamada, o React agenda uma nova renderização com
+                o novo valor.
+              </p>
+              <p class="post-detail-text">
+                Um exemplo clássico é um contador: o estado começa em zero e
+                pode ser incrementado a partir de uma interação. A ideia é
+                simples, mas esse mecanismo está por trás de inúmeras
+                experiências interativas, como formulários, filtros, menus,
+                seleções e controles de interface.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔄 Atualizando o estado corretamente</h2>
+              <p class="post-detail-text">
+                Quando o novo estado depende do valor anterior, é importante
+                utilizar a função de atualização baseada no estado pendente.
+                Essa abordagem é especialmente útil quando existem várias
+                atualizações dentro da mesma interação, pois o React pode
+                agrupar atualizações de estado.
+              </p>
+              <p class="post-detail-text">
+                Outro ponto importante: chamar a função de atualização não
+                altera imediatamente o valor da variável de estado dentro do
+                código que já está sendo executado. O novo valor estará
+                disponível na próxima renderização.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📦 Estado com objetos e arrays</h2>
+              <p class="post-detail-text">
+                O estado pode armazenar diferentes tipos de valores, incluindo
+                objetos e arrays. Porém, esses dados devem ser tratados como
+                somente leitura: em vez de modificar diretamente o objeto ou
+                array existente, deve-se criar um novo valor para representar a
+                atualização.
+              </p>
+              <p class="post-detail-text">
+                Essa prática ajuda o React a identificar corretamente as
+                mudanças e evita problemas em que a interface não é atualizada
+                como esperado.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🚦 Regras importantes</h2>
+              <p class="post-detail-text">
+                O useState deve ser chamado no nível superior do componente ou
+                de um Hook personalizado. Não deve ser colocado dentro de
+                condicionais ou loops, pois a ordem das chamadas de Hooks
+                precisa permanecer consistente entre as renderizações.
+              </p>
+              <p class="post-detail-text">
+                Também é comum utilizar vários useState para representar estados
+                independentes, em vez de concentrar informações diferentes em um
+                único objeto.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🚀 Por que dominar o useState?</h2>
+              <p class="post-detail-text">
+                Porque entender estado é entender uma parte essencial do React.
+                Ao dominar como o estado é criado, atualizado e preservado, fica
+                muito mais fácil construir interfaces previsíveis, interativas e
+                organizadas.
+              </p>
+              <p class="post-detail-text">
+                O useState parece simples, mas seus conceitos — renderização,
+                atualização baseada no estado anterior, imutabilidade e regras
+                dos Hooks — formam uma base indispensável para evoluir no
+                desenvolvimento com React.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_react_next.html"
+                  >Voltar para Postagens React / Next.js</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/d_NTf45Q"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
