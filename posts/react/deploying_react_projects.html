@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Deploy de Projetos React | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">Deploy de Projetos React</h1>
+          <p class="post-meta">React | Vite | Deploy</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>🚀 Deploy de projetos React: do código local à produção</h2>
+              <p class="post-detail-text">
+                Desenvolver uma aplicação React é apenas uma parte do processo.
+                Para que ela deixe o ambiente local e fique disponível para
+                usuários reais, é necessário preparar, gerar o build e
+                configurar corretamente a publicação.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚙️ 1. Prepare o projeto</h2>
+              <p class="post-detail-text">
+                Antes do deploy, revise título, favicon, caminhos de recursos e
+                configurações do Vite. Se a aplicação for publicada em um
+                subdiretório, o parâmetro base também precisa refletir esse
+                caminho. Essa etapa ajuda a evitar problemas com assets e URLs
+                após a publicação.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📦 2. Gere o build de produção</h2>
+              <p class="post-detail-text">
+                Em projetos React com Vite, o build transforma a aplicação em
+                arquivos otimizados para produção e gera a pasta dist. É esse
+                resultado que será servido pela hospedagem, e não os arquivos
+                usados durante o desenvolvimento.
+              </p>
+              <p class="post-detail-text">
+                Uma boa prática é validar o resultado localmente com o preview
+                de produção. Assim, problemas que só aparecem depois do build
+                podem ser identificados antes da publicação.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔐 3. Configure as variáveis de ambiente</h2>
+              <p class="post-detail-text">
+                Aplicações que consomem APIs normalmente precisam de URLs e
+                configurações diferentes entre desenvolvimento e produção.
+                Separar esses valores por ambiente organiza o projeto e evita
+                alterações desnecessárias no código.
+              </p>
+              <p class="post-detail-text">
+                No Vite, as variáveis destinadas ao código do cliente seguem a
+                convenção VITE_. Informações sensíveis não devem ser expostas em
+                variáveis incorporadas ao bundle do frontend.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🌐 4. Publique frontend e backend</h2>
+              <p class="post-detail-text">
+                Quando o React depende de uma API, o deploy não termina ao
+                publicar o frontend. A API também precisa estar acessível em
+                produção, e o frontend deve apontar para o endereço correto.
+              </p>
+              <p class="post-detail-text">
+                Uma estratégia comum é manter frontend e API em repositórios
+                separados e publicar cada parte conforme sua responsabilidade. A
+                Vercel permite conectar um repositório Git e automatizar novas
+                publicações a partir de commits.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧭 5. Atenção às rotas de uma SPA</h2>
+              <p class="post-detail-text">
+                Um problema comum aparece quando o usuário acessa diretamente
+                uma rota interna ou atualiza a página. Em uma Single Page
+                Application, essa rota pode não existir fisicamente no servidor.
+              </p>
+              <p class="post-detail-text">
+                Por isso, a hospedagem precisa direcionar as requisições
+                apropriadas para o index.html, permitindo que o React controle a
+                navegação. Na Vercel, isso pode ser resolvido com regras de
+                rewrite.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🚀 Deploy não é apenas “colocar no ar”</h2>
+              <p class="post-detail-text">
+                Um deploy profissional envolve preparação, build, variáveis de
+                ambiente, hospedagem, integração com APIs, roteamento e
+                validação. Tratar essas etapas como parte do desenvolvimento
+                resulta em uma aplicação mais previsível, fácil de manter e
+                pronta para evoluir.
+              </p>
+              <p class="post-detail-text">
+                O objetivo não é apenas publicar: é entregar uma experiência
+                funcionando corretamente em produção.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_react_next.html"
+                  >Voltar para Postagens React / Next.js</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dZAUJjTZ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
