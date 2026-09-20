@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>React Query | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">React Query</h1>
+          <p class="post-meta">React | TanStack Query | Dados assíncronos</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>
+                ⚛️ React Query: uma abordagem mais inteligente para dados
+                assíncronos no React
+              </h2>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🚀 O que é React Query?</h2>
+              <p class="post-detail-text">
+                Hoje chamado oficialmente de TanStack Query, o React Query é uma
+                biblioteca voltada ao gerenciamento de server state — dados que
+                vivem em uma API e precisam ser buscados, armazenados em cache,
+                sincronizados e atualizados pela interface.
+              </p>
+              <p class="post-detail-text">
+                Em vez de espalhar useEffect, useState, loading, erros e lógica
+                de atualização pelos componentes, a biblioteca concentra grande
+                parte desse trabalho em uma camada especializada.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔎 Queries: buscando dados</h2>
+              <p class="post-detail-text">
+                O conceito central é a query. Cada consulta possui uma query
+                key, que identifica aquele conjunto de dados, e uma função
+                responsável por buscá-los.
+              </p>
+              <p class="post-detail-text">
+                Essa chave é fundamental porque permite ao TanStack Query
+                associar os dados ao cache, reutilizá-los e compartilhar a mesma
+                consulta entre diferentes partes da aplicação.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧠 Cache e sincronização</h2>
+              <p class="post-detail-text">
+                Uma das grandes vantagens está no cache. Depois que uma
+                informação é obtida, ela pode ser reutilizada enquanto o
+                TanStack Query controla seu ciclo de vida e verifica quando
+                precisa atualizá-la.
+              </p>
+              <p class="post-detail-text">
+                Por padrão, consultas são consideradas stale e podem ser
+                atualizadas em situações como montagem de novos componentes,
+                retorno do foco à janela ou reconexão da rede. O comportamento
+                pode ser ajustado com opções como staleTime.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>✏️ Mutations: alterando dados</h2>
+              <p class="post-detail-text">
+                Queries são adequadas para leitura. Quando precisamos criar,
+                atualizar ou excluir informações no servidor, entram as
+                mutations.
+              </p>
+              <p class="post-detail-text">
+                Com useMutation, podemos controlar operações assíncronas e
+                reagir a estados de sucesso, erro ou execução. Depois de uma
+                alteração, o cache pode ser atualizado diretamente ou uma query
+                pode ser invalidada para buscar novamente os dados.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🗂️ Query Keys bem organizadas</h2>
+              <p class="post-detail-text">
+                Em aplicações maiores, centralizar as query keys ajuda a evitar
+                duplicação e inconsistências. Uma estrutura padronizada também
+                facilita a manutenção e torna mais previsível a relação entre
+                consultas, mutations e cache. Essa organização é especialmente
+                útil quando diferentes hooks compartilham os mesmos dados.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📈 Por que isso importa?</h2>
+              <p class="post-detail-text">
+                O principal ganho não é apenas escrever menos código. É separar
+                melhor responsabilidades: o React cuida da interface, enquanto o
+                TanStack Query oferece uma solução especializada para o ciclo de
+                vida do server state.
+              </p>
+              <p class="post-detail-text">
+                O resultado tende a ser uma aplicação mais organizada,
+                responsiva e fácil de evoluir, reduzindo o código necessário
+                para gerenciar fetching, cache, sincronização e estados
+                assíncronos.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🎯 Conclusão</h2>
+              <p class="post-detail-text">
+                Para quem desenvolve aplicações React que consomem APIs,
+                entender Queries, Mutations, Query Keys e Cache é um passo
+                importante para construir interfaces modernas com uma
+                arquitetura mais sustentável.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_react_next.html"
+                  >Voltar para Postagens React / Next.js</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dMMvsy7d"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
