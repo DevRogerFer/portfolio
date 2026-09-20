@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Hooks Customizados em React | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">Hooks Customizados em React</h1>
+          <p class="post-meta">React | Hooks | Arquitetura</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>
+                ⚛️ Hooks Customizados em React: reutilização, organização e
+                código muito mais limpo
+              </h2>
+              <p class="post-detail-text">
+                Quando uma aplicação React começa a crescer, é comum perceber
+                que diversos componentes compartilham a mesma lógica de negócio.
+                Nesse cenário, os Hooks Customizados surgem como uma das
+                melhores práticas para eliminar duplicações, aumentar a
+                reutilização e tornar o código mais organizado.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <p class="post-detail-text">
+                🚀 A ideia é simples: encapsular regras de negócio, chamadas à
+                API e gerenciamento de estado em funções reutilizáveis, mantendo
+                os componentes focados apenas na interface. A própria
+                documentação oficial do React incentiva essa abordagem para
+                compartilhar lógica entre componentes sem recorrer à herança.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧩 Por que criar Hooks Customizados?</h2>
+              <p class="post-detail-text">
+                Em vez de repetir chamadas ao useQuery, useMutation ou outras
+                regras em vários componentes, é possível criar hooks específicos
+                para buscar, adicionar, atualizar ou remover dados. Assim, toda
+                a lógica relacionada ao consumo de APIs, tratamento de estados e
+                atualização de informações permanece centralizada em um único
+                local, facilitando a reutilização e reduzindo significativamente
+                a duplicação de código.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚡ Mais produtividade e escalabilidade</h2>
+              <p class="post-detail-text">
+                Ao concentrar responsabilidades em hooks reutilizáveis, os
+                componentes passam a cuidar apenas da renderização da interface
+                e da experiência do usuário. Essa separação de responsabilidades
+                torna a estrutura do projeto mais intuitiva, facilita a
+                identificação de problemas e reduz o esforço necessário para
+                implementar novas funcionalidades. Além disso, quando uma regra
+                de negócio precisa ser alterada, basta modificar o hook
+                correspondente, sem a necessidade de atualizar diversos
+                componentes espalhados pela aplicação.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🎯 Benefícios dessa abordagem</h2>
+              <p class="post-detail-text">
+                ✅ Reaproveitamento de lógica entre diferentes componentes.<br />
+                ✅ Separação clara entre interface e regras de negócio.<br />
+                ✅ Componentes menores, mais legíveis e fáceis de testar.<br />
+                ✅ Manutenção simplificada conforme a aplicação cresce.<br />
+                ✅ Código mais organizado e padronizado.<br />
+                ✅ Maior facilidade para evolução e refatoração do projeto.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>💡 Conclusão</h2>
+              <p class="post-detail-text">
+                Criar Hooks Customizados não significa apenas escrever menos
+                código. Significa desenvolver aplicações mais escaláveis,
+                desacopladas e preparadas para o crescimento. Essa abordagem
+                melhora a produtividade da equipe, facilita a colaboração entre
+                desenvolvedores e contribui para uma arquitetura mais
+                consistente, tornando o projeto mais robusto, reutilizável e de
+                fácil manutenção ao longo de todo o seu ciclo de vida.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_react_next.html"
+                  >Voltar para Postagens React / Next.js</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dwAPzNkc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
