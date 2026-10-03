@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>React Hooks: useEffect | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">React Hooks: useEffect</h1>
+          <p class="post-meta">React | Hooks | useEffect</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>⚛️ Dominando os React Hooks — useEffect</h2>
+              <p class="post-detail-text">
+                Se o useState controla o estado de uma interface, o useEffect
+                entra em cena quando o componente precisa sincronizar-se com
+                algo externo ao React. Ele é essencial para efeitos como
+                requisições de dados, assinaturas, timers e integrações com APIs
+                do navegador.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔄 O que é o useEffect?</h2>
+              <p class="post-detail-text">
+                O useEffect recebe uma função de configuração e, opcionalmente,
+                uma lista de dependências. O React executa essa lógica e pode
+                chamar uma função de limpeza antes de uma nova execução ou
+                quando o componente é removido.
+              </p>
+              <p class="post-detail-text">
+                Sua ideia central é sincronizar o componente com um sistema
+                externo, e não substituir lógicas que poderiam ser resolvidas
+                diretamente durante a renderização.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🎯 Como funcionam as dependências?</h2>
+              <p class="post-detail-text">
+                A lista de dependências determina quando o efeito deve ser
+                executado novamente:
+              </p>
+              <ul class="post-detail-list">
+                <li>
+                  ✅ Sem dependências: pode ser executado após cada commit.
+                </li>
+                <li>
+                  ✅ Array vazio []: não é reexecutado por mudanças de props ou
+                  estado.
+                </li>
+                <li>
+                  ✅ Com dependências: executa novamente quando algum valor
+                  reativo utilizado pelo efeito muda.
+                </li>
+              </ul>
+              <p class="post-detail-text">
+                Todas as dependências reativas usadas pelo efeito devem ser
+                declaradas.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🌐 useEffect na prática</h2>
+              <p class="post-detail-text">
+                Um uso comum é buscar dados de uma API quando determinado estado
+                muda. Ao alterar o tipo de recurso desejado, o useEffect pode
+                detectar essa mudança e iniciar uma nova requisição.
+              </p>
+              <p class="post-detail-text">
+                Os dados recebidos podem ser armazenados em estado e depois
+                renderizados na interface.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⏳ E o async/await?</h2>
+              <p class="post-detail-text">
+                O useEffect não deve ser diretamente uma função assíncrona.
+                Quando async/await é necessário, uma função assíncrona pode ser
+                criada dentro do efeito e executada.
+              </p>
+              <p class="post-detail-text">
+                Em requisições, também é importante considerar a limpeza e
+                possíveis condições de corrida. A documentação do React
+                recomenda esse cuidado para evitar que respostas antigas
+                sobrescrevam dados mais recentes.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧹 Cleanup: tão importante quanto o efeito</h2>
+              <p class="post-detail-text">
+                O efeito pode retornar uma função de limpeza. Ela serve para
+                desfazer o que foi configurado: remover assinaturas e listeners,
+                interromper timers ou encerrar conexões.
+              </p>
+              <p class="post-detail-text">
+                Com Strict Mode, o React pode executar uma sequência extra de
+                configuração e limpeza em desenvolvimento para encontrar
+                problemas.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚠️ Boas práticas</h2>
+              <p class="post-detail-text">
+                useEffect não deve ser usado automaticamente sempre que algo
+                muda. A documentação do React destaca que, se não houver
+                necessidade de sincronização com um sistema externo,
+                provavelmente você não precisa de um Effect.
+              </p>
+              <p class="post-detail-text">
+                Hooks também não devem ser chamados dentro de condicionais ou
+                loops. O useEffect deve permanecer no nível superior do
+                componente ou de um Hook customizado.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🚀 Conclusão</h2>
+              <p class="post-detail-text">
+                Dominar o useEffect é entender quando sincronizar, com o que
+                sincronizar e como limpar essa sincronização. Mais do que
+                memorizar sua sintaxe, é preciso compreender seu ciclo de
+                execução e suas dependências.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_react_next.html"
+                  >Voltar para Postagens React / Next.js</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dGg6kJEE"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
