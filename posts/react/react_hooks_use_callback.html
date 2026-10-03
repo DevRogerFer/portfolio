@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>React Hooks: useCallback | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">React Hooks: useCallback</h1>
+          <p class="post-meta">React | Hooks | useCallback</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>⚛️ Dominando os React Hooks: useCallback</h2>
+              <p class="post-detail-text">
+                Quando uma aplicação React sofre com renderizações ou chamadas
+                desnecessárias, o useCallback pode ajudar a melhorar a
+                performance. Mas seu uso deve ter um motivo claro: ele é uma
+                ferramenta de otimização, não algo para aplicar em todas as
+                funções.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧠 O que é o useCallback?</h2>
+              <p class="post-detail-text">
+                O useCallback permite armazenar em cache a definição de uma
+                função entre renderizações. Enquanto suas dependências não
+                mudarem, o React pode reutilizar a mesma referência da função.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔄 Por que isso importa?</h2>
+              <p class="post-detail-text">
+                Em JavaScript, uma função criada durante uma renderização é uma
+                nova referência. Isso pode ser relevante quando essa função é
+                passada como prop para um componente otimizado ou utilizada como
+                dependência de outro Hook.
+              </p>
+              <p class="post-detail-text">
+                No cenário de uma aplicação que busca dados de uma API, uma
+                função responsável pelo fetch era recriada sempre que um campo
+                de texto era alterado. Como essa função era uma dependência de
+                um efeito, a API acabava sendo chamada novamente sem
+                necessidade.
+              </p>
+              <p class="post-detail-text">
+                Com o useCallback, a função pode ser recriada somente quando uma
+                dependência relevante, como o tipo de recurso, mudar. Assim,
+                alterações no texto não precisam disparar novas requisições.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🎯 useCallback x useMemo</h2>
+              <p class="post-detail-text">A diferença é simples:</p>
+              <ul class="post-detail-list">
+                <li>✅ useCallback armazena a própria função.</li>
+                <li>✅ useMemo armazena o resultado de uma função.</li>
+              </ul>
+              <p class="post-detail-text">
+                Os dois mecanismos estão relacionados à memoização, mas resolvem
+                problemas diferentes.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚙️ Quando usar?</h2>
+              <p class="post-detail-text">
+                O useCallback é especialmente útil quando uma função é passada
+                para um componente otimizado com memo ou quando sua identidade é
+                usada como dependência de outro Hook.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚠️ Use com critério</h2>
+              <p class="post-detail-text">
+                Não é necessário envolver toda função em useCallback. A
+                documentação oficial recomenda tratá-lo como uma otimização de
+                performance. Se a aplicação não apresenta um problema real de
+                renderização ou processamento, adicionar memoização pode apenas
+                deixar o código mais complexo.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_react_next.html"
+                  >Voltar para Postagens React / Next.js</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dufKA8nQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
