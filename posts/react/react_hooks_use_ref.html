@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>React Hooks: useRef | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">React Hooks: useRef</h1>
+          <p class="post-meta">React | Hooks | useRef</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>⚛️ Dominando os React Hooks: useRef</h2>
+              <p class="post-detail-text">
+                No React, nem todo valor precisa participar da renderização da
+                interface. É justamente nesse cenário que o useRef se destaca:
+                ele permite manter uma informação entre renderizações sem
+                provocar uma nova renderização quando seu valor é alterado. A
+                documentação oficial define a ref como um objeto com a
+                propriedade current, preservado entre as renderizações do
+                componente.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧠 useRef x useState</h2>
+              <p class="post-detail-text">
+                Embora ambos possam guardar valores, seus objetivos são
+                diferentes. O useState deve ser usado quando a mudança do valor
+                precisa atualizar a interface. Já o useRef é indicado para
+                informações que não precisam aparecer na tela. Alterar
+                ref.current não faz o React renderizar novamente o componente.
+              </p>
+              <p class="post-detail-text">
+                Esse comportamento torna o hook especialmente útil para
+                armazenar referências, identificadores, valores temporários e
+                informações que precisam sobreviver entre renderizações.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🎯 3 usos essenciais do useRef</h2>
+              <p class="post-detail-text">
+                <strong>1️⃣ Contar renderizações</strong>
+              </p>
+              <p class="post-detail-text">
+                Uma ref pode armazenar uma contagem de renderizações sem criar
+                um novo ciclo de renderização. Esse é um exemplo importante para
+                compreender a diferença entre uma informação persistente e um
+                estado visual.
+              </p>
+              <p class="post-detail-text">
+                <strong>2️⃣ Acessar elementos do DOM</strong>
+              </p>
+              <p class="post-detail-text">
+                Um dos usos mais comuns é criar uma referência para um elemento
+                HTML. Assim, é possível acessar diretamente o elemento e
+                realizar ações como colocar o foco em um campo de entrada. A
+                documentação oficial também apresenta o foco de um input como
+                exemplo clássico de manipulação do DOM com refs.
+              </p>
+              <p class="post-detail-text">
+                <strong>3️⃣ Guardar valores anteriores</strong>
+              </p>
+              <p class="post-detail-text">
+                O useRef também pode preservar o valor anterior de um estado.
+                Combinado com useEffect, ele permite armazenar a informação
+                anterior sem provocar uma nova renderização.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚠️ Um cuidado importante</h2>
+              <p class="post-detail-text">
+                Refs não devem ser usadas como substitutas do estado quando o
+                valor precisa atualizar a interface. Além disso, a documentação
+                atual recomenda não ler ou escrever ref.current durante a
+                renderização, exceto em situações específicas de inicialização.
+                Eventos e efeitos são os locais apropriados para essas
+                operações.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🚀 Conclusão</h2>
+              <p class="post-detail-text">
+                Dominar o useRef é entender que o React oferece diferentes
+                ferramentas para diferentes necessidades. Quando um valor
+                precisa persistir entre renderizações, mas sua alteração não
+                deve disparar uma nova renderização, uma ref pode ser a escolha
+                certa.
+              </p>
+              <p class="post-detail-text">
+                Use useState para dados que afetam a interface e useRef para
+                informações que precisam permanecer disponíveis sem participar
+                diretamente da renderização. Essa distinção ajuda a criar
+                componentes mais previsíveis e simples.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_react_next.html"
+                  >Voltar para Postagens React / Next.js</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/d2DFmCiM"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
