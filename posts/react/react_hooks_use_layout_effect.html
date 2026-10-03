@@ -51,27 +51,26 @@
               <p class="post-detail-text">
                 Quando uma interface precisa medir, posicionar ou ajustar
                 elementos do DOM antes que o usuário veja a tela, o
-                useLayoutEffect pode ser a escolha certa. Ele é uma variação
-                do useEffect para efeitos que precisam acontecer antes da
-                pintura do navegador.
+                useLayoutEffect pode ser a escolha certa. Ele é uma variação do
+                useEffect para efeitos que precisam acontecer antes da pintura
+                do navegador.
               </p>
             </section>
 
             <section class="post-detail-section">
               <h2>🧠 O que é o useLayoutEffect?</h2>
               <p class="post-detail-text">
-                O useLayoutEffect executa seu efeito depois que o React
-                aplica alterações ao DOM, mas antes que o navegador apresente
-                a atualização visual. Isso é útil quando o efeito depende das
+                O useLayoutEffect executa seu efeito depois que o React aplica
+                alterações ao DOM, mas antes que o navegador apresente a
+                atualização visual. Isso é útil quando o efeito depende das
                 dimensões ou da posição de elementos.
               </p>
               <p class="post-detail-text">
-                Já o useEffect acontece posteriormente e, em situações
-                visuais, pode permitir que uma versão intermediária seja
-                exibida antes do ajuste. A documentação oficial do React
-                recomenda preferir useEffect sempre que possível e reservar
-                useLayoutEffect para casos que exigem trabalho antes da
-                pintura.
+                Já o useEffect acontece posteriormente e, em situações visuais,
+                pode permitir que uma versão intermediária seja exibida antes do
+                ajuste. A documentação oficial do React recomenda preferir
+                useEffect sempre que possível e reservar useLayoutEffect para
+                casos que exigem trabalho antes da pintura.
               </p>
             </section>
 
@@ -82,8 +81,8 @@
               </p>
               <ul class="post-detail-list">
                 <li>
-                  🔹 useEffect: adequado para efeitos que não precisam
-                  bloquear a pintura.
+                  🔹 useEffect: adequado para efeitos que não precisam bloquear
+                  a pintura.
                 </li>
                 <li>
                   🔹 useLayoutEffect: indicado quando é necessário medir ou
@@ -91,8 +90,8 @@
                 </li>
               </ul>
               <p class="post-detail-text">
-                Essa diferença pode evitar efeitos como um elemento aparecer
-                em uma posição e “saltar” para o local correto logo depois.
+                Essa diferença pode evitar efeitos como um elemento aparecer em
+                uma posição e “saltar” para o local correto logo depois.
               </p>
             </section>
 
@@ -100,16 +99,16 @@
               <h2>📐 Um caso prático</h2>
               <p class="post-detail-text">
                 Imagine um modal, tooltip ou menu que precisa ser posicionado
-                com base na localização de outro elemento. A interface
-                precisa existir no DOM para que sua posição possa ser medida
-                e, então, ajustada.
+                com base na localização de outro elemento. A interface precisa
+                existir no DOM para que sua posição possa ser medida e, então,
+                ajustada.
               </p>
               <p class="post-detail-text">
                 Com useLayoutEffect, essa medição e correção podem acontecer
-                antes da pintura. Assim, o usuário recebe diretamente a
-                posição final, proporcionando uma experiência mais fluida.
-                Esse é justamente o tipo de situação explorado nas páginas
-                sobre posicionamento de modal.
+                antes da pintura. Assim, o usuário recebe diretamente a posição
+                final, proporcionando uma experiência mais fluida. Esse é
+                justamente o tipo de situação explorado nas páginas sobre
+                posicionamento de modal.
               </p>
             </section>
 
@@ -117,18 +116,17 @@
               <h2>⚠️ Use com cuidado</h2>
               <p class="post-detail-text">
                 O useLayoutEffect não deve substituir o useEffect
-                automaticamente. Como seu código bloqueia o navegador de
-                exibir a tela enquanto é executado, seu uso excessivo pode
-                prejudicar o desempenho.
+                automaticamente. Como seu código bloqueia o navegador de exibir
+                a tela enquanto é executado, seu uso excessivo pode prejudicar o
+                desempenho.
               </p>
               <p class="post-detail-text">
-                Hooks também devem ser chamados no nível superior do
-                componente ou de Hooks personalizados, nunca dentro de
-                condições ou loops.
+                Hooks também devem ser chamados no nível superior do componente
+                ou de Hooks personalizados, nunca dentro de condições ou loops.
               </p>
               <p class="post-detail-text">
-                Effects são executados no cliente e não durante a
-                renderização no servidor.
+                Effects são executados no cliente e não durante a renderização
+                no servidor.
               </p>
               <p class="post-detail-text">
                 Em aplicações com renderização no servidor, esse comportamento
@@ -149,10 +147,10 @@
                 <li>✨ evitar “piscadas” ou mudanças visuais perceptíveis.</li>
               </ul>
               <p class="post-detail-text">
-                Dominar esse Hook não significa usá-lo em todo lugar.
-                Significa reconhecer quando o timing da atualização visual
-                realmente importa. No React, performance e experiência do
-                usuário caminham juntas.
+                Dominar esse Hook não significa usá-lo em todo lugar. Significa
+                reconhecer quando o timing da atualização visual realmente
+                importa. No React, performance e experiência do usuário caminham
+                juntas.
               </p>
 
               <div class="post-actions">

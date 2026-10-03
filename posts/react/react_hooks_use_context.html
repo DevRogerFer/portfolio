@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>React Hooks: useContext | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">React Hooks: useContext</h1>
+          <p class="post-meta">React | Hooks | useContext</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>⚛️ Dominando os React Hooks: useContext</h2>
+              <p class="post-detail-text">
+                Em aplicações React, compartilhar informações entre componentes
+                pode se tornar trabalhoso quando precisamos passar props por
+                vários níveis da árvore. É nesse cenário que o useContext se
+                destaca: ele permite ler e acompanhar um contexto diretamente no
+                componente, evitando o repasse manual de props pela hierarquia.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧩 O que é o useContext?</h2>
+              <p class="post-detail-text">
+                O useContext permite acessar o valor de um contexto criado com
+                createContext. O React procura o Provider mais próximo acima do
+                componente que utiliza o Hook e entrega o valor fornecido por
+                ele. Se nenhum Provider for encontrado, será usado o valor
+                padrão definido na criação do contexto.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🌐 Compartilhando dados</h2>
+              <p class="post-detail-text">
+                Context pode disponibilizar informações para diferentes partes
+                da interface, como tema, usuário autenticado, idioma ou
+                configurações globais. O benefício é reduzir o chamado prop
+                drilling, deixando a comunicação entre componentes mais
+                organizada.
+              </p>
+              <p class="post-detail-text">
+                Um exemplo utiliza um contexto de tema com light e dark. Um
+                Provider disponibiliza o tema e uma função para alterná-lo,
+                enquanto outros componentes consomem essas informações sem
+                receber props intermediárias.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔄 Contexto também pode ser atualizado</h2>
+              <p class="post-detail-text">
+                O Context pode trabalhar em conjunto com estado. Quando o valor
+                fornecido pelo Provider muda, os componentes que consomem aquele
+                contexto recebem o novo valor e são atualizados.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🎯 Provider mais próximo vence</h2>
+              <p class="post-detail-text">
+                O useContext procura o Provider mais próximo na árvore. Isso
+                permite sobrescrever um contexto em uma parte específica da
+                aplicação, criando valores diferentes para diferentes regiões da
+                interface.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚡ Boas práticas e atenção</h2>
+              <p class="post-detail-text">
+                Context é poderoso, mas nem todo estado deve ser global. Use-o
+                quando diferentes componentes realmente precisarem compartilhar
+                uma informação. Quando o valor contém objetos ou funções,
+                mudanças na referência podem provocar novas renderizações;
+                useMemo e useCallback podem ajudar quando essa otimização for
+                necessária.
+              </p>
+              <p class="post-detail-text">
+                Também é importante garantir que o componente consumidor esteja
+                dentro do Provider correto e que o contexto usado para fornecer
+                e consumir o valor seja o mesmo.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🚀 Conclusão</h2>
+              <p class="post-detail-text">
+                Dominar o useContext é entender como compartilhar dados em React
+                sem transformar a árvore de componentes em uma sequência
+                interminável de props. Com estado e uma estrutura bem planejada,
+                ele contribui para aplicações mais organizadas, legíveis e
+                escaláveis.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_react_next.html"
+                  >Voltar para Postagens React / Next.js</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dXy2DsAs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
