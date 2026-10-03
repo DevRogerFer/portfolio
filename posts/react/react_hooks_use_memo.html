@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>React Hooks: useMemo | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">React Hooks: useMemo</h1>
+          <p class="post-meta">React | Hooks | useMemo</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>⚛️ Dominando os React Hooks: useMemo</h2>
+              <p class="post-detail-text">
+                Quando uma aplicação React realiza cálculos custosos, cada nova
+                renderização pode repetir operações desnecessárias. É nesse
+                cenário que o useMemo pode ajudar a otimizar a performance.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧠 O que é o useMemo?</h2>
+              <p class="post-detail-text">
+                O useMemo é um Hook que permite armazenar em memória o resultado
+                de um cálculo entre renderizações. Se suas dependências não
+                mudarem, o React reutiliza o valor já calculado em vez de
+                executar a operação novamente.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚙️ Como funciona?</h2>
+              <p class="post-detail-text">
+                O useMemo recebe uma função de cálculo e uma lista de
+                dependências. Na primeira renderização, o cálculo é executado.
+                Nas seguintes, o React compara as dependências e só refaz o
+                cálculo quando algum valor utilizado por ele muda.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔄 Um problema comum</h2>
+              <p class="post-detail-text">
+                Imagine um componente que possui um estado numérico e outro
+                relacionado a um campo de texto. Se o componente executar uma
+                função lenta diretamente durante a renderização, alterar apenas
+                o texto também poderá fazer esse cálculo ser repetido.
+              </p>
+              <p class="post-detail-text">
+                Nesse exemplo, isso vai gerar chamadas desnecessárias de uma
+                função lenta. Com o useMemo, o resultado passa a ser recalculado
+                somente quando o número utilizado como dependência é alterado.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🚀 Quando usar?</h2>
+              <p class="post-detail-text">
+                O useMemo faz mais sentido quando existe um cálculo realmente
+                custoso, quando um valor memoizado é passado para um componente
+                otimizado com memo ou quando esse valor é utilizado como
+                dependência de outro Hook.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚠️ Use com critério</h2>
+              <p class="post-detail-text">
+                O useMemo é uma otimização de performance, não uma solução para
+                corrigir lógica incorreta. Seu uso indiscriminado pode tornar o
+                código menos legível e consumir recursos desnecessariamente.
+              </p>
+              <p class="post-detail-text">
+                Outro ponto importante: o useMemo não deixa a primeira
+                renderização mais rápida. Seu benefício aparece ao evitar
+                trabalho repetido em renderizações posteriores.
+              </p>
+              <p class="post-detail-text">
+                Hooks devem ser chamados no nível superior do componente ou de
+                Hooks customizados, nunca dentro de condicionais ou loops.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📊 Performance deve ser medida</h2>
+              <p class="post-detail-text">
+                Antes de adicionar useMemo, vale identificar se o cálculo
+                realmente representa um custo relevante. A documentação do React
+                recomenda medir a performance e usar memoização quando houver um
+                benefício perceptível.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📌 Conclusão</h2>
+              <p class="post-detail-text">
+                Dominar o useMemo é entender que memoização não significa “usar
+                em tudo”. O objetivo é evitar cálculos desnecessários quando
+                isso realmente traz benefício. Antes de aplicar o Hook, avalie o
+                custo da operação e meça a performance da aplicação.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_react_next.html"
+                  >Voltar para Postagens React / Next.js</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/ddpJkBga"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
