@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>React Hooks: useLayoutEffect | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">React Hooks: useLayoutEffect</h1>
+          <p class="post-meta">React | Hooks | useLayoutEffect</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>⚛️ Dominando os React Hooks: useLayoutEffect</h2>
+              <p class="post-detail-text">
+                Quando uma interface precisa medir, posicionar ou ajustar
+                elementos do DOM antes que o usuário veja a tela, o
+                useLayoutEffect pode ser a escolha certa. Ele é uma variação
+                do useEffect para efeitos que precisam acontecer antes da
+                pintura do navegador.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧠 O que é o useLayoutEffect?</h2>
+              <p class="post-detail-text">
+                O useLayoutEffect executa seu efeito depois que o React
+                aplica alterações ao DOM, mas antes que o navegador apresente
+                a atualização visual. Isso é útil quando o efeito depende das
+                dimensões ou da posição de elementos.
+              </p>
+              <p class="post-detail-text">
+                Já o useEffect acontece posteriormente e, em situações
+                visuais, pode permitir que uma versão intermediária seja
+                exibida antes do ajuste. A documentação oficial do React
+                recomenda preferir useEffect sempre que possível e reservar
+                useLayoutEffect para casos que exigem trabalho antes da
+                pintura.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔍 useEffect x useLayoutEffect</h2>
+              <p class="post-detail-text">
+                A principal diferença está no momento da execução:
+              </p>
+              <ul class="post-detail-list">
+                <li>
+                  🔹 useEffect: adequado para efeitos que não precisam
+                  bloquear a pintura.
+                </li>
+                <li>
+                  🔹 useLayoutEffect: indicado quando é necessário medir ou
+                  modificar o layout antes da atualização ser exibida.
+                </li>
+              </ul>
+              <p class="post-detail-text">
+                Essa diferença pode evitar efeitos como um elemento aparecer
+                em uma posição e “saltar” para o local correto logo depois.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📐 Um caso prático</h2>
+              <p class="post-detail-text">
+                Imagine um modal, tooltip ou menu que precisa ser posicionado
+                com base na localização de outro elemento. A interface
+                precisa existir no DOM para que sua posição possa ser medida
+                e, então, ajustada.
+              </p>
+              <p class="post-detail-text">
+                Com useLayoutEffect, essa medição e correção podem acontecer
+                antes da pintura. Assim, o usuário recebe diretamente a
+                posição final, proporcionando uma experiência mais fluida.
+                Esse é justamente o tipo de situação explorado nas páginas
+                sobre posicionamento de modal.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚠️ Use com cuidado</h2>
+              <p class="post-detail-text">
+                O useLayoutEffect não deve substituir o useEffect
+                automaticamente. Como seu código bloqueia o navegador de
+                exibir a tela enquanto é executado, seu uso excessivo pode
+                prejudicar o desempenho.
+              </p>
+              <p class="post-detail-text">
+                Hooks também devem ser chamados no nível superior do
+                componente ou de Hooks personalizados, nunca dentro de
+                condições ou loops.
+              </p>
+              <p class="post-detail-text">
+                Effects são executados no cliente e não durante a
+                renderização no servidor.
+              </p>
+              <p class="post-detail-text">
+                Em aplicações com renderização no servidor, esse comportamento
+                precisa ser considerado.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🚀 Quando usar?</h2>
+              <p class="post-detail-text">
+                Pense no useLayoutEffect quando precisar:
+              </p>
+              <ul class="post-detail-list">
+                <li>📏 medir dimensões de elementos;</li>
+                <li>📍 calcular posições no DOM;</li>
+                <li>🧩 ajustar elementos antes da exibição;</li>
+                <li>💬 posicionar tooltips, menus ou modais;</li>
+                <li>✨ evitar “piscadas” ou mudanças visuais perceptíveis.</li>
+              </ul>
+              <p class="post-detail-text">
+                Dominar esse Hook não significa usá-lo em todo lugar.
+                Significa reconhecer quando o timing da atualização visual
+                realmente importa. No React, performance e experiência do
+                usuário caminham juntas.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_react_next.html"
+                  >Voltar para Postagens React / Next.js</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dZnHC4sB"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
