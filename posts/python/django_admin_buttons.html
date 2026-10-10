@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Criando Botões no Django Admin | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">Criando botões no Django Admin</h1>
+          <p class="post-meta">Python | Django | Administração de dados</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>🔘 Criando botões no Django Admin</h2>
+              <p class="post-detail-text">
+                O Django Admin permite ir além das operações tradicionais de
+                cadastrar, editar e excluir registros. Com ações e ferramentas
+                personalizadas, é possível transformar o painel em um ambiente
+                mais produtivo, capaz de executar tarefas específicas
+                diretamente sobre os dados.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚙️ Ações administrativas</h2>
+              <p class="post-detail-text">
+                As ações do Django são ideais para executar uma mesma operação
+                em vários registros selecionados. Elas aparecem na tela de
+                listagem e podem, por exemplo, atualizar informações em massa,
+                gerar resultados ou executar processos administrativos.
+              </p>
+              <p class="post-detail-text">
+                Também é possível definir ações como métodos do
+                <code>ModelAdmin</code>, permitindo acessar recursos do próprio
+                painel.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧩 E quando precisamos de um botão por registro?</h2>
+              <p class="post-detail-text">
+                Para ações específicas de um único objeto, uma alternativa é
+                utilizar o Django Object Actions. A biblioteca permite adicionar
+                ferramentas diretamente à tela de edição de cada registro,
+                utilizando ações associadas ao
+                <code>ModelAdmin</code>.
+              </p>
+              <p class="post-detail-text">
+                Isso possibilita criar botões para tarefas como visualizar
+                detalhes, publicar conteúdo, executar processos ou gerar
+                informações adicionais, deixando o fluxo administrativo mais
+                direto.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🎯 Personalizando a experiência</h2>
+              <p class="post-detail-text">
+                Um botão personalizado pode representar uma ação completa: o
+                administrador inicia o processo, uma função executa a lógica
+                necessária e o sistema pode retornar uma mensagem ou até
+                direcionar para outra página.
+              </p>
+              <p class="post-detail-text">
+                No Django Admin, também é possível utilizar
+                <code>get_urls()</code> para criar URLs específicas e
+                associá-las a views responsáveis por determinadas operações.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔐 Atenção às permissões</h2>
+              <p class="post-detail-text">
+                Ao criar ações personalizadas, é importante considerar quem
+                poderá executá-las. Operações administrativas podem alterar
+                informações ou iniciar processos importantes, portanto, o
+                controle de permissões deve fazer parte da implementação.
+              </p>
+              <p class="post-detail-text">
+                Também é recomendável utilizar requisições apropriadas para
+                ações que modificam dados e fornecer mensagens claras ao
+                administrador sobre o resultado da operação.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔧 Quando usar cada abordagem?</h2>
+              <p class="post-detail-text">
+                As ações nativas são mais adequadas quando a operação deve ser
+                aplicada a vários registros ao mesmo tempo. Já os botões
+                vinculados a objetos individuais fazem mais sentido quando a
+                tarefa depende de um registro específico. Escolher a abordagem
+                correta ajuda a manter o painel simples.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🚀 Mais produtividade no Admin</h2>
+              <p class="post-detail-text">
+                Ao combinar as ações nativas do Django com ferramentas
+                personalizadas, o painel administrativo pode se adaptar melhor
+                às necessidades da aplicação.
+              </p>
+              <p class="post-detail-text">
+                O resultado é uma experiência mais rápida, organizada e
+                funcional, reduzindo tarefas repetitivas e colocando operações
+                importantes ao alcance de um clique.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_python_django.html"
+                  >Voltar para Postagens Python / Django</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dxnMj93d"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
