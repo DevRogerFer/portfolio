@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>KeyError no Django Sessions | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">
+            KeyError no Django Sessions: como evitar falhas inesperadas
+          </h1>
+          <p class="post-meta">Python | Django | Autenticação e estado</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>
+                🔐 KeyError no Django Sessions: como evitar falhas inesperadas
+              </h2>
+              <p class="post-detail-text">
+                Ao trabalhar com Sessions no Django, é comum armazenar
+                informações temporárias relacionadas ao estado do usuário, como
+                dados de autenticação, preferências ou informações de navegação.
+                Porém, como a sessão funciona de maneira semelhante a um
+                dicionário, é importante considerar que uma chave pode não
+                existir quando sua aplicação tenta utilizá-la.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚠️ O que é o KeyError?</h2>
+              <p class="post-detail-text">
+                O <code>KeyError</code> acontece quando uma operação tenta
+                acessar ou remover uma chave que não está presente na sessão. Um
+                cenário comum ocorre durante o logout: a aplicação tenta excluir
+                uma informação de autenticação que já foi removida ou que nunca
+                chegou a ser criada.
+              </p>
+              <p class="post-detail-text">
+                Isso pode acontecer quando o usuário acessa diretamente uma rota
+                de logout, realiza o logout mais de uma vez ou quando o estado
+                da sessão foi alterado por outro fluxo da aplicação.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧩 Como lidar com esse cenário?</h2>
+              <p class="post-detail-text">
+                Uma abordagem é tratar explicitamente a exceção e definir um
+                comportamento seguro para quando a chave não estiver disponível.
+                Assim, em vez de interromper a requisição com um erro interno, é
+                possível redirecionar o usuário para uma página apropriada e
+                apresentar uma mensagem informativa.
+              </p>
+              <p class="post-detail-text">
+                Outra prática importante é verificar a existência da chave antes
+                de realizar operações sobre ela. O Django também disponibiliza
+                métodos próprios para trabalhar com sessões, como
+                <code>get()</code>, que permite definir um valor padrão quando
+                uma chave não existe, e <code>pop()</code>, que pode remover uma
+                chave sem gerar erro quando um valor padrão é informado.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🛡️ Por que isso importa?</h2>
+              <p class="post-detail-text">
+                Tratamento de exceções não significa apenas esconder erros. Ele
+                ajuda a criar fluxos previsíveis e resistentes a situações
+                inesperadas. Em funcionalidades de autenticação, isso é
+                especialmente importante, pois o estado da sessão pode mudar
+                entre diferentes requisições.
+              </p>
+              <p class="post-detail-text">
+                No logout, por exemplo, a aplicação deve conseguir concluir o
+                fluxo mesmo quando os dados esperados já não estiverem
+                disponíveis. Dessa forma, o usuário não fica exposto a uma
+                página de erro interno e a experiência permanece consistente.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🚀 Boas práticas com Sessions</h2>
+              <ul class="post-detail-list">
+                <li>• Considere sempre que uma chave pode não existir.</li>
+                <li>
+                  • Prefira métodos apropriados para leitura e remoção de dados.
+                </li>
+                <li>
+                  • Trate exceções quando uma operação puder falhar
+                  legitimamente.
+                </li>
+                <li>
+                  • Evite expor detalhes internos da aplicação ao usuário.
+                </li>
+                <li>
+                  • Garanta fluxos de autenticação seguros para diferentes
+                  estados da sessão.
+                </li>
+              </ul>
+              <p class="post-detail-text">
+                Dominar esses detalhes do Django Sessions ajuda a construir
+                aplicações mais robustas, previsíveis e preparadas para
+                situações que não acontecem apenas no fluxo “ideal”.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_python_django.html"
+                  >Voltar para Postagens Python / Django</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/d7iX62BT"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
