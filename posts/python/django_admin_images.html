@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Exibindo Imagens no Django Admin | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">Exibindo imagens no Django Admin</h1>
+          <p class="post-meta">Python | Django | Administração de dados</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>🖼️ Exibindo imagens no Django Admin</h2>
+              <p class="post-detail-text">
+                O Django Admin pode ser muito mais visual. Ao trabalhar com
+                cadastros que possuem fotografias, capas, produtos ou outros
+                arquivos de imagem, é possível apresentar miniaturas diretamente
+                no painel administrativo, facilitando a identificação dos
+                registros e tornando a gestão mais prática.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📸 Usando ImageField</h2>
+              <p class="post-detail-text">
+                O primeiro passo é utilizar um campo <code>ImageField</code>
+                no modelo. Ele permite receber imagens e definir, por meio de
+                <code>upload_to</code>, o diretório onde os arquivos enviados
+                serão organizados.
+              </p>
+              <p class="post-detail-text">
+                Uma informação importante: o banco de dados não armazena a
+                imagem em si. Ele mantém a referência ao arquivo, enquanto o
+                arquivo é gerenciado pelo sistema de armazenamento configurado
+                pelo Django. O objeto do campo também disponibiliza a URL da
+                imagem para sua utilização.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚙️ Configurando os arquivos de mídia</h2>
+              <p class="post-detail-text">
+                Para que as imagens possam ser armazenadas e acessadas
+                corretamente, é necessário configurar <code>MEDIA_ROOT</code> e
+                <code>MEDIA_URL</code>. O primeiro define o local onde os
+                arquivos enviados serão armazenados; o segundo define a URL
+                utilizada para servi-los.
+              </p>
+              <p class="post-detail-text">
+                Durante o desenvolvimento, essa configuração também precisa
+                estar integrada às URLs do projeto para que os arquivos de mídia
+                sejam disponibilizados corretamente.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧩 Mostrando a imagem no Admin</h2>
+              <p class="post-detail-text">
+                O Django Admin permite adicionar métodos personalizados ao
+                <code>ModelAdmin</code> e incluí-los em
+                <code>list_display</code>. Dessa forma, uma informação derivada
+                do registro pode aparecer como uma coluna na listagem
+                administrativa.
+              </p>
+              <p class="post-detail-text">
+                Para imagens, esse método pode produzir uma miniatura HTML
+                vinculada ao arquivo armazenado. A documentação atual recomenda
+                <code>format_html()</code> para gerar HTML em métodos do Admin,
+                evitando que a saída seja tratada simplesmente como texto.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>👀 Por que usar miniaturas?</h2>
+              <p class="post-detail-text">
+                Imagine uma administração com dezenas de pessoas, produtos ou
+                conteúdos. Identificar cada registro apenas pelo nome pode ser
+                pouco intuitivo. Uma pequena prévia visual permite reconhecer
+                rapidamente o item correto, reduzindo a necessidade de abrir
+                cada cadastro individualmente.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🚀 Mais praticidade no painel</h2>
+              <p class="post-detail-text">
+                A combinação de <code>ImageField</code>, configuração de mídia e
+                personalização do <code>ModelAdmin</code> transforma o Django
+                Admin em uma ferramenta mais informativa. Além de preservar a
+                estrutura dos dados, a abordagem melhora a experiência de quem
+                administra a aplicação.
+              </p>
+              <p class="post-detail-text">
+                O resultado é um painel mais visual, organizado e eficiente —
+                especialmente em sistemas nos quais imagens fazem parte
+                importante dos registros.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_python_django.html"
+                  >Voltar para Postagens Python / Django</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dnYC_M-a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
