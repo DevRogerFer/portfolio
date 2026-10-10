@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Django Messages | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">
+            Django Messages: feedback temporário para aplicações web
+          </h1>
+          <p class="post-meta">Python | Django | Interface e feedback</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>
+                💬 Django Messages: feedback temporário para aplicações web
+              </h2>
+              <p class="post-detail-text">
+                Uma aplicação web não deve apenas executar ações: também precisa
+                informar ao usuário o que aconteceu. Um cadastro concluído, uma
+                senha inválida ou uma alteração realizada com sucesso são
+                situações em que um retorno visual torna a experiência mais
+                clara.
+              </p>
+              <p class="post-detail-text">
+                É nesse cenário que entra o Django Messages, recurso integrado
+                ao Django para criar notificações temporárias entre requisições.
+                As mensagens podem ser armazenadas durante uma requisição e
+                recuperadas posteriormente, normalmente na próxima página
+                exibida.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚙️ Como funciona?</h2>
+              <p class="post-detail-text">
+                O sistema utiliza níveis de mensagem para representar diferentes
+                tipos de feedback: <code>DEBUG</code>, <code>INFO</code>,
+                <code>SUCCESS</code>, <code>WARNING</code> e <code>ERROR</code>.
+                Cada nível pode receber uma identificação visual própria,
+                permitindo diferenciar uma confirmação, uma advertência ou um
+                erro.
+              </p>
+              <p class="post-detail-text">
+                A mensagem é criada na view e associada à requisição. Depois, o
+                template pode acessar as mensagens disponíveis e apresentá-las
+                ao usuário. Dessa forma, a lógica permanece na aplicação
+                enquanto a apresentação fica sob responsabilidade da interface.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🎨 Integração com Bootstrap</h2>
+              <p class="post-detail-text">
+                O Django Messages pode ser utilizado junto ao Bootstrap, que
+                possui componentes de alerta para diferentes contextos, como
+                sucesso, informação, aviso e perigo.
+              </p>
+              <p class="post-detail-text">
+                Por meio de <code>MESSAGE_TAGS</code>, é possível personalizar
+                as tags associadas aos níveis de mensagem e relacioná-las às
+                classes de alerta do Bootstrap, facilitando a integração entre
+                backend e frontend.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🚀 Onde utilizar?</h2>
+              <p class="post-detail-text">Esse recurso pode ser aplicado em:</p>
+              <ul class="post-detail-list">
+                <li>• Login e logout;</li>
+                <li>• Cadastro de usuários;</li>
+                <li>• Validação de formulários;</li>
+                <li>• Alterações de dados;</li>
+                <li>• Exclusões e operações administrativas;</li>
+                <li>• Avisos sobre permissões ou acesso;</li>
+                <li>• Confirmações de ações realizadas.</li>
+              </ul>
+              <p class="post-detail-text">
+                O Django também oferece atalhos para mensagens de informação,
+                sucesso, aviso e erro, além da possibilidade de utilizar tags
+                adicionais e configurar o nível mínimo registrado.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔎 Um detalhe importante</h2>
+              <p class="post-detail-text">
+                As mensagens são temporárias. O sistema marca o armazenamento
+                para limpeza quando elas são percorridas. Por isso, é uma boa
+                prática iterar sobre a coleção de mensagens no template, mesmo
+                quando se espera apenas uma notificação.
+              </p>
+              <p class="post-detail-text">
+                Compreender esse mecanismo ajuda a criar interfaces mais
+                previsíveis, consistentes e informativas. Em vez de deixar o
+                usuário sem saber se uma ação funcionou, a aplicação pode
+                fornecer um feedback imediato e contextualizado.
+              </p>
+              <p class="post-detail-text">
+                📚 O Django Messages é um recurso simples, mas muito útil para
+                conectar a lógica da aplicação à experiência do usuário,
+                tornando as interações mais claras e profissionais.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_python_django.html"
+                  >Voltar para Postagens Python / Django</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dTPpUk2r"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
