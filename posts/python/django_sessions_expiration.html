@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Expiração no Django Sessions | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">
+            Definindo o tempo de expiração no Django Sessions
+          </h1>
+          <p class="post-meta">Python | Django | Autenticação e estado</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>⏱️ Definindo o tempo de expiração no Django Sessions</h2>
+              <p class="post-detail-text">
+                Em aplicações web com autenticação, controlar por quanto tempo
+                uma sessão permanece válida é importante para equilibrar
+                segurança e experiência do usuário. O Django oferece mecanismos
+                para definir quando uma Session deve expirar automaticamente.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⏳ O que define a duração da Session?</h2>
+              <p class="post-detail-text">
+                A configuração <code>SESSION_COOKIE_AGE</code> determina, em
+                segundos, o tempo padrão de duração da sessão.
+              </p>
+              <p class="post-detail-text">
+                Esse valor pode ser ajustado conforme as necessidades da
+                aplicação. Sistemas que trabalham com informações sensíveis
+                podem adotar períodos menores, enquanto outros podem utilizar
+                períodos maiores para reduzir a frequência de novos logins.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚙️ Personalizando a expiração</h2>
+              <p class="post-detail-text">
+                Além da configuração global, o Django permite definir a
+                expiração individualmente por meio de
+                <code>set_expiry()</code>. O valor pode representar segundos de
+                inatividade, uma data ou horário específico, <code>0</code> para
+                expirar o cookie quando o navegador for fechado ou
+                <code>None</code> para retornar à política global.
+              </p>
+              <p class="post-detail-text">
+                Um ponto importante é que a leitura da sessão não é considerada
+                atividade para fins de expiração. O Django considera a última
+                modificação da sessão ao calcular sua validade.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🕐 Consultando a expiração</h2>
+              <p class="post-detail-text">
+                O Django também disponibiliza métodos para consultar informações
+                sobre a validade.
+              </p>
+              <ul class="post-detail-list">
+                <li>
+                  ✅ <code>get_expiry_age()</code> retorna a quantidade de
+                  segundos até a sessão expirar, enquanto
+                </li>
+                <li>
+                  ✅ <code>get_expiry_date()</code> informa a data prevista para
+                  a expiração.
+                </li>
+              </ul>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔐 Expiração e segurança</h2>
+              <p class="post-detail-text">
+                Uma sessão com duração excessiva pode manter uma autenticação
+                válida por mais tempo do que o necessário.
+              </p>
+              <p class="post-detail-text">
+                Por isso, o tempo adequado depende do contexto da aplicação, da
+                sensibilidade das informações e do comportamento esperado dos
+                usuários. O Django permite ajustar essa política de forma global
+                ou individual.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🌐 Expirar ao fechar o navegador</h2>
+              <p class="post-detail-text">
+                Também é possível configurar o cookie da sessão para expirar
+                quando o navegador for fechado, utilizando
+                <code>SESSION_EXPIRE_AT_BROWSER_CLOSE</code>. Essa configuração
+                funciona como uma política global e pode ser sobrescrita
+                individualmente com <code>set_expiry()</code>.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🚀 Conclusão</h2>
+              <p class="post-detail-text">
+                Definir corretamente o tempo de expiração das Sessions é parte
+                importante do gerenciamento de autenticação no Django. Com
+                <code>SESSION_COOKIE_AGE</code>, <code>set_expiry()</code>
+                e os métodos de consulta, é possível controlar a duração das
+                sessões conforme as necessidades da aplicação, equilibrando
+                segurança e usabilidade.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_python_django.html"
+                  >Voltar para Postagens Python / Django</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/diaZQUb8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
