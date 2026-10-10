@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Atributos de Exibição no Django Admin | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">
+            Modificando atributos de exibição no Django Admin
+          </h1>
+          <p class="post-meta">Python | Django | Administração de dados</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>🛠️ Modificando atributos de exibição no Django Admin</h2>
+              <p class="post-detail-text">
+                O Django Admin já oferece uma interface poderosa para
+                administrar os dados de uma aplicação, mas seu verdadeiro
+                potencial aparece quando personalizamos a forma como os
+                registros são apresentados. A classe <code>ModelAdmin</code>,
+                normalmente configurada em <code>admin.py</code>, concentra
+                diversas opções para tornar o painel mais organizado, rápido e
+                útil.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📋 Controlando as colunas</h2>
+              <p class="post-detail-text">
+                Com <code>list_display</code>, você define quais informações
+                aparecem na tabela de registros. Em vez de depender da
+                visualização padrão, é possível selecionar campos relevantes
+                para que o administrador encontre rapidamente o que precisa.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔒 Protegendo informações</h2>
+              <p class="post-detail-text">
+                O atributo <code>readonly_fields</code> transforma determinados
+                campos em somente leitura. Isso é especialmente útil para
+                informações que devem ser consultadas, mas não alteradas
+                manualmente, como datas de criação ou outros dados controlados
+                pela aplicação.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔎 Pesquisa e filtros</h2>
+              <p class="post-detail-text">
+                Para bases maiores, <code>search_fields</code> adiciona recursos
+                de pesquisa diretamente à listagem. Já
+                <code>list_filter</code> cria filtros que facilitam a
+                segmentação dos registros. Juntos, esses recursos reduzem a
+                navegação desnecessária e tornam a administração muito mais
+                eficiente.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>✏️ Edição rápida</h2>
+              <p class="post-detail-text">
+                Outra possibilidade é <code>list_editable</code>, que permite
+                alterar determinados campos diretamente na tela de listagem, sem
+                abrir cada registro individualmente. A documentação do Django
+                destaca que os campos editáveis precisam estar presentes em
+                <code>list_display</code> e não podem ocupar simultaneamente o
+                espaço destinado aos links de edição.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚙️ Personalização com ModelAdmin</h2>
+              <p class="post-detail-text">
+                Esses recursos podem ser reunidos em uma classe personalizada
+                derivada de <code>admin.ModelAdmin</code>, registrada inclusive
+                pelo decorator <code>@admin.register()</code>. Assim, a
+                personalização fica concentrada no <code>admin.py</code>, sem
+                exigir a criação de uma interface administrativa do zero.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🚀 Resultado</h2>
+              <p class="post-detail-text">
+                Modificar os atributos de exibição do Django Admin é uma mudança
+                simples, mas com grande impacto na experiência de administração.
+                Com colunas relevantes, campos protegidos, pesquisa, filtros e
+                edição rápida, o painel deixa de ser apenas uma área de CRUD e
+                passa a funcionar como uma ferramenta de gestão mais clara,
+                produtiva e adaptada às necessidades do projeto.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_python_django.html"
+                  >Voltar para Postagens Python / Django</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dgDUqGQ3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
