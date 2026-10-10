@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Métodos Personalizados no Django Admin | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">
+            Criando métodos personalizados no Django Admin
+          </h1>
+          <p class="post-meta">Python | Django | Administração de dados</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>🧩 Criando métodos personalizados no Django Admin</h2>
+              <p class="post-detail-text">
+                O Django Admin permite ir além da simples exibição dos campos do
+                modelo. Com métodos personalizados, é possível apresentar
+                informações calculadas, combinadas ou formatadas diretamente na
+                interface administrativa, tornando o painel mais útil e
+                intuitivo.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚙️ O que são métodos personalizados?</h2>
+              <p class="post-detail-text">
+                São métodos que produzem informações a partir dos dados de um
+                registro sem criar novos campos no banco de dados. Eles podem
+                retornar textos, números, datas formatadas ou outros valores
+                derivados do objeto.
+              </p>
+              <p class="post-detail-text">
+                No Django Admin, esses métodos podem ser adicionados ao
+                <code>list_display</code>, fazendo com que o resultado apareça
+                como uma coluna na listagem. A documentação oficial também
+                permite personalizar a apresentação dessa coluna com o decorator
+                <code>@admin.display</code>.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>👤 Um exemplo prático</h2>
+              <p class="post-detail-text">
+                Imagine um cadastro que possui nome e sobrenome separados. Em
+                vez de exibir essas informações em colunas independentes, um
+                método personalizado pode apresentar o nome completo em uma
+                única coluna.
+              </p>
+              <p class="post-detail-text">
+                Essa abordagem também pode ser utilizada para mostrar status,
+                valores calculados, informações derivadas ou qualquer dado
+                relevante para a administração.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📊 Mais controle sobre a exibição</h2>
+              <p class="post-detail-text">
+                Além de definir o conteúdo apresentado, o Django permite
+                configurar características da coluna, como descrição, ordenação
+                e representação de valores booleanos. Isso ajuda a transformar
+                dados técnicos em informações mais claras para quem utiliza o
+                painel.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🚀 Por que utilizar?</h2>
+              <p class="post-detail-text">
+                Métodos personalizados ajudam a criar uma interface
+                administrativa mais informativa sem alterar a estrutura do banco
+                de dados. Eles são especialmente úteis quando o administrador
+                precisa visualizar informações que não existem como um campo
+                isolado, mas podem ser obtidas a partir dos dados já
+                armazenados.
+              </p>
+              <p class="post-detail-text">
+                Na prática, esse recurso amplia as possibilidades do
+                <code>ModelAdmin</code> e permite adaptar o Django Admin às
+                necessidades específicas da aplicação, mantendo o painel
+                organizado, funcional e produtivo.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_python_django.html"
+                  >Voltar para Postagens Python / Django</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/d54yxy2Y"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
