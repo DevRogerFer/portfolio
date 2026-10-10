@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Personalizando a Área no Django Admin | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">Personalizando a área no Django Admin</h1>
+          <p class="post-meta">Python | Django | Administração de dados</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>🎨 Personalizando a área no Django Admin</h2>
+              <p class="post-detail-text">
+                O Django Admin já oferece uma interface completa para gerenciar
+                os dados de uma aplicação, mas isso não significa que você
+                precise manter sua aparência padrão. A área administrativa pode
+                ser adaptada para refletir a identidade visual do projeto e
+                proporcionar uma experiência mais profissional.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧭 Personalizando a identidade do painel</h2>
+              <p class="post-detail-text">
+                Uma das formas mais simples de começar é alterar os textos
+                apresentados pelo <code>AdminSite</code>. Elementos como o
+                cabeçalho, o título da página e o título da página inicial podem
+                receber nomes relacionados ao sistema, substituindo a identidade
+                genérica do Django por uma comunicação mais adequada ao negócio.
+              </p>
+              <p class="post-detail-text">
+                Essa personalização é útil quando o painel será utilizado por
+                equipes internas, clientes ou administradores.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🖥️ Alterando a aparência</h2>
+              <p class="post-detail-text">
+                A personalização também pode ir além dos textos. O Django
+                permite sobrescrever templates administrativos, possibilitando
+                modificar elementos da interface sem precisar reconstruir o
+                painel do zero.
+              </p>
+              <p class="post-detail-text">
+                Um exemplo bastante útil é o <code>base_site.html</code>, que
+                pode ser utilizado para ajustar a área de identificação do
+                Admin. A partir dessa estrutura, é possível trabalhar com
+                branding, estilos e outros elementos visuais.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🎨 CSS, cores e identidade visual</h2>
+              <p class="post-detail-text">
+                Para uma personalização mais completa, arquivos CSS podem ser
+                utilizados para adaptar cores, tipografia, espaçamentos,
+                logotipo e outros detalhes visuais. Dessa forma, o painel pode
+                ficar alinhado à identidade da aplicação sem perder os recursos
+                administrativos oferecidos pelo framework.
+              </p>
+              <p class="post-detail-text">
+                As versões atuais do Django também oferecem suporte a temas por
+                meio de variáveis CSS, facilitando alterações visuais sem a
+                necessidade de substituir grandes partes do estilo original.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧩 Templates sem perder a estrutura</h2>
+              <p class="post-detail-text">
+                Ao sobrescrever templates, uma boa prática é aproveitar a
+                estrutura existente do Django e alterar somente os blocos
+                necessários. Isso reduz a manutenção e ajuda a preservar as
+                funcionalidades nativas do painel.
+              </p>
+              <p class="post-detail-text">
+                Também é possível personalizar templates específicos de
+                aplicações ou modelos quando a necessidade for mais localizada.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🚀 Um Admin mais profissional</h2>
+              <p class="post-detail-text">
+                Personalizar o Django Admin não significa apenas deixá-lo mais
+                bonito. Uma identidade visual consistente, títulos mais claros e
+                uma interface adaptada ao contexto da aplicação podem melhorar a
+                navegação e tornar o gerenciamento diário mais intuitivo.
+              </p>
+              <p class="post-detail-text">
+                Com <code>AdminSite</code>, templates e CSS, o Django Admin pode
+                deixar de ser apenas uma ferramenta genérica de gerenciamento e
+                se transformar em uma área administrativa integrada à identidade
+                do próprio sistema.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_python_django.html"
+                  >Voltar para Postagens Python / Django</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dbfKKfFq"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
