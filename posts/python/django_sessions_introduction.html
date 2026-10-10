@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Introdução ao Django Sessions | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">Introdução ao Django Sessions</h1>
+          <p class="post-meta">Python | Django | Autenticação e estado</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>🔐 Introdução ao Django Sessions</h2>
+              <p class="post-detail-text">
+                Em aplicações web, cada requisição HTTP é independente. Isso
+                significa que, por padrão, o servidor não “lembra” o que
+                aconteceu anteriormente. É justamente nesse cenário que o Django
+                Sessions entra em ação: permitindo manter informações associadas
+                a cada visitante durante a navegação.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧠 O que são Sessions?</h2>
+              <p class="post-detail-text">
+                O sistema de sessões permite armazenar e recuperar dados
+                temporários relacionados a um usuário. No Django, essas
+                informações são normalmente mantidas no servidor, enquanto o
+                navegador recebe um identificador da sessão por meio de um
+                cookie. Assim, diferentes requisições podem ser associadas à
+                mesma sessão.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔑 Sessions e autenticação</h2>
+              <p class="post-detail-text">
+                Um dos usos mais comuns é controlar o estado de autenticação.
+                Depois que as credenciais são validadas, a aplicação pode
+                registrar na sessão que o usuário está autenticado e, a partir
+                disso, proteger páginas que exigem login.
+              </p>
+              <p class="post-detail-text">
+                Durante uma navegação autenticada, o Django utiliza o objeto
+                <code>request.session</code> para acessar os dados armazenados.
+                Dessa forma, uma view pode verificar informações da sessão antes
+                de permitir o acesso a uma área restrita.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🍪 O papel dos cookies</h2>
+              <p class="post-detail-text">
+                O cookie de sessão não precisa armazenar todos os dados da
+                sessão. Na prática, ele contém o identificador utilizado para
+                localizar as informações correspondentes no servidor. Essa
+                separação ajuda a manter o estado da navegação sem precisar
+                reenviar todos os dados de autenticação a cada requisição.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🛡️ Protegendo páginas privadas</h2>
+              <p class="post-detail-text">
+                Uma aplicação pode verificar a existência de uma sessão válida
+                antes de renderizar uma página protegida. Caso o usuário não
+                esteja autenticado, o fluxo pode direcioná-lo novamente para o
+                login.
+              </p>
+              <p class="post-detail-text">
+                Também é importante tratar corretamente o encerramento da
+                sessão. O Django oferece mecanismos como
+                <code>flush()</code> para remover os dados da sessão e apagar o
+                cookie associado, sendo utilizado pelo próprio sistema de
+                autenticação no processo de logout.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⏱️ Controle de expiração</h2>
+              <p class="post-detail-text">
+                As sessões também possuem um tempo de vida configurável. O
+                Django disponibiliza configurações e métodos para definir quando
+                uma sessão deve expirar, seja após determinado período, seja ao
+                fechar o navegador.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🚀 Por que Sessions são importantes?</h2>
+              <p class="post-detail-text">
+                Sessions são fundamentais para criar experiências personalizadas
+                e controlar acessos em aplicações web. Com elas, o Django
+                consegue manter o contexto do usuário entre requisições,
+                permitindo implementar autenticação, preferências temporárias,
+                carrinhos e outros recursos que dependem de estado.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_python_django.html"
+                  >Voltar para Postagens Python / Django</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/d95_i8qQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
