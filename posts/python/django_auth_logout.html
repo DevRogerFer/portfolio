@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Logout no Django Auth: encerre sessões com segurança | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">
+            Logout no Django Auth: encerre sessões com segurança
+          </h1>
+          <p class="post-meta">Python | Django | Logout e segurança</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>🔐 Logout no Django Auth: encerre sessões com segurança</h2>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🚪 Por que o logout é importante?</h2>
+              <p class="post-detail-text">
+                A autenticação não termina apenas ao redirecionar alguém para a
+                tela de login. Durante o acesso, o Django associa o usuário à
+                sessão, permitindo reconhecer sua identidade em requisições
+                posteriores. Por isso, o logout precisa encerrar corretamente
+                esse estado de autenticação.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚙️ Como funciona no Django?</h2>
+              <p class="post-detail-text">
+                O Django Auth disponibiliza a função <code>logout()</code>, que
+                recebe a requisição atual e encerra a sessão autenticada. Ao
+                executá-la, o framework limpa os dados da sessão e faz com que o
+                usuário deixe de ser reconhecido como autenticado. Com isso, a
+                aplicação pode redirecionar a pessoa para a página de login e
+                exibir uma mensagem de confirmação.
+              </p>
+              <p class="post-detail-text">
+                É importante entender que o logout atua sobre a sessão da
+                requisição atual. Em vez de manipular a sessão manualmente,
+                utilize o mecanismo nativo do Django, que administra essa
+                operação de forma consistente.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🛡️ Logout e proteção de páginas</h2>
+              <p class="post-detail-text">
+                Encerrar a sessão é apenas uma parte do controle de acesso.
+                Páginas e funcionalidades restritas também precisam estar
+                protegidas. O decorador <code>login_required</code>, por
+                exemplo, impede que usuários não autenticados acessem
+                determinadas views. Se alguém tentar abrir diretamente uma área
+                protegida após sair, o Django poderá redirecioná-lo para a
+                página de login.
+              </p>
+              <p class="post-detail-text">
+                Assim, o login, o logout e a proteção das views trabalham em
+                conjunto: o primeiro inicia a sessão autenticada, o segundo
+                encerra esse estado e a proteção verifica se a pessoa ainda
+                possui autorização para acessar determinada página.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔒 Cuidados importantes</h2>
+              <ul class="post-detail-list">
+                <li>
+                  Disponibilize uma opção de saída fácil de localizar,
+                  especialmente em sistemas usados em dispositivos
+                  compartilhados.
+                </li>
+                <li>
+                  Após o logout, redirecione o usuário para uma página adequada
+                  e, se necessário, apresente uma mensagem informativa.
+                </li>
+                <li>
+                  Teste o acesso direto a páginas restritas depois de sair,
+                  verificando se é solicitado um novo login.
+                </li>
+                <li>
+                  Evite implementar o encerramento removendo manualmente apenas
+                  parte dos dados da sessão.
+                </li>
+                <li>
+                  Nas versões atuais do Django, a saída pela view integrada
+                  <code>LogoutView</code> é realizada por requisições POST.
+                  Utilize formulários protegidos contra CSRF em vez de links
+                  GET simples para acionar essa operação.
+                </li>
+              </ul>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>✅ Conclusão</h2>
+              <p class="post-detail-text">
+                O logout é mais do que um botão: ele finaliza o acesso atual e
+                contribui para proteger informações e sessões. Quando
+                implementado com os recursos nativos do Django Auth e combinado
+                com a proteção adequada das views, ajuda a tornar a aplicação
+                mais segura, organizada e previsível para quem a utiliza.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_python_django.html"
+                  >Voltar para Postagens Python / Django</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dWn72vJk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
