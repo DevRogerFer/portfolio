@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Impedindo duplo login no Django Auth | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">
+            Impedindo duplo login no Django Auth
+          </h1>
+          <p class="post-meta">Python | Django | Fluxo de autenticação</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>🔐 Impedindo duplo login no Django Auth</h2>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>👤 Por que evitar um novo login?</h2>
+              <p class="post-detail-text">
+                Em uma aplicação web, quando uma pessoa já está autenticada,
+                voltar à página de login ou de cadastro normalmente é
+                desnecessário. Além de tornar a navegação menos intuitiva, isso
+                pode gerar um fluxo confuso para quem já possui uma sessão
+                ativa.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚙️ Como o Django ajuda?</h2>
+              <p class="post-detail-text">
+                O Django Auth disponibiliza <code>request.user</code>, que
+                representa o usuário associado à requisição atual. Com a
+                propriedade <code>is_authenticated</code>, a aplicação
+                consegue verificar se essa pessoa já está conectada.
+              </p>
+              <p class="post-detail-text">
+                Nas views responsáveis pelas páginas de login e cadastro, essa
+                verificação pode direcionar usuários autenticados diretamente
+                para a área principal do sistema, em vez de mostrar novamente
+                os formulários. Para visitantes não autenticados, as páginas
+                continuam disponíveis normalmente.
+              </p>
+              <p class="post-detail-text">
+                Como o Django acompanha a autenticação por sessão, esse estado
+                pode ser verificado a cada requisição e usado para definir o
+                comportamento das páginas necessárias.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧭 Uma navegação mais coerente</h2>
+              <p class="post-detail-text">
+                Imagine uma plataforma com uma área inicial protegida. Após
+                entrar, a pessoa tenta abrir novamente a página de login pelo
+                menu ou pela barra de endereços. Ao verificar o estado da
+                sessão, a aplicação reconhece que o login já foi realizado e a
+                encaminha para a área principal.
+              </p>
+              <p class="post-detail-text">
+                Essa abordagem organiza melhor o fluxo e evita exibir telas que
+                não fazem sentido para o estado atual do usuário. Ela também
+                deixa mais claro o próximo passo, sem exigir que a pessoa refaça
+                uma autenticação já concluída.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🛡️ Atenção ao significado de “duplo login”</h2>
+              <p class="post-detail-text">
+                Essa verificação impede que a sessão atual retorne
+                desnecessariamente às páginas de login ou cadastro. Ela não
+                bloqueia, por si só, que a mesma conta esteja conectada em outro
+                navegador ou dispositivo. Se a aplicação precisar restringir
+                sessões simultâneas, será necessária uma estratégia adicional
+                de gerenciamento de sessões.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>✅ Boas práticas</h2>
+              <ul class="post-detail-list">
+                <li>
+                  Verifique o estado de autenticação nas views de login e
+                  cadastro.
+                </li>
+                <li>
+                  Redirecione o usuário autenticado para uma página apropriada.
+                </li>
+                <li>
+                  Mantenha as páginas restritas protegidas com recursos como
+                  <code>login_required</code>; esconder o formulário não
+                  protege outras áreas do sistema.
+                </li>
+                <li>
+                  Teste os fluxos com usuários conectados e visitantes
+                  anônimos.
+                </li>
+              </ul>
+              <p class="post-detail-text">
+                O Django Auth oferece ferramentas para organizar a autenticação
+                de forma clara. Ao considerar o estado do usuário em cada
+                requisição, você melhora a experiência de navegação e mantém o
+                fluxo de acesso mais consistente.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_python_django.html"
+                  >Voltar para Postagens Python / Django</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dx3UcKvK"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
