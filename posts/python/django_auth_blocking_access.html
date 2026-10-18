@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Bloqueando Acesso no Django Auth | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">Bloqueando Acesso no Django Auth</h1>
+          <p class="post-meta">Python | Django | Controle de acesso</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>🔒 Bloqueando Acesso no Django Auth</h2>
+              <p class="post-detail-text">
+                Proteger páginas restritas é importante no desenvolvimento web.
+                Sem esse cuidado, visitantes podem tentar acessar áreas
+                destinadas a usuários autenticados. O Django oferece recursos
+                nativos para organizar esse controle.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🛡️ Verifique se o usuário está autenticado</h2>
+              <p class="post-detail-text">
+                O Django disponibiliza
+                <code>request.user.is_authenticated</code> para identificar se
+                a requisição está associada a um usuário autenticado. Essa
+                verificação permite definir o comportamento da aplicação quando
+                a página exige login.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔐 Proteja views com login_required</h2>
+              <p class="post-detail-text">
+                Uma maneira prática de restringir o acesso é utilizar o
+                decorador <code>login_required</code> em uma view. Quando uma
+                pessoa não autenticada tenta abrir uma página protegida, o
+                Django a redireciona para a tela de login. Após se autenticar,
+                ela pode acessar a página solicitada.
+              </p>
+              <p class="post-detail-text">
+                O parâmetro <code>login_url</code> permite indicar um endereço
+                específico para esse redirecionamento. Isso é útil quando o
+                projeto utiliza uma rota de login própria ou quando é necessário
+                manter o comportamento alinhado à estrutura de URLs da
+                aplicação. O redirecionamento pode ser ajustado para oferecer
+                um caminho claro de retorno ao conteúdo protegido.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧭 Onde esse recurso pode ser aplicado?</h2>
+              <p class="post-detail-text">
+                Esse controle pode ser usado em páginas de perfil, painéis
+                administrativos, áreas internas e outras funcionalidades que não
+                devem ficar disponíveis para visitantes. Ele também evita que a
+                restrição dependa apenas de a página estar ou não visível na
+                interface.
+              </p>
+              <p class="post-detail-text">
+                Vale lembrar que o decorador protege o acesso com base na
+                autenticação, mas não substitui todas as regras de segurança.
+                Autenticação confirma se o usuário está conectado; autorização
+                determina o que ele tem permissão para fazer. Portanto,
+                operações que dependem de papéis, grupos ou permissões
+                específicas também precisam das verificações adequadas.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>⚙️ Boas práticas no controle de acesso</h2>
+              <p class="post-detail-text">
+                Confira se a rota de login está configurada corretamente e
+                aplique a proteção de maneira consistente às páginas que
+                realmente exigem autenticação. Teste o acesso com e sem
+                autenticação antes de publicar. Confira se as páginas restritas
+                redirecionam corretamente e se, após o login, o usuário
+                consegue seguir o fluxo esperado. Essa revisão ajuda a
+                identificar falhas de configuração e mantém a navegação
+                coerente.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🚀 Aproveite os recursos nativos do Django</h2>
+              <p class="post-detail-text">
+                O Django Auth oferece mecanismos prontos que ajudam a criar
+                fluxos de autenticação mais organizados. Usar
+                <code>is_authenticated</code> e
+                <code>login_required</code> de forma adequada torna o
+                comportamento das views mais claro e contribui para uma
+                aplicação mais segura e previsível.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_python_django.html"
+                  >Voltar para Postagens Python / Django</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dEStDgeh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
