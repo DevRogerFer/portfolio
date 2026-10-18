@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Login de Usuário no Django Auth | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">Login de Usuário no Django Auth</h1>
+          <p class="post-meta">Python | Django | Login e autenticação</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>🔐 Login de Usuário no Django Auth</h2>
+              <p class="post-detail-text">
+                O login é uma das etapas centrais de qualquer aplicação que
+                precisa identificar seus usuários. No Django, o sistema de
+                autenticação oferece recursos nativos para validar credenciais
+                e iniciar uma sessão autenticada, evitando a necessidade de
+                construir toda essa estrutura do zero.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧩 Como funciona a autenticação?</h2>
+              <p class="post-detail-text">
+                O fluxo começa quando o usuário informa suas credenciais. O
+                Django utiliza a função <code>authenticate()</code> para
+                verificar se os dados fornecidos correspondem a um usuário
+                válido. Quando a autenticação não é bem-sucedida, a aplicação
+                pode informar que as credenciais estão incorretas e solicitar
+                uma nova tentativa.
+              </p>
+              <p class="post-detail-text">
+                Quando a autenticação é válida, a função <code>login()</code>
+                registra o usuário na sessão. A partir desse momento, o Django
+                consegue manter o estado de autenticação durante a navegação da
+                aplicação.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>👤 Username x e-mail</h2>
+              <p class="post-detail-text">
+                Um ponto importante ao desenvolver um formulário de login é
+                compreender como o usuário é identificado. No modelo padrão do
+                Django, username e email são campos distintos. Portanto,
+                receber um e-mail no formulário não significa automaticamente
+                que ele será utilizado como identificador pela autenticação
+                padrão.
+              </p>
+              <p class="post-detail-text">
+                Esse detalhe pode gerar falhas no login quando a aplicação
+                envia o e-mail diretamente para o mecanismo que espera o
+                username. A solução é alinhar a lógica do formulário à
+                estratégia de autenticação utilizada.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔑 Senha e segurança</h2>
+              <p class="post-detail-text">
+                O Django não armazena senhas em texto simples. As senhas são
+                protegidas por hashing, e a criação de usuários deve utilizar os
+                mecanismos próprios do framework para que esse tratamento seja
+                realizado corretamente.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔄 Login e sessão</h2>
+              <p class="post-detail-text">
+                Depois de uma autenticação bem-sucedida, o usuário passa a ser
+                associado à sessão atual. Esse mecanismo permite que a
+                aplicação reconheça o usuário ao longo das requisições,
+                mantendo o estado de autenticação de forma integrada ao Django
+                Auth.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🚀 Por que entender esse fluxo?</h2>
+              <p class="post-detail-text">
+                Compreender a relação entre credenciais,
+                <code>authenticate()</code>, <code>login()</code> e sessões é
+                fundamental para implementar um processo de autenticação
+                consistente. O Django também disponibiliza a
+                <code>LoginView</code>, uma view pronta para lidar com o
+                processo de login, além de formulários e configurações que
+                podem ser personalizados conforme a necessidade do projeto.
+              </p>
+              <p class="post-detail-text">
+                📚 A documentação oficial do Django apresenta o sistema de
+                autenticação como uma solução integrada para trabalhar com
+                usuários e autenticação.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_python_django.html"
+                  >Voltar para Postagens Python / Django</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/d_UxGZkC"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
