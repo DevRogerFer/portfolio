@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Entendendo AbstractUser no Django Auth | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">
+            Entendendo AbstractUser no Django Auth
+          </h1>
+          <p class="post-meta">Python | Django | Usuários personalizados</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>🔐 Entendendo AbstractUser no Django Auth</h2>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>👤 Personalize sem reconstruir tudo</h2>
+              <p class="post-detail-text">
+                O Django Auth oferece um sistema de autenticação com campos
+                como nome de usuário, e-mail e senha, além de recursos como
+                grupos e permissões. Mas e quando a aplicação precisa de
+                informações específicas, como CEP, rua ou número?
+              </p>
+              <p class="post-detail-text">
+                É aí que entra o <code>AbstractUser</code>: um modelo abstrato
+                que permite criar um usuário personalizado, acrescentando
+                campos próprios sem reimplementar toda a lógica de
+                autenticação do Django.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🏗️ Quando usar AbstractUser?</h2>
+              <p class="post-detail-text">
+                Ao herdar de <code>AbstractUser</code>, o modelo personalizado
+                reúne os campos originais do Django e os novos dados exigidos
+                pelo projeto. A conta continua contando com funcionalidades
+                como senhas protegidas, grupos, permissões e estados de
+                usuário ativo, membro da equipe ou superusuário.
+              </p>
+              <p class="post-detail-text">
+                Para informar ao Django qual modelo deve representar os
+                usuários, configure <code>AUTH_USER_MODEL</code> nas
+                definições do projeto. O ideal é decidir isso no início,
+                antes das primeiras migrações: trocar o modelo de usuário
+                depois que o banco já está estruturado pode exigir ajustes
+                complexos.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧭 Todos os dados precisam ficar no usuário?</h2>
+              <p class="post-detail-text">
+                Não necessariamente. Se a necessidade for apenas guardar
+                informações de perfil, como endereço, considere um modelo
+                separado relacionado ao usuário. O <code>AbstractUser</code>
+                é útil quando os novos campos precisam fazer parte
+                diretamente do modelo de autenticação.
+              </p>
+              <p class="post-detail-text">
+                A decisão depende de como os dados serão utilizados.
+                Informações complementares com ciclo próprio podem ficar em
+                modelos relacionados, mantendo a estrutura clara e evitando
+                concentrar dados desnecessários no usuário.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🗃️ Cuide das migrações e do gerenciamento</h2>
+              <p class="post-detail-text">
+                Depois de definir os campos, gere e aplique as migrações para
+                atualizar o banco de dados. Confira se o modelo está
+                configurado corretamente e se os novos campos podem ser
+                administrados conforme as necessidades da aplicação.
+              </p>
+              <p class="post-detail-text">
+                O Django Admin pode exibir os campos personalizados junto das
+                informações padrão, facilitando a consulta e o gerenciamento
+                das contas. Teste também o cadastro e a edição para garantir
+                que os dados sejam validados e salvos corretamente.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>✅ Conclusão</h2>
+              <p class="post-detail-text">
+                O <code>AbstractUser</code> permite adaptar o usuário do
+                Django às necessidades do projeto sem abrir mão dos recursos
+                nativos do Django Auth. A chave é escolher a estrutura certa
+                desde o início e organizar os dados conforme as regras da
+                aplicação. Planejamento, migrações bem executadas e testes
+                ajudam a evitar retrabalho e tornam o projeto mais fácil de
+                manter.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_python_django.html"
+                  >Voltar para Postagens Python / Django</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dVe32HQv"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
