@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Adicionando novos campos ao User do Django Auth | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">
+            Adicionando novos campos ao User do Django Auth
+          </h1>
+          <p class="post-meta">Python | Django | Modelagem de usuários</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>🔐 Adicionando novos campos ao User do Django Auth</h2>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>👤 O modelo User não precisa guardar tudo</h2>
+              <p class="post-detail-text">
+                O Django Auth disponibiliza um modelo de usuário com
+                informações básicas para identificação e autenticação, como
+                nome de usuário, e-mail e senha. Porém, aplicações reais podem
+                precisar de dados complementares, como endereço, CEP, rua e
+                número. Uma abordagem organizada é manter os dados de
+                autenticação no <code>User</code> padrão e armazenar as
+                informações adicionais em um modelo relacionado.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🏗️ Organize os dados com um modelo relacionado</h2>
+              <p class="post-detail-text">
+                Um modelo como <code>UserAddress</code> pode armazenar os
+                campos de endereço e manter uma ligação com o
+                <code>User</code> por meio de uma <code>ForeignKey</code>.
+                Assim, os dados complementares ficam separados das
+                informações de autenticação, mantendo o projeto organizado e
+                facilitando a evolução da estrutura.
+              </p>
+              <p class="post-detail-text">
+                A <code>ForeignKey</code> permite associar registros de
+                endereço a um usuário; portanto, um usuário pode ter mais de
+                um endereço relacionado. Se a aplicação exigir exatamente um
+                perfil por usuário, avalie uma relação
+                <code>OneToOneField</code>. A escolha deve refletir as regras
+                do negócio.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📝 Atualize o cadastro</h2>
+              <p class="post-detail-text">
+                Depois de definir os campos no modelo, o formulário de
+                registro precisa oferecer os campos correspondentes, como
+                CEP, rua e número. A view responsável pelo cadastro deve
+                recuperar e validar esses dados, além de criar o usuário e
+                guardar as informações complementares no modelo associado.
+                Não basta acrescentar campos ao formulário: a aplicação
+                precisa tratar os valores enviados e persistir os dados no
+                banco.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🗃️ Atualize o banco de dados</h2>
+              <p class="post-detail-text">
+                Sempre que um modelo for criado ou alterado, gere e aplique
+                as migrações para sincronizar a estrutura do banco de dados
+                com as definições do projeto. Também configure o Django Admin
+                para visualizar e gerenciar os novos registros com
+                facilidade.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🛡️ Atenção à integridade dos dados</h2>
+              <p class="post-detail-text">
+                Ao relacionar endereços ao usuário, considere o comportamento
+                de exclusão. Com a exclusão em cascata, remover o usuário
+                também remove os registros dependentes. Defina esse
+                comportamento conforme as necessidades da aplicação e valide
+                os campos recebidos para evitar informações incompletas ou
+                inconsistentes.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>✅ Conclusão</h2>
+              <p class="post-detail-text">
+                Ampliar as informações dos usuários não significa misturar
+                todos os dados no modelo de autenticação. Modelos
+                relacionados permitem manter o Django Auth funcionando e
+                armazenar informações específicas, como endereço, de forma
+                organizada. Planejar os relacionamentos, validar os
+                formulários e manter as migrações atualizadas são passos
+                essenciais para um cadastro confiável e fácil de manter.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_python_django.html"
+                  >Voltar para Postagens Python / Django</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/d_h6f7Bm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
