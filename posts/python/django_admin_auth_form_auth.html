@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Entendendo admin_auth e form_auth no Django Auth | Dev Roger Fer</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v=1" />
+    <link
+      rel="alternate icon"
+      type="image/svg+xml"
+      href="../../images/favicon.svg?v=1"
+    />
+    <link rel="apple-touch-icon" href="../../images/favicon.svg?v=1" />
+    <script
+      src="https://kit.fontawesome.com/6394f12341.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="navbar-container">
+      <ul>
+        <li class="active">
+          <a href="../../index.html#home-section">Início</a>
+        </li>
+        <li><a href="../../index.html#about-me-section">Sobre</a></li>
+        <li><a href="../../index.html#skills-section">Habilidades</a></li>
+        <li><a href="../../index.html#projects-section">Projetos</a></li>
+        <li><a href="../../index.html#posts-section">Postagens</a></li>
+        <li><a href="../../index.html#contact-section">Contato</a></li>
+      </ul>
+    </nav>
+
+    <main class="post-page-main">
+      <div class="section-container" id="posts-section">
+        <div class="section-content">
+          <h1 class="section-title">
+            Entendendo admin_auth e form_auth no Django Auth
+          </h1>
+          <p class="post-meta">Python | Django | Formulários e administração</p>
+
+          <div class="post-page-content">
+            <section class="post-detail-section">
+              <h2>🔐 Entendendo admin_auth e form_auth no Django Auth</h2>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🧩 Do cadastro ao painel administrativo</h2>
+              <p class="post-detail-text">
+                Personalizar o usuário no Django não termina ao adicionar
+                novos campos ao modelo. Para que informações como CEP, rua e
+                número sejam realmente utilizadas, é necessário integrá-las
+                ao formulário de cadastro, à lógica que salva os dados e ao
+                painel administrativo.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>📝 form_auth: recebendo e salvando dados</h2>
+              <p class="post-detail-text">
+                O formulário de cadastro pode reunir os campos básicos —
+                nome, e-mail e senha — e também informações complementares,
+                como endereço residencial. A view responsável pelo registro
+                precisa receber esses dados, validá-los e persistir os
+                valores no modelo de usuário personalizado.
+              </p>
+              <p class="post-detail-text">
+                Não basta criar os campos visualmente na página: eles
+                precisam corresponder aos campos do modelo e ser incluídos
+                no processo de gravação. Após o registro, uma mensagem de
+                sucesso ajuda a confirmar que a operação foi concluída.
+                Também é importante tratar falhas e apresentar um retorno
+                claro ao usuário.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🛠️ admin_auth: gerenciando os campos</h2>
+              <p class="post-detail-text">
+                O Django Admin permite consultar e administrar as
+                informações cadastradas. Quando determinados dados, como
+                CEP, rua e número, devem ser exibidos sem permitir
+                alterações pelo painel, a configuração de campos somente
+                leitura ajuda a preservar o fluxo de gerenciamento
+                desejado.
+              </p>
+              <p class="post-detail-text">
+                Essa decisão deve refletir as regras do sistema: campos
+                exibidos como somente leitura no Admin continuam sendo
+                dados do modelo, mas não podem ser editados por essa
+                interface. A configuração precisa estar associada à classe
+                administrativa que gerencia o modelo.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>🔄 Integração é o ponto principal</h2>
+              <p class="post-detail-text">
+                Formulário, view, modelo e administração precisam trabalhar
+                em conjunto. Os campos personalizados devem ser
+                apresentados no cadastro, validados antes de serem salvos e
+                disponibilizados no Admin conforme a necessidade. Depois
+                de alterar os modelos, as migrações também devem ser
+                aplicadas para atualizar a estrutura do banco de dados.
+              </p>
+            </section>
+
+            <section class="post-detail-section">
+              <h2>✅ Boas práticas</h2>
+              <ul class="post-detail-list">
+                <li>
+                  • Confira se os nomes dos campos do formulário correspondem
+                  aos do modelo.
+                </li>
+                <li>• Valide os dados recebidos antes de gravá-los.</li>
+                <li>
+                  • Utilize os mecanismos nativos do Django Auth para criar
+                  usuários e tratar senhas.
+                </li>
+                <li>
+                  • Configure os campos de leitura no Admin pela classe
+                  administrativa apropriada.
+                </li>
+                <li>
+                  • Informe claramente se o cadastro foi concluído ou se
+                  ocorreu um erro.
+                </li>
+              </ul>
+              <p class="post-detail-text">
+                Com essa integração, os campos personalizados deixam de ser
+                apenas elementos de interface e passam a fazer parte do
+                fluxo real de cadastro e gerenciamento de usuários. Uma
+                estrutura bem organizada torna a aplicação mais consistente,
+                segura e fácil de manter.
+              </p>
+
+              <div class="post-actions">
+                <a class="post-back-link" href="./posts_python_django.html"
+                  >Voltar para Postagens Python / Django</a
+                >
+                <a
+                  class="post-back-link"
+                  href="https://lnkd.in/p/dzNqQQ3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Ver no LinkedIn</a
+                >
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
